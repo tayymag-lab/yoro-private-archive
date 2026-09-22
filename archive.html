@@ -1,155 +1,3 @@
-/* ───── PERSONAJE PRINCIPAL ───── */
-
-.main-character {
-    margin-top: 30px;
-    padding: 25px 20px;
-    border: 1px solid rgba(128, 96, 82, 0.5);
-    background: rgba(35, 27, 25, 0.35);
-    position: relative;
-}
-
-.main-character::before {
-    content: "PERSONAJE PRINCIPAL";
-    position: absolute;
-    top: -8px;
-    left: 20px;
-    padding: 0 10px;
-    background: #100b0b;
-    font-family: 'Noto Serif JP', serif;
-    font-size: 8px;
-    letter-spacing: 3px;
-    opacity: 0.55;
-}
-
-.character-symbol {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 12px;
-    opacity: 0.8;
-}
-
-.character-name {
-    text-align: center;
-    font-size: 34px;
-    letter-spacing: 5px;
-    font-weight: 400;
-    margin-bottom: 5px;
-}
-
-.character-title {
-    text-align: center;
-    font-family: 'Noto Serif JP', serif;
-    font-size: 10px;
-    letter-spacing: 3px;
-    opacity: 0.5;
-    margin-bottom: 25px;
-}
-
-.character-line {
-    width: 60px;
-    height: 1px;
-    background: #806052;
-    margin: 0 auto 25px;
-}
-
-.character-data {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 30px;
-}
-
-.character-data-box {
-    padding: 12px 10px;
-    border: 1px solid rgba(128, 96, 82, 0.3);
-    background: rgba(0, 0, 0, 0.12);
-}
-
-.character-data-box span {
-    display: block;
-    font-family: 'Noto Serif JP', serif;
-    font-size: 8px;
-    letter-spacing: 2px;
-    opacity: 0.4;
-    margin-bottom: 5px;
-}
-
-.character-data-box strong {
-    font-size: 15px;
-    font-weight: 400;
-}
-
-.character-description {
-    margin: 25px 0;
-    padding-left: 18px;
-    border-left: 1px solid rgba(128, 96, 82, 0.6);
-}
-
-.character-description-title {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 9px;
-    letter-spacing: 3px;
-    opacity: 0.45;
-    margin-bottom: 12px;
-}
-
-.character-description p {
-    margin-bottom: 17px;
-}
-
-.character-mystery {
-    margin: 30px 0;
-    padding: 22px 15px;
-    text-align: center;
-    border-top: 1px solid rgba(128, 96, 82, 0.4);
-    border-bottom: 1px solid rgba(128, 96, 82, 0.4);
-}
-
-.character-mystery .label {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 9px;
-    letter-spacing: 3px;
-    opacity: 0.4;
-    margin-bottom: 12px;
-}
-
-.character-mystery p {
-    font-size: 20px;
-    font-style: italic;
-    margin: 0;
-}
-
-.character-question {
-    text-align: center;
-    margin: 30px 0;
-}
-
-.character-question p {
-    font-size: 20px;
-    font-style: italic;
-    opacity: 0.8;
-}
-
-.character-status {
-    text-align: center;
-    margin-top: 30px;
-    font-family: 'Noto Serif JP', serif;
-    font-size: 9px;
-    letter-spacing: 3px;
-    opacity: 0.4;
-}
-
-@media (max-width: 500px) {
-
-    .character-name {
-        font-size: 28px;
-        letter-spacing: 4px;
-    }
-
-    .character-data {
-        grid-template-columns: 1fr;
-    }
-
 }<!DOCTYPE html>
 <html lang="es">
 
@@ -3615,6 +3463,15 @@ header {
 
         <div class="character-description">
 
+            <details class="character-file">
+
+    <summary>
+        VER ARCHIVO COMPLETO
+    </summary>
+
+    <!-- AQUÍ VA TODA LA HISTORIA DE MINGI -->
+
+
             <div class="character-description-title">
                 「 HISTORIA 」
             </div>
@@ -3689,7 +3546,7 @@ header {
             </p>
 
         </div>
-
+    </details>
 
         <div class="character-question">
 
