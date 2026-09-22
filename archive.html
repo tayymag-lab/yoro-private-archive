@@ -412,130 +412,162 @@ header {
     opacity: 0.6;
 }
    
-   /* ═══════════════════════════════
-   LORE — DISEÑO
-═══════════════════════════════ */
-
-.lore h2 {
-    font-size: 38px;
-    letter-spacing: 8px;
-}
-
-.lore h3 {
-    font-size: 27px;
-    font-weight: 400;
-    letter-spacing: 3px;
-    margin-bottom: 5px;
-}
-
-.lore p {
-    margin-bottom: 20px;
-}
+ /* ───── LORE ───── */
 
 .lore-intro {
-    border-left: 1px solid rgba(128,96,82,0.5);
-    padding-left: 20px;
-    margin-bottom: 35px;
-}
-
-.lore-opening {
-    font-size: 21px !important;
-    font-style: italic;
-    opacity: 0.95 !important;
-}
-
-.lore-divider {
     text-align: center;
-    margin: 38px 0;
-    color: #a98572;
+    max-width: 600px;
+    margin: 0 auto 35px;
+}
+
+.lore-intro .lore-subtitle {
+    font-size: 13px;
+    letter-spacing: 4px;
+    opacity: 0.45;
+    margin-bottom: 15px;
+}
+
+.lore-intro p {
+    font-size: 16px;
+    line-height: 1.7;
     opacity: 0.7;
+}
+
+.lore-group {
+    margin: 35px 0;
+}
+
+.lore-group-title {
+    text-align: center;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 11px;
     letter-spacing: 5px;
+    opacity: 0.4;
+    margin-bottom: 18px;
+}
+
+.lore-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
 }
 
 .lore-card {
-    margin: 25px 0;
-    padding: 20px;
-    background: rgba(255,255,255,0.015);
-    border: 1px solid rgba(128,96,82,0.35);
+    border: 1px solid rgba(128, 96, 82, 0.45);
+    background: rgba(20, 15, 15, 0.45);
+    transition: 0.3s ease;
 }
 
-.lore-card h4 {
-    font-size: 19px;
-    font-weight: 400;
+.lore-card:hover {
+    border-color: #a98572;
+    background: rgba(128, 96, 82, 0.12);
+}
+
+.lore-card summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 20px 18px;
+    text-align: center;
+    font-size: 17px;
     letter-spacing: 2px;
-    margin-bottom: 10px;
 }
 
-.lore-card p {
-    margin-bottom: 0;
+.lore-card summary::-webkit-details-marker {
+    display: none;
 }
 
-.lore-list {
-    margin: 25px 0;
-    padding-left: 20px;
+.lore-card summary::after {
+    content: "＋";
+    display: block;
+    margin-top: 7px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 12px;
+    opacity: 0.4;
 }
 
-.lore-list li {
+.lore-card[open] summary::after {
+    content: "−";
+}
+
+.lore-content {
+    padding: 0 20px 22px;
+    text-align: left;
+}
+
+.lore-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    opacity: 0.78;
     margin-bottom: 15px;
-    line-height: 1.6;
 }
 
-.lore-warning {
-    margin: 30px 0;
-    padding: 20px;
+.lore-content p:last-child {
+    margin-bottom: 0;
+}
+
+.lore-single {
+    display: block;
+}
+
+.lore-single summary {
     text-align: center;
-    border-top: 1px solid rgba(128,96,82,0.4);
-    border-bottom: 1px solid rgba(128,96,82,0.4);
 }
 
-.lore-warning .label {
-    font-family: "Noto Serif JP", serif;
-    font-size: 9px;
-    letter-spacing: 4px;
-    opacity: 0.45;
-    margin-bottom: 10px;
-}
-
-.lore-warning p {
-    font-size: 19px;
+.lore-highlight {
+    margin: 15px 0;
+    padding: 15px;
+    border-left: 1px solid rgba(128, 96, 82, 0.6);
+    background: rgba(255,255,255,0.015);
     font-style: italic;
+}
+
+.lore-timeline {
+    margin-top: 20px;
+    padding-left: 20px;
+    border-left: 1px solid rgba(128, 96, 82, 0.45);
+}
+
+.lore-timeline-item {
+    margin-bottom: 22px;
+}
+
+.lore-timeline-item:last-child {
     margin-bottom: 0;
 }
 
-.zone {
-    margin: 22px 0;
-    padding: 18px;
-    border-left: 1px solid rgba(128,96,82,0.6);
+.lore-timeline-year {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    opacity: 0.4;
+    margin-bottom: 5px;
 }
 
-.zone h4 {
-    font-size: 19px;
+.lore-timeline-item strong {
+    display: block;
+    font-size: 18px;
     font-weight: 400;
-    letter-spacing: 2px;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
-.zone p {
-    margin-bottom: 0;
-}
-
-.lore-ending {
-    text-align: center;
-    margin: 50px 0 30px;
-    padding-top: 30px;
-    border-top: 1px solid rgba(128,96,82,0.4);
-}
-
-.lore-ending .jp {
+.lore-timeline-item p {
     font-size: 15px;
+    line-height: 1.6;
     opacity: 0.7;
 }
 
-.lore-ending p {
-    font-size: 17px;
-    font-style: italic;
-    opacity: 0.6;
+@media (max-width: 500px) {
+
+    .lore-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lore-card summary {
+        padding: 18px 15px;
+    }
+
 }
+
 
 /* ═══════════════════════════════
    PERSONAJES — YŌRŌ ARCHIVE
@@ -2769,13 +2801,9 @@ header {
          LORE
     ═══════════════════════════════ -->
 
-    <section id="lore" class="section lore">
+<section id="lore" class="section lore">
 
-    <div class="chapter-number">
-        01
-    </div>
-
-    <h2>LORE</h2>
+    <h2>Lore</h2>
 
     <div class="jp">
         世界 — SEKAI
@@ -2784,466 +2812,339 @@ header {
 
     <div class="lore-intro">
 
-        <p class="lore-opening">
-            Una ciudad que despierta cuando el resto del
-            mundo se queda dormido.
-        </p>
-
-        <p>
-            YŌRŌ existe dentro de un distrito nocturno
-            donde las apariencias tienen tanto valor como
-            los secretos que se esconden detrás de ellas.
-        </p>
-
-    </div>
-
-
-    <div class="lore-divider">
-        ✦
-    </div>
-
-
-    <div class="chapter-number">
-        02
-    </div>
-
-    <h3>El distrito</h3>
-
-    <div class="jp">
-        夜街 — YO-MACHI
-    </div>
-
-
-    <p>
-        Cuando cae la noche, el distrito cambia
-        completamente.
-    </p>
-
-    <p>
-        Las calles se llenan de luces de neón,
-        vehículos de lujo, música y personas que
-        buscan algo que durante el día no pueden
-        encontrar.
-    </p>
-
-    <p>
-        Restaurantes exclusivos, clubes privados,
-        bares, hoteles y establecimientos ocultos
-        conviven en unas pocas calles.
-    </p>
-
-    <p>
-        No todos conocen lo que ocurre realmente
-        allí.
-    </p>
-
-    <p>
-        Y quienes lo conocen suelen tener buenas
-        razones para guardar silencio.
-    </p>
-
-
-    <div class="lore-warning">
-
-        <div class="label">
-            REGLA NO ESCRITA
+        <div class="lore-subtitle">
+            EL MUNDO DETRÁS DE YŌRŌ
         </div>
 
         <p>
-            Lo que ocurre durante la noche
-            no pertenece al día.
+            Todo lo que existe alrededor de la casa:
+            sus lugares, costumbres, jerarquías
+            y secretos.
         </p>
 
     </div>
 
 
-    <div class="lore-divider">
-        ✦
-    </div>
+    <!-- LA CASA -->
 
+    <div class="lore-group">
 
-    <div class="chapter-number">
-        03
-    </div>
-
-    <h3>YŌRŌ</h3>
-
-    <div class="jp">
-        夜楼 — LA CASA DE LA NOCHE
-    </div>
-
-
-    <p>
-        En una de las calles más discretas del distrito
-        se encuentra YŌRŌ.
-    </p>
-
-    <p>
-        Desde el exterior, el establecimiento mantiene
-        una apariencia elegante y discreta.
-    </p>
-
-    <p>
-        No existen grandes carteles anunciando su
-        presencia. La mayoría de sus clientes llegan
-        mediante recomendaciones, invitaciones o por
-        vínculos con personas que ya conocen la casa.
-    </p>
-
-    <p>
-        Su interior combina la estética tradicional
-        japonesa con elementos modernos: madera oscura,
-        iluminación cálida, flores, cortinas, música
-        suave y habitaciones cuidadosamente decoradas.
-    </p>
-
-    <p>
-        La privacidad es una de las principales
-        características de YŌRŌ.
-    </p>
-
-
-    <div class="lore-card">
-
-        <h4>
-            ✦ La reputación
-        </h4>
-
-        <p>
-            YŌRŌ es conocido por ser un lugar donde
-            nadie hace demasiadas preguntas.
-            Por eso, personas de diferentes círculos
-            sociales pueden entrar y salir sin llamar
-            demasiado la atención.
-        </p>
-
-    </div>
-
-
-    <div class="lore-divider">
-        ✦
-    </div>
-
-
-    <div class="chapter-number">
-        04
-    </div>
-
-    <h3>Las zonas</h3>
-
-    <div class="jp">
-        場所 — BASHO
-    </div>
-
-
-    <div class="zone">
-
-        <h4>
-            🏮 Salón principal
-        </h4>
-
-        <p>
-            El corazón de YŌRŌ. Es donde los clientes
-            son recibidos y donde trabajadores y visitantes
-            pueden relacionarse durante las primeras horas
-            de la noche.
-        </p>
-
-    </div>
-
-
-    <div class="zone">
-
-        <h4>
-            🍷 Bar
-        </h4>
-
-        <p>
-            Un espacio más relajado donde pueden ocurrir
-            conversaciones privadas, encuentros casuales
-            y reuniones entre personajes.
-        </p>
-
-    </div>
-
-
-    <div class="zone">
-
-        <h4>
-            🎭 Escenario
-        </h4>
-
-        <p>
-            Utilizado para presentaciones, música y
-            actuaciones privadas. Es uno de los lugares
-            donde los artistas de YŌRŌ pueden mostrar
-            su talento.
-        </p>
-
-    </div>
-
-
-    <div class="zone">
-
-        <h4>
-            🌙 Habitaciones privadas
-        </h4>
-
-        <p>
-            Espacios reservados para encuentros
-            particulares. Cada habitación posee una
-            decoración diferente y puede convertirse
-            en escenario de conversaciones, acuerdos,
-            romances o conflictos.
-        </p>
-
-    </div>
-
-
-    <div class="zone">
-
-        <h4>
-            🔐 Área restringida
-        </h4>
-
-        <p>
-            Una zona a la que solamente determinadas
-            personas tienen acceso. La existencia de
-            este lugar es conocida por pocos.
-        </p>
-
-    </div>
-
-
-    <div class="lore-divider">
-        ✦
-    </div>
-
-
-    <div class="chapter-number">
-        05
-    </div>
-
-    <h3>Los trabajadores</h3>
-
-    <div class="jp">
-        働く者 — HATARAKU MONO
-    </div>
-
-
-    <p>
-        Los trabajadores de YŌRŌ son seleccionados
-        cuidadosamente.
-    </p>
-
-    <p>
-        Algunos son acompañantes. Otros son anfitriones,
-        artistas o personas encargadas de distintas
-        funciones dentro de la casa.
-    </p>
-
-    <p>
-        Cada uno posee una personalidad diferente y
-        una razón propia para formar parte de YŌRŌ.
-    </p>
-
-
-    <ul class="lore-list">
-
-        <li>
-            Algunos buscan dinero o estabilidad.
-        </li>
-
-        <li>
-            Otros necesitan escapar de su vida pública.
-        </li>
-
-        <li>
-            Algunos fueron recomendados por personas
-            relacionadas con la casa.
-        </li>
-
-        <li>
-            Otros simplemente encontraron en YŌRŌ
-            un lugar donde podían comenzar de nuevo.
-        </li>
-
-    </ul>
-
-
-    <div class="lore-divider">
-        ✦
-    </div>
-
-
-    <div class="chapter-number">
-        06
-    </div>
-
-    <h3>Los clientes</h3>
-
-    <div class="jp">
-        客 — KYAKU
-    </div>
-
-
-    <p>
-        No existe un único tipo de cliente.
-    </p>
-
-    <p>
-        Empresarios, celebridades, artistas, herederos,
-        políticos, personas anónimas y miembros de
-        familias poderosas pueden formar parte de la
-        clientela.
-    </p>
-
-    <p>
-        Algunos llegan buscando compañía.
-        Otros buscan información, conexiones,
-        entretenimiento o simplemente un lugar donde
-        nadie conozca su verdadera identidad.
-    </p>
-
-
-    <div class="lore-card">
-
-        <h4>
-            ✦ Una condición
-        </h4>
-
-        <p>
-            Todo cliente debe comprender que YŌRŌ
-            protege la privacidad de quienes entran
-            en la casa.
-        </p>
-
-    </div>
-
-
-    <div class="lore-divider">
-        ✦
-    </div>
-
-
-    <div class="chapter-number">
-        07
-    </div>
-
-    <h3>Las reglas no escritas</h3>
-
-    <div class="jp">
-        暗黙の規則 — ANMOKU NO KISOKU
-    </div>
-
-
-    <p>
-        No todas las reglas de YŌRŌ aparecen en un
-        reglamento.
-    </p>
-
-    <ul class="lore-list">
-
-        <li>
-            No revelar la identidad de otro cliente.
-        </li>
-
-        <li>
-            No hablar de lo ocurrido dentro de la casa.
-        </li>
-
-        <li>
-            No utilizar información privada como
-            amenaza sin consecuencias.
-        </li>
-
-        <li>
-            No interferir en asuntos internos sin
-            autorización.
-        </li>
-
-        <li>
-            Y, sobre todo, nunca preguntar demasiado
-            sobre el pasado de alguien.
-        </li>
-
-    </ul>
-
-
-    <div class="lore-warning">
-
-        <div class="label">
-            ARCHIVO CONFIDENCIAL
+        <div class="lore-group-title">
+            LA CASA
         </div>
 
-        <p>
-            Algunas reglas existen precisamente
-            porque alguien ya las rompió.
-        </p>
+        <div class="lore-grid">
 
-    </div>
+            <details class="lore-card">
 
+                <summary>
+                    YŌRŌ
+                </summary>
 
-    <div class="lore-divider">
-        ✦
-    </div>
+                <div class="lore-content">
 
+                    <p>
+                        YŌRŌ es uno de los establecimientos
+                        privados más exclusivos del distrito.
+                    </p>
 
-    <div class="chapter-number">
-        08
-    </div>
+                    <p>
+                        Durante el día, la casa permanece
+                        prácticamente en silencio. Cuando
+                        cae la noche, sus puertas se abren
+                        para recibir a una clientela selecta.
+                    </p>
 
-    <h3>La noche</h3>
+                    <div class="lore-highlight">
+                        La casa pertenece a una familia que
+                        ha mantenido su control durante
+                        generaciones.
+                    </div>
 
-    <div class="jp">
-        夜 — YORU
-    </div>
+                </div>
 
-
-    <p>
-        La noche es el verdadero corazón de YŌRŌ.
-    </p>
-
-    <p>
-        Es cuando las identidades cambian, las
-        relaciones comienzan y los secretos encuentran
-        un lugar donde esconderse.
-    </p>
-
-    <p>
-        Una persona puede ser completamente diferente
-        durante el día.
-    </p>
-
-    <p>
-        Puede existir una vida pública, una familia,
-        una carrera o una reputación que proteger.
-    </p>
-
-    <p>
-        Pero cuando cruza las puertas de YŌRŌ,
-        todo eso puede quedar atrás.
-    </p>
+            </details>
 
 
-    <div class="lore-ending">
+            <details class="lore-card">
 
-        <div class="jp">
-            夜は秘密を知っている。
+                <summary>
+                    DISTRITO
+                </summary>
+
+                <div class="lore-content">
+
+                    <p>
+                        El distrito nocturno es una zona
+                        donde los establecimientos privados,
+                        clubes, bares y casas de entretenimiento
+                        funcionan lejos de las miradas del
+                        resto de la ciudad.
+                    </p>
+
+                    <p>
+                        Cuando cae el sol, el distrito
+                        comienza realmente a cobrar vida.
+                    </p>
+
+                </div>
+
+            </details>
+
         </div>
 
-        <p>
-            La noche conoce todos los secretos.
-        </p>
+    </div>
+
+
+    <!-- EL MUNDO -->
+
+    <div class="lore-group">
+
+        <div class="lore-group-title">
+            EL MUNDO
+        </div>
+
+        <div class="lore-grid">
+
+            <details class="lore-card">
+
+                <summary>
+                    CLIENTES
+                </summary>
+
+                <div class="lore-content">
+
+                    <p>
+                        YŌRŌ recibe personas pertenecientes
+                        a distintos círculos sociales.
+                    </p>
+
+                    <p>
+                        Empresarios, artistas, celebridades,
+                        herederos y personas que simplemente
+                        buscan un lugar donde nadie haga
+                        preguntas.
+                    </p>
+
+                </div>
+
+            </details>
+
+
+            <details class="lore-card">
+
+                <summary>
+                    VIDA NOCTURNA
+                </summary>
+
+                <div class="lore-content">
+
+                    <p>
+                        La vida nocturna del distrito gira
+                        alrededor de eventos privados,
+                        celebraciones, espectáculos y
+                        reuniones reservadas.
+                    </p>
+
+                    <p>
+                        Muchas relaciones y acuerdos que
+                        comienzan durante la noche terminan
+                        teniendo consecuencias durante el día.
+                    </p>
+
+                </div>
+
+            </details>
+
+        </div>
+
+    </div>
+
+
+    <!-- LA ESTRUCTURA -->
+
+    <div class="lore-group">
+
+        <div class="lore-group-title">
+            LA ESTRUCTURA
+        </div>
+
+        <div class="lore-grid">
+
+            <details class="lore-card">
+
+                <summary>
+                    JERARQUÍAS
+                </summary>
+
+                <div class="lore-content">
+
+                    <p>
+                        Dentro de YŌRŌ existen diferentes
+                        posiciones y niveles de autoridad.
+                    </p>
+
+                    <p>
+                        Cada persona ocupa un lugar
+                        determinado dentro de la casa,
+                        aunque las relaciones personales
+                        pueden alterar fácilmente ese orden.
+                    </p>
+
+                </div>
+
+            </details>
+
+
+            <details class="lore-card">
+
+                <summary>
+                    CÓDIGOS
+                </summary>
+
+                <div class="lore-content">
+
+                    <p>
+                        Existen reglas que nunca fueron
+                        escritas oficialmente.
+                    </p>
+
+                    <p>
+                        Son códigos conocidos por quienes
+                        llevan suficiente tiempo dentro
+                        de YŌRŌ y que deben respetarse
+                        incluso cuando nadie está mirando.
+                    </p>
+
+                    <div class="lore-highlight">
+                        Algunas reglas no necesitan estar
+                        escritas para ser entendidas.
+                    </div>
+
+                </div>
+
+            </details>
+
+        </div>
+
+    </div>
+
+
+    <!-- SECRETOS -->
+
+    <div class="lore-group">
+
+        <div class="lore-group-title">
+            LOS SECRETOS
+        </div>
+
+        <details class="lore-card lore-single">
+
+            <summary>
+                EL ARCHIVO DE LOS SIETE AÑOS
+            </summary>
+
+            <div class="lore-content">
+
+                <p>
+                    Siete años atrás ocurrió un
+                    acontecimiento que cambió para siempre
+                    la historia de YŌRŌ.
+                </p>
+
+                <p>
+                    La desaparición de Akari fue oficialmente
+                    cerrada como una decisión personal.
+                </p>
+
+                <p>
+                    Sin embargo, existen documentos,
+                    recuerdos y versiones que contradicen
+                    aquella explicación.
+                </p>
+
+                <div class="lore-highlight">
+                    El archivo permanece incompleto.
+                    Algunas páginas nunca fueron encontradas.
+                </div>
+
+            </div>
+
+        </details>
+
+    </div>
+
+
+    <!-- CRONOLOGÍA -->
+
+    <div class="lore-group">
+
+        <div class="lore-group-title">
+            CRONOLOGÍA
+        </div>
+
+        <details class="lore-card lore-single">
+
+            <summary>
+                LÍNEA TEMPORAL
+            </summary>
+
+            <div class="lore-content">
+
+                <div class="lore-timeline">
+
+                    <div class="lore-timeline-item">
+
+                        <div class="lore-timeline-year">
+                            HACE SIETE AÑOS
+                        </div>
+
+                        <strong>
+                            La desaparición de Akari
+                        </strong>
+
+                        <p>
+                            Una de las trabajadoras más
+                            importantes de YŌRŌ desaparece
+                            después de recibir a un cliente.
+                        </p>
+
+                    </div>
+
+
+                    <div class="lore-timeline-item">
+
+                        <div class="lore-timeline-year">
+                            ACTUALIDAD
+                        </div>
+
+                        <strong>
+                            El pasado regresa
+                        </strong>
+
+                        <p>
+                            Una serie de mensajes anónimos
+                            comienza a sacar nuevamente
+                            a la luz los acontecimientos
+                            de aquella noche.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </details>
 
     </div>
 
 
     <button class="close" onclick="closeSections()">
-        CERRAR ARCHIVO
+        CERRAR
     </button>
 
-    </section>
+</section>
 
 
 
