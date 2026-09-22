@@ -54,358 +54,297 @@ body::before{
 
 /* HEADER */
 
+/* ═══════════════════════════════════════
+   YŌRŌ SHINBUN — HEADER
+   ═══════════════════════════════════════ */
+
 header{
     width:100%;
-    border-bottom:1px solid var(--line);
-    padding:18px 20px;
+    padding:18px 25px 26px;
     text-align:center;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(255,255,255,.018),
+            transparent 70%
+        );
+
+    border-bottom:1px solid var(--line);
+
+    position:relative;
 }
 
+
+/* ───────── TOP NAVIGATION ───────── */
+
 .header-top{
-    display:flex;
-    justify-content:space-between;
+    width:min(1180px,100%);
+    margin:0 auto;
+
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
     align-items:center;
-    max-width:1200px;
-    margin:auto;
-    color:var(--muted);
+
     font-family:"Noto Serif JP",serif;
-    font-size:.72rem;
-    letter-spacing:2px;
+    font-size:.66rem;
+
+    letter-spacing:2.5px;
+    color:var(--muted);
 }
 
 .header-top a{
     color:var(--muted);
     text-decoration:none;
-    transition:.3s;
+
+    transition:
+        color .3s ease,
+        letter-spacing .3s ease;
 }
 
 .header-top a:hover{
     color:var(--gold);
+    letter-spacing:3px;
 }
+
+.header-link:first-child{
+    text-align:left;
+}
+
+.header-link:last-child{
+    text-align:right;
+}
+
+.header-status{
+    color:#6f6963;
+
+    font-family:"Noto Serif JP",serif;
+    font-size:.58rem;
+
+    letter-spacing:4px;
+}
+
+
+/* ───────── MASTHEAD ───────── */
 
 .masthead{
-    margin:18px auto 10px;
+    margin:43px auto 0;
 }
 
-.masthead .jp{
+.masthead-jp{
     font-family:"Noto Serif JP",serif;
-    font-size:clamp(2.5rem,7vw,5.5rem);
-    letter-spacing:18px;
+
+    color:var(--text);
+
+    font-size:clamp(
+        4rem,
+        10vw,
+        7rem
+    );
+
+    font-weight:500;
+
+    letter-spacing:
+        clamp(12px,3vw,25px);
+
+    line-height:.9;
+
+    text-shadow:
+        0 0 30px rgba(181,154,104,.05);
+}
+
+
+/* ───────── ROMAN NAME ───────── */
+
+.masthead-name{
+    margin-top:18px;
+
+    font-family:"Playfair Display",serif;
+
+    color:var(--text);
+
+    font-size:clamp(
+        1.7rem,
+        4vw,
+        3rem
+    );
+
+    font-weight:500;
+
+    letter-spacing:
+        clamp(7px,1.8vw,13px);
+
     line-height:1;
 }
 
-.masthead .roman{
-    font-family:"Playfair Display",serif;
-    font-size:clamp(1.4rem,4vw,2.8rem);
-    letter-spacing:12px;
-    margin-top:8px;
-}
 
-.subtitle{
+/* ───────── SUBTITLE ───────── */
+
+.masthead-subtitle{
+    margin-top:13px;
+
     font-family:"Noto Serif JP",serif;
-    font-size:.72rem;
-    letter-spacing:5px;
+
     color:var(--gold);
-    margin-top:8px;
+
+    font-size:.63rem;
+
+    letter-spacing:4px;
+
+    opacity:.85;
 }
 
-.header-line{
+
+/* ───────── DECORATIVE DIVIDER ───────── */
+
+.masthead-divider{
+    width:min(720px,80%);
+    margin:27px auto 20px;
+
     display:flex;
     align-items:center;
+
     gap:15px;
-    max-width:900px;
-    margin:20px auto 0;
-    color:var(--muted);
-    font-family:"Noto Serif JP",serif;
-    font-size:.65rem;
-    letter-spacing:3px;
 }
 
-.header-line::before,
-.header-line::after{
-    content:"";
+.masthead-divider span{
     height:1px;
-    background:var(--line);
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            var(--line)
+        );
+
     flex:1;
 }
 
-/* MAIN */
-
-main{
-    width:min(1100px,92%);
-    margin:45px auto 80px;
+.masthead-divider span:last-child{
+    background:
+        linear-gradient(
+            to left,
+            transparent,
+            var(--line)
+        );
 }
 
-.edition-head{
-    text-align:center;
-    margin-bottom:40px;
-}
-
-.edition-number{
-    font-family:"Noto Serif JP",serif;
+.masthead-divider b{
     color:var(--gold);
-    font-size:.72rem;
-    letter-spacing:4px;
+
+    font-size:.55rem;
+
+    font-weight:400;
+
+    opacity:.8;
 }
 
-.edition-title{
-    font-family:"Playfair Display",serif;
-    font-size:clamp(2rem,5vw,4rem);
-    letter-spacing:3px;
-    margin:8px 0;
-}
 
-.edition-date{
-    color:var(--muted);
-    font-size:.9rem;
-    letter-spacing:3px;
-}
+/* ───────── EDITION INFO ───────── */
 
-.headline{
-    border-top:3px double var(--line);
-    border-bottom:1px solid var(--line);
-    padding:30px 15px;
-    text-align:center;
-    margin-bottom:35px;
-}
-
-.headline-kicker{
-    font-family:"Noto Serif JP",serif;
-    color:var(--red-light);
-    font-size:.75rem;
-    letter-spacing:4px;
-    margin-bottom:15px;
-}
-
-.headline h1{
-    font-family:"Playfair Display",serif;
-    font-size:clamp(2rem,5vw,4.2rem);
-    line-height:1.05;
-    font-weight:600;
-}
-
-.headline p{
-    max-width:700px;
-    margin:20px auto 0;
-    color:var(--muted);
-    font-size:1.05rem;
-    line-height:1.6;
-}
-
-.news-grid{
-    display:grid;
-    grid-template-columns:2fr 1fr;
-    gap:25px;
-}
-
-.news-main,
-.news-side{
-    border-top:1px solid var(--line);
-}
-
-.news-card{
-    padding:25px 0;
-    border-bottom:1px solid var(--line);
-}
-
-.news-main .news-card h2{
-    font-size:1.9rem;
-}
-
-.news-card h2{
-    font-family:"Playfair Display",serif;
-    font-weight:600;
-    font-size:1.4rem;
-    margin-bottom:10px;
-}
-
-.news-card .tag{
-    color:var(--red-light);
-    font-family:"Noto Serif JP",serif;
-    font-size:.65rem;
-    letter-spacing:3px;
-    margin-bottom:8px;
-}
-
-.news-card p{
-    color:#bbb2a8;
-    font-size:1rem;
-    line-height:1.65;
-}
-
-.news-side{
-    padding-left:25px;
-    border-left:1px solid var(--line);
-}
-
-.side-title{
-    padding:20px 0 14px;
-    border-bottom:1px solid var(--line);
-    font-family:"Noto Serif JP",serif;
-    letter-spacing:3px;
-    font-size:.75rem;
-    color:var(--gold);
-}
-
-.agenda-item{
-    padding:18px 0;
-    border-bottom:1px dotted var(--line);
-}
-
-.agenda-date{
-    font-family:"Noto Serif JP",serif;
-    color:var(--red-light);
-    font-size:.7rem;
-    letter-spacing:2px;
-}
-
-.agenda-item h3{
-    margin:5px 0;
-    font-family:"Playfair Display",serif;
-    font-size:1.15rem;
-}
-
-.agenda-item p{
-    color:var(--muted);
-    font-size:.9rem;
-    line-height:1.5;
-}
-
-.quote{
-    margin:45px 0;
-    padding:35px 25px;
-    text-align:center;
-    border-top:1px solid var(--line);
-    border-bottom:1px solid var(--line);
-}
-
-.quote .jp{
-    font-family:"Noto Serif JP",serif;
-    font-size:1rem;
-    letter-spacing:3px;
-    color:var(--gold);
-    margin-bottom:12px;
-}
-
-.quote p{
-    font-family:"Playfair Display",serif;
-    font-style:italic;
-    font-size:1.4rem;
-}
-
-.rumors{
-    border:1px solid var(--line);
-    padding:25px;
-    position:relative;
-}
-
-.rumors::before{
-    content:"裏";
-    position:absolute;
-    right:15px;
-    top:8px;
-    font-family:"Noto Serif JP",serif;
-    font-size:3rem;
-    color:rgba(125,32,41,.15);
-}
-
-.rumors h2{
-    font-family:"Noto Serif JP",serif;
-    color:var(--gold);
-    font-size:.8rem;
-    letter-spacing:4px;
-    margin-bottom:18px;
-}
-
-.rumors p{
-    color:#bdb4aa;
-    line-height:1.7;
-}
-
-.navigation{
+.edition-info{
     display:flex;
+
     justify-content:center;
-    gap:15px;
-    margin-top:45px;
-    flex-wrap:wrap;
-}
+    align-items:center;
 
-.btn{
-    display:inline-block;
-    padding:12px 24px;
-    border:1px solid var(--line);
-    color:var(--text);
-    text-decoration:none;
+    gap:16px;
+
+    color:#817970;
+
     font-family:"Noto Serif JP",serif;
-    font-size:.7rem;
-    letter-spacing:2px;
-    transition:.3s;
+
+    font-size:.58rem;
+
+    letter-spacing:3px;
 }
 
-.btn:hover{
-    border-color:var(--gold);
-    color:var(--gold);
-    background:rgba(181,154,104,.04);
+.edition-info i{
+    width:3px;
+    height:3px;
+
+    border-radius:50%;
+
+    background:var(--red-light);
+
+    opacity:.8;
 }
 
-footer{
-    border-top:1px solid var(--line);
-    text-align:center;
-    padding:35px 20px;
-    color:#716a64;
-}
 
-footer .jp{
-    font-family:"Noto Serif JP",serif;
-    font-size:.7rem;
-    letter-spacing:4px;
-}
+/* ═══════════════════════════════════════
+   MOBILE
+   ═══════════════════════════════════════ */
 
-footer p{
-    margin-top:8px;
-    font-size:.75rem;
-    letter-spacing:2px;
-}
+@media(max-width:600px){
 
-@media(max-width:750px){
-
-    .header-top{
-        font-size:.58rem;
+    header{
+        padding:
+            15px
+            16px
+            23px;
     }
 
-    .masthead .jp{
+
+    .header-top{
+        grid-template-columns:1fr 1fr;
+
+        font-size:.55rem;
+
+        letter-spacing:1.5px;
+    }
+
+    .header-status{
+        display:none;
+    }
+
+
+    .masthead{
+        margin-top:36px;
+    }
+
+
+    .masthead-jp{
+        font-size:4rem;
+
         letter-spacing:10px;
     }
 
-    .masthead .roman{
-        letter-spacing:7px;
+
+    .masthead-name{
+        margin-top:15px;
+
+        font-size:1.55rem;
+
+        letter-spacing:6px;
     }
 
-    .news-grid{
-        grid-template-columns:1fr;
+
+    .masthead-subtitle{
+        margin-top:12px;
+
+        font-size:.53rem;
+
+        letter-spacing:2.5px;
     }
 
-    .news-side{
-        padding-left:0;
-        border-left:none;
+
+    .masthead-divider{
+        width:88%;
+
+        margin-top:25px;
+
+        gap:10px;
     }
 
-    main{
-        width:90%;
-        margin-top:30px;
+
+    .edition-info{
+        gap:8px;
+
+        font-size:.48rem;
+
+        letter-spacing:1.5px;
     }
 
-    .headline{
-        padding:25px 5px;
-    }
-
-    .headline h1{
-        font-size:2.2rem;
-    }
-
-    .quote p{
-        font-size:1.15rem;
-    }
 }
 
 </style>
