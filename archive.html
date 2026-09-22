@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>YŌRŌ — Archive</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Noto+Serif+JP:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top, #24191a 0%, #0c0909 50%, #050505 100%);
+    color: #e8dfd2;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* ENCABEZADO */
+
+header {
+    text-align: center;
+    padding: 55px 20px 30px;
+}
+
+.symbol {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.logo {
+    font-size: 42px;
+    letter-spacing: 9px;
+    font-weight: 400;
+}
+
+.subtitle {
+    margin-top: 5px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    opacity: 0.55;
+}
+
+.line {
+    width: 100px;
+    height: 1px;
+    background: #806052;
+    margin: 25px auto;
+}
+
+/* MENÚ */
+
+.archive {
+    width: 90%;
+    max-width: 650px;
+    margin: auto;
+    padding-bottom: 60px;
+}
+
+.archive-title {
+    text-align: center;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 13px;
+    letter-spacing: 5px;
+    opacity: 0.65;
+    margin-bottom: 30px;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.menu button {
+    min-height: 85px;
+    background: rgba(20, 15, 15, 0.75);
+    border: 1px solid rgba(128, 96, 82, 0.55);
+    color: #e8dfd2;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.35s ease;
+}
+
+.menu button span {
+    display: block;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.menu button:hover {
+    background: rgba(128, 96, 82, 0.2);
+    border-color: #a98572;
+    transform: translateY(-2px);
+}
+
+/* SECCIONES */
+
+.section {
+    display: none;
+    margin-top: 35px;
+    padding: 30px 25px;
+    border-top: 1px solid rgba(128, 96, 82, 0.5);
+    border-bottom: 1px solid rgba(128, 96, 82, 0.3);
+    animation: fade 0.5s ease;
+}
+
+.section.active {
+    display: block;
+}
+
+.section h2 {
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+.section .jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 12px;
+    opacity: 0.5;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+}
+
+.section p {
+    font-size: 17px;
+    line-height: 1.7;
+    opacity: 0.85;
+}
+
+.close {
+    display: block;
+    margin: 25px auto 0;
+    padding: 9px 25px;
+    background: transparent;
+    border: 1px solid #806052;
+    color: #e8dfd2;
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 2px;
+}
+
+/* FRASE FINAL */
+
+.quote {
+    text-align: center;
+    margin: 45px 20px;
+    opacity: 0.55;
+}
+
+.quote .japanese {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14px;
+    letter-spacing: 4px;
+}
+
+.quote p {
+    margin-top: 10px;
+    font-size: 15px;
+    font-style: italic;
+}
+
+/* ANIMACIÓN */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 500px) {
+
+    .logo {
+        font-size: 34px;
+    }
+
+    .menu {
+        grid-template-columns: 1fr;
+    }
+
+    .menu button {
+        min-height: 70px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="symbol">🏮</div>
+
+    <div class="logo">YŌRŌ</div>
+
+    <div class="subtitle">
+        PRIVATE ARCHIVE
+    </div>
+
+    <div class="line"></div>
+
+</header>
+
+
+<main class="archive">
+
+    <div class="archive-title">
+        ARCHIVE
+    </div>
+
+
+    <div class="menu">
+
+        <button onclick="openSection('historia')">
+            <span>📜</span>
+            HISTORIA
+        </button>
+
+        <button onclick="openSection('lore')">
+            <span>🪭</span>
+            LORE
+        </button>
+
+        <button onclick="openSection('personajes')">
+            <span>🎭</span>
+            PERSONAJES
+        </button>
+
+        <button onclick="openSection('roles')">
+            <span>🎬</span>
+            ROLES
+        </button>
+
+        <button onclick="openSection('integrantes')">
+            <span>👥</span>
+            INTEGRANTES
+        </button>
+
+        <button onclick="openSection('staff')">
+            <span>🏮</span>
+            STAFF
+        </button>
+
+        <button onclick="openSection('reglas')">
+            <span>📖</span>
+            REGLAMENTO
+        </button>
+
+        <button onclick="openSection('eventos')">
+            <span>🎎</span>
+            EVENTOS
+        </button>
+
+    </div>
+
+
+    <!-- HISTORIA -->
+
+    <section id="historia" class="section">
+
+        <h2>Historia</h2>
+
+        <div class="jp">
+            物語 — MONOGATARI
+        </div>
+
+        <p>
+            Aquí irá la historia oficial de YŌRŌ.
+            <br><br>
+            Este espacio estará destinado a conservar
+            los acontecimientos que dieron origen al
+            mundo del rol y los sucesos que marcaron
+            su historia.
+        </p>
+
+        <button class="close" onclick="closeSections()">
+            CERRAR
+        </button>
+
+    </section>
+
+
+    <!-- LORE -->
+
+    <section id="lore" class="section">
+
+        <h2>Lore</h2>
+
+        <div class="jp">
+            世界 — SEKAI
+        </div>
+
+        <p>
+            Información sobre el universo de YŌRŌ,
+            sus lugares, organizaciones, tradiciones,
+            secretos y acontecimientos importantes.
+        </p>
+
+        <button class="close" onclick="closeSections()">
+            CERRAR
+        </button>
+
+    </section>
+
+
+    <!-- PERSONAJES -->
+
+    <section id="personajes" class="section">
+
+        <h2>Personajes</h2>
+
+        <div class="jp">
+            登場人物 — TŌJŌJINBUTSU
+        </div>
+
+        <p>
+            Aquí aparecerán las fichas de los personajes
+            pertenecientes al universo de YŌRŌ.
+        </p>
+
+        <button class="close" onclick="closeSections()">
+            CERRAR
+        </button>
+
+    </section>
+
+
+    <!-- ROLES -->
+
+    <section id="roles" class="section">
+
+        <h2>Roles</h2>
+
+        <div class="jp">
+            役割 — YAKUWARI
+        </div>
+
+        <p>
+            Información sobre los distintos tipos de
+            personajes, trabajadores, clientes y
+            funciones dentro del rol.
+        </p>
+
+        <button class="close" onclick="closeSections()">
+            CERRAR
+        </button>
+
+    </section>
+
+
+    <!-- INTEGRANTES -->
+
+    <section id="integrantes" class="section">
+
+        <h2>Integrantes</h2>
+
+        <div class="jp">
+            MEMBERS
+        </div>
+
+        <p>
+            Aquí estará la lista de integrantes del team
+            y sus respectivos personajes.
+        </p>
+
+        <button class="close" onclick="closeSections()">
+            CERRAR
+        </button>
+
+    </section>
+
+
+    <!-- STAFF -->
+
+    <section id="staff" class="section">
+
+        <h2>Staff</h2>
+
+        <div class="jp">
+            管理 — KANRI
+        </div>
+
+        <p>
+            Información sobre la administración de YŌRŌ,
+            sus funciones y responsables.
+        </p>
+
+        <button class="close" onclick="closeSections()">
+            CERRAR
+        </button>
+
+    </section>
+
+
+    <!-- REGLAMENTO -->
+
+    <section id="reglas" class="section">
+
+        <h2>Reglamento</h2>
+
+        <div class="jp">
+            規則 — KISOKU
+        </div>
+
+        <p>
+            Reglamento general del universo y del grupo
+            principal de YŌRŌ.
+        </p>
+
+        <button class="close" onclick="closeSections()">
+            CERRAR
+        </button>
+
+    </section>
+
+
+    <!-- EVENTOS -->
+
+    <section id="eventos" class="section">
+
+        <h2>Eventos</h2>
+
+        <div class="jp">
+            行事 — GYŌJI
+        </div>
+
+        <p>
+            Próximos eventos, celebraciones y
+            acontecimientos especiales del rol.
+        </p>
+
+        <button class="close" onclick="closeSections()">
+            CERRAR
+        </button>
+
+    </section>
+
+
+    <div class="quote">
+
+        <div class="japanese">
+            七年前の夜
+        </div>
+
+        <p>
+            “La noche de hace siete años.”
+        </p>
+
+    </div>
+
+</main>
+
+
+<script>
+
+function openSection(id) {
+
+    const sections = document.querySelectorAll('.section');
+
+    sections.forEach(section => {
+        section.classList.remove('active');
+    });
+
+    document.getElementById(id).classList.add('active');
+
+    document.getElementById(id).scrollIntoView({
+        behavior: '
