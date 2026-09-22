@@ -347,6 +347,180 @@ header{
 
 }
 
+/* ═══════════════════════════════════════
+   YŌRŌ SHINBUN — NAVIGATION
+   ═══════════════════════════════════════ */
+
+.shinbun-nav{
+    width:min(1100px,92%);
+    margin:0 auto;
+
+    display:grid;
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    border-left:1px solid var(--line);
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+
+    background:rgba(255,255,255,.008);
+}
+
+
+/* ───────── ITEM ───────── */
+
+.shinbun-nav-item{
+    position:relative;
+
+    min-height:76px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    gap:6px;
+
+    color:var(--muted);
+
+    text-decoration:none;
+
+    border-right:1px solid var(--line);
+
+    transition:
+        color .3s ease,
+        background .3s ease;
+}
+
+.shinbun-nav-item:last-child{
+    border-right:none;
+}
+
+
+/* ───────── JAPANESE ───────── */
+
+.nav-jp{
+    font-family:"Noto Serif JP",serif;
+
+    font-size:.72rem;
+
+    letter-spacing:2px;
+
+    color:var(--text);
+
+    transition:
+        color .3s ease;
+}
+
+
+/* ───────── SPANISH ───────── */
+
+.nav-es{
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:.85rem;
+
+    letter-spacing:2.5px;
+
+    color:#817970;
+
+    transition:
+        color .3s ease;
+}
+
+
+/* ───────── HOVER ───────── */
+
+.shinbun-nav-item:hover{
+    background:rgba(181,154,104,.035);
+
+    color:var(--gold);
+}
+
+.shinbun-nav-item:hover .nav-jp{
+    color:var(--gold);
+}
+
+.shinbun-nav-item:hover .nav-es{
+    color:var(--text);
+}
+
+
+/* ───────── ACTIVE ───────── */
+
+.shinbun-nav-item.active::after{
+    content:"";
+
+    position:absolute;
+
+    bottom:-1px;
+    left:22%;
+    right:22%;
+
+    height:2px;
+
+    background:var(--red-light);
+}
+
+.shinbun-nav-item.active .nav-jp{
+    color:var(--text);
+}
+
+.shinbun-nav-item.active .nav-es{
+    color:var(--red-light);
+}
+
+
+/* ═══════════════════════════════════════
+   MOBILE
+   ═══════════════════════════════════════ */
+
+@media(max-width:650px){
+
+    .shinbun-nav{
+        width:100%;
+
+        display:flex;
+
+        overflow-x:auto;
+
+        justify-content:flex-start;
+
+        border-left:none;
+        border-right:none;
+
+        scrollbar-width:none;
+
+        -webkit-overflow-scrolling:touch;
+    }
+
+    .shinbun-nav::-webkit-scrollbar{
+        display:none;
+    }
+
+
+    .shinbun-nav-item{
+        flex:0 0 125px;
+
+        min-height:72px;
+
+        border-right:1px solid var(--line);
+    }
+
+
+    .nav-jp{
+        font-size:.67rem;
+    }
+
+
+    .nav-es{
+        font-size:.78rem;
+
+        letter-spacing:2px;
+    }
+
+}
+
 </style>
 </head>
 
@@ -429,6 +603,78 @@ header{
 
 
 </header>
+
+<!-- ═══════════════════════════════════════
+     YŌRŌ SHINBUN — SECCIÓN DE NAVEGACIÓN
+     ═══════════════════════════════════════ -->
+
+<nav class="shinbun-nav" aria-label="Secciones del periódico">
+
+    <a href="#noticias" class="shinbun-nav-item active">
+
+        <span class="nav-jp">
+            最新情報
+        </span>
+
+        <span class="nav-es">
+            NOTICIAS
+        </span>
+
+    </a>
+
+
+    <a href="#personajes" class="shinbun-nav-item">
+
+        <span class="nav-jp">
+            人物録
+        </span>
+
+        <span class="nav-es">
+            PERSONAJES
+        </span>
+
+    </a>
+
+
+    <a href="#agenda" class="shinbun-nav-item">
+
+        <span class="nav-jp">
+            今夜の予定
+        </span>
+
+        <span class="nav-es">
+            AGENDA
+        </span>
+
+    </a>
+
+
+    <a href="#avisos" class="shinbun-nav-item">
+
+        <span class="nav-jp">
+            掲示板
+        </span>
+
+        <span class="nav-es">
+            AVISOS
+        </span>
+
+    </a>
+
+
+    <a href="#rumores" class="shinbun-nav-item">
+
+        <span class="nav-jp">
+            噂
+        </span>
+
+        <span class="nav-es">
+            RUMORES
+        </span>
+
+    </a>
+
+</nav>
 
 
 <main>
