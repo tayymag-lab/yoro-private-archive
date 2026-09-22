@@ -537,233 +537,428 @@ header {
     opacity: 0.6;
 }
 
-   /* ═══════════════════════════════
-   PERSONAJES — DISEÑO
-═══════════════════════════════ */
+/* ═══════════════════════════════
+   PERSONAJES — YŌRŌ ARCHIVE
+   ═══════════════════════════════ */
 
-.personajes h2 {
-    font-size: 38px;
-    letter-spacing: 8px;
-}
-
-.personajes-intro {
-    border-left: 1px solid rgba(128,96,82,0.5);
-    padding-left: 20px;
-    margin-bottom: 35px;
-}
-
-.personajes-intro p {
-    margin-bottom: 15px;
-}
-
-.personajes-intro .opening {
-    font-size: 21px !important;
-    font-style: italic;
-    opacity: 0.95 !important;
-}
-
-/* CATÁLOGO */
-
-.character-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    margin: 30px 0;
-}
-
-.character-card {
-    position: relative;
-    min-height: 170px;
-    padding: 22px 18px;
-    background: rgba(20,15,15,0.75);
-    border: 1px solid rgba(128,96,82,0.45);
-    transition: 0.35s ease;
-}
-
-.character-card:hover {
-    background: rgba(128,96,82,0.15);
-    border-color: #a98572;
-    transform: translateY(-3px);
-}
-
-.character-card .symbol {
-    font-size: 22px;
-    margin-bottom: 12px;
-}
-
-.character-card .character-name {
-    font-size: 24px;
-    letter-spacing: 3px;
-    margin-bottom: 4px;
-}
-
-.character-card .character-role {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 9px;
-    letter-spacing: 3px;
-    opacity: 0.45;
-    margin-bottom: 15px;
-}
-
-.character-card .character-description {
-    font-size: 15px;
-    line-height: 1.5;
-    opacity: 0.65;
-}
-
-/* ESTADO */
-
-.character-status {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-family: 'Noto Serif JP', serif;
-    font-size: 8px;
-    letter-spacing: 2px;
-    opacity: 0.4;
-}
-
-/* DIVISOR */
-
-.characters-divider {
+.personajes-section {
     text-align: center;
-    margin: 38px 0;
-    color: #a98572;
+}
+
+
+/* INTRODUCCIÓN */
+
+.characters-intro {
+    max-width: 540px;
+    margin: 0 auto 10px;
     opacity: 0.7;
 }
 
-/* CATEGORÍAS */
 
-.character-category {
-    margin-top: 35px;
+/* TÍTULOS DE CATEGORÍA */
+
+.characters-heading {
+    margin: 20px 0 35px;
 }
 
-.character-category-title {
+.characters-heading span {
+    display: block;
     font-family: 'Noto Serif JP', serif;
-    font-size: 11px;
+    font-size: 9px;
+    letter-spacing: 5px;
+    opacity: 0.35;
+    margin-bottom: 7px;
+}
+
+.characters-heading h3,
+.character-category h3 {
+    font-size: 23px;
+    font-weight: 400;
     letter-spacing: 4px;
-    opacity: 0.5;
-    margin-bottom: 18px;
 }
 
-/* FICHA */
 
-.character-profile {
-    margin-top: 35px;
-    padding: 25px 20px;
-    border-top: 1px solid rgba(128,96,82,0.45);
-    border-bottom: 1px solid rgba(128,96,82,0.35);
-}
+/* ═══════════════════════════════
+   PERSONAJE PRINCIPAL
+   ═══════════════════════════════ */
 
-.profile-header {
+.main-character {
+    max-width: 500px;
+    margin: 0 auto;
     text-align: center;
-    margin-bottom: 30px;
 }
 
-.profile-header .profile-symbol {
+
+.character-symbol {
     font-size: 28px;
     margin-bottom: 10px;
+    opacity: 0.85;
 }
 
-.profile-header h3 {
-    font-size: 32px;
+
+.character-name {
+    font-size: 31px;
+    letter-spacing: 7px;
     font-weight: 400;
-    letter-spacing: 5px;
 }
 
-.profile-header .profile-role {
+
+.character-title {
+    margin-top: 6px;
     font-family: 'Noto Serif JP', serif;
     font-size: 10px;
     letter-spacing: 3px;
     opacity: 0.45;
-    margin-top: 5px;
 }
 
-.profile-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 25px;
+
+.character-line {
+    width: 55px;
+    height: 1px;
+    background: #806052;
+    margin: 18px auto;
+    opacity: 0.6;
 }
 
-.profile-info div {
-    padding: 12px;
-    background: rgba(255,255,255,0.02);
-    border-left: 1px solid rgba(128,96,82,0.4);
+
+/* DATOS PEQUEÑOS */
+
+.character-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px 17px;
+    margin: 18px 0 30px;
 }
 
-.profile-info span {
-    display: block;
+
+.character-data-box {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+
+.character-data-box span {
     font-family: 'Noto Serif JP', serif;
     font-size: 8px;
-    letter-spacing: 2px;
-    opacity: 0.4;
-    margin-bottom: 4px;
+    letter-spacing: 1.5px;
+    opacity: 0.3;
+    margin-right: 3px;
 }
 
-.profile-info strong {
-    font-size: 16px;
+
+.character-data-box strong {
+    font-size: 11px;
     font-weight: 400;
+    letter-spacing: 0.5px;
+    opacity: 0.55;
 }
 
-.profile-section {
-    margin: 25px 0;
+
+/* FRASE */
+
+.character-question {
+    max-width: 390px;
+    margin: 30px auto;
 }
 
-.profile-section h4 {
-    font-size: 18px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    margin-bottom: 9px;
+
+.character-question p {
+    font-size: 19px;
+    line-height: 1.7;
+    font-style: italic;
+    opacity: 0.8;
 }
 
-.profile-section p {
-    margin-bottom: 0;
+
+/* ═══════════════════════════════
+   ARCHIVO DESPLEGABLE
+   ═══════════════════════════════ */
+
+.character-file {
+    margin: 25px auto 0;
+    max-width: 480px;
+    border-top: 1px solid rgba(128,96,82,0.3);
+    padding-top: 18px;
 }
 
-/* CONFIDENCIAL */
 
-.confidential {
+.character-file summary {
+    list-style: none;
+    cursor: pointer;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 9px;
+    letter-spacing: 4px;
+    opacity: 0.5;
+    padding: 10px;
+    transition: 0.35s ease;
+}
+
+
+.character-file summary::-webkit-details-marker {
+    display: none;
+}
+
+
+.character-file summary::before {
+    content: "＋";
+    margin-right: 8px;
+    opacity: 0.5;
+}
+
+
+.character-file[open] summary::before {
+    content: "−";
+}
+
+
+.character-file summary:hover {
+    opacity: 1;
+    letter-spacing: 5px;
+}
+
+
+.character-file-content {
     margin-top: 30px;
-    padding: 20px;
-    text-align: center;
-    border: 1px solid rgba(128,96,82,0.35);
-    background: rgba(35,27,25,0.35);
+    text-align: left;
+    animation: fade 0.5s ease;
 }
 
-.confidential .label {
+
+/* HISTORIA */
+
+.character-description {
+    margin-bottom: 30px;
+}
+
+
+.character-description-title {
+    text-align: center;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    opacity: 0.5;
+    margin-bottom: 20px;
+}
+
+
+.character-description p {
+    margin-bottom: 17px;
+}
+
+
+/* MISTERIO */
+
+.character-mystery {
+    text-align: center;
+    margin: 35px 0;
+    padding: 20px 10px;
+    border-top: 1px solid rgba(128,96,82,0.3);
+    border-bottom: 1px solid rgba(128,96,82,0.3);
+}
+
+
+.character-mystery .label {
     font-family: 'Noto Serif JP', serif;
     font-size: 8px;
     letter-spacing: 4px;
-    opacity: 0.4;
-    margin-bottom: 8px;
+    opacity: 0.35;
+    margin-bottom: 12px;
 }
 
-.confidential p {
-    font-size: 16px;
+
+.character-mystery p {
+    font-size: 17px;
     font-style: italic;
-    opacity: 0.65;
-    margin-bottom: 0;
+    opacity: 0.7;
 }
 
-/* CELULAR */
+
+/* ESTADO */
+
+.character-status {
+    text-align: center;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    opacity: 0.4;
+    margin-top: 30px;
+}
+
+
+/* ═══════════════════════════════
+   AKARI
+   ═══════════════════════════════ */
+
+.secondary-character {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.secondary-symbol {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+
+.secondary-name {
+    font-size: 26px;
+    letter-spacing: 6px;
+}
+
+
+.secondary-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    opacity: 0.4;
+    margin: 6px 0 15px;
+}
+
+
+.secondary-character p {
+    max-width: 350px;
+    margin: auto;
+    font-size: 15px;
+    opacity: 0.6;
+}
+
+
+.secondary-status {
+    margin-top: 15px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 8px;
+    letter-spacing: 3px;
+    opacity: 0.3;
+}
+
+
+/* ═══════════════════════════════
+   CATEGORÍAS
+   ═══════════════════════════════ */
+
+.character-category {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+
+.category-number {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    opacity: 0.25;
+    margin-bottom: 6px;
+}
+
+
+.character-category .jp {
+    margin-top: 5px;
+}
+
+
+.character-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+
+.available-character {
+    padding: 22px 12px;
+    border-top: 1px solid rgba(128,96,82,0.3);
+    border-bottom: 1px solid rgba(128,96,82,0.2);
+    transition: 0.3s ease;
+}
+
+
+.available-character:hover {
+    background: rgba(128,96,82,0.06);
+}
+
+
+.available-symbol {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+
+.available-character h4 {
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 7px;
+}
+
+
+.available-character span {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 7px;
+    letter-spacing: 2px;
+    opacity: 0.35;
+}
+
+
+/* ═══════════════════════════════
+   ARCHIVO CONFIDENCIAL
+   ═══════════════════════════════ */
+
+.character-confidential {
+    max-width: 400px;
+    margin: 45px auto 25px;
+    text-align: center;
+}
+
+
+.character-confidential span {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 8px;
+    letter-spacing: 4px;
+    opacity: 0.35;
+}
+
+
+.character-confidential p {
+    margin-top: 10px;
+    font-size: 14px;
+    font-style: italic;
+    opacity: 0.5;
+}
+
+
+/* ═══════════════════════════════
+   CELULAR
+   ═══════════════════════════════ */
 
 @media (max-width: 500px) {
 
+    .character-name {
+        font-size: 27px;
+        letter-spacing: 5px;
+    }
+
+    .character-data {
+        gap: 6px 12px;
+    }
+
+    .character-question p {
+        font-size: 17px;
+    }
+
     .character-grid {
-        grid-template-columns: 1fr;
+        gap: 8px;
     }
 
-    .profile-info {
-        grid-template-columns: 1fr;
-    }
-
-    .character-card {
-        min-height: 150px;
+    .available-character {
+        padding: 18px 8px;
     }
 
 }
-
    /* ═══════════════════════════════
    ROLES — DISEÑO
 ═══════════════════════════════ */
@@ -3352,11 +3547,10 @@ header {
     ═══════════════════════════════ -->
 
 
-<section id="personajes" class="section personajes">
 
-    <div class="chapter-number">
-        01
-    </div>
+<section id="personajes" class="section personajes-section">
+
+    <div class="chapter-number">01</div>
 
     <h2>PERSONAJES</h2>
 
@@ -3364,389 +3558,269 @@ header {
         登場人物 — TŌJŌJINBUTSU
     </div>
 
-
-    <div class="personajes-intro">
-
-        <p class="opening">
-            Nadie es exactamente quien dice ser.
-        </p>
-
-        <p>
-            Cada persona que entra en YŌRŌ trae consigo
-            una historia, una identidad y secretos que
-            pueden cambiar el curso de la noche.
-        </p>
-
-    </div>
+    <p class="characters-intro">
+        Nadie es exactamente quien dice ser.
+        Cada persona que entra en YŌRŌ trae consigo
+        una historia, una identidad y secretos que
+        pueden cambiar el curso de la noche.
+    </p>
 
 
-    <div class="characters-divider">
-        ✦
-    </div>
+    <div class="story-divider">✦</div>
 
 
     <!-- PERSONAJES PRINCIPALES -->
 
-    <div class="character-category">
+    <div class="characters-heading">
 
-        <div class="character-category-title">
-            PERSONAJES PRINCIPALES
+        <span>ARCHIVO</span>
+
+        <h3>PERSONAJES PRINCIPALES</h3>
+
+    </div>
+
+
+    <!-- MINGI -->
+
+    <article class="main-character">
+
+        <div class="character-symbol">
+            🏮
+        </div>
+
+        <div class="character-name">
+            SONG MINGI
+        </div>
+
+        <div class="character-title">
+            EL HEREDERO DE LA CASA
+        </div>
+
+        <div class="character-line"></div>
+
+
+        <div class="character-data">
+
+            <div class="character-data-box">
+                <span>EDAD</span>
+                <strong>27</strong>
+            </div>
+
+            <div class="character-data-box">
+                <span>POSICIÓN</span>
+                <strong>OWEN</strong>
+            </div>
+
+            <div class="character-data-box">
+                <span>ROL</span>
+                <strong>DUEÑO</strong>
+            </div>
+
+            <div class="character-data-box">
+                <span>ESTADO</span>
+                <strong>ACTIVO</strong>
+            </div>
+
         </div>
 
 
-        <div class="character-grid">
+        <div class="character-question">
 
-            <div class="character-card">
+            <p>
+                «Conocer la verdad no significa
+                estar dispuesto a revelarla.»
+            </p>
 
-                <div class="character-status">
-                    ARCHIVO
-                </div>
+        </div>
 
-                <div class="symbol">
-                    🌸
-                </div>
 
-                <div class="character-name">
-                    AKARI
-                </div>
+        <details class="character-file">
 
-                <div class="character-role">
-                    LA FLOR DE YŌRŌ
-                </div>
+            <summary>
+                VER ARCHIVO COMPLETO
+            </summary>
+
+
+            <div class="character-file-content">
 
                 <div class="character-description">
-                    Una figura del pasado cuya desaparición
-                    continúa rodeada de preguntas.
+
+                    <div class="character-description-title">
+                        「 HISTORIA 」
+                    </div>
+
+                    <p>
+                        Mingi pertenece a la familia que ha
+                        estado al frente de YŌRŌ durante
+                        generaciones.
+                    </p>
+
+                    <p>
+                        Tras recibir la responsabilidad de
+                        dirigir el establecimiento, se convirtió
+                        en el actual dueño y principal autoridad
+                        de la casa.
+                    </p>
+
+                    <p>
+                        Desde pequeño creció escuchando
+                        historias sobre YŌRŌ. Algunas eran
+                        simples recuerdos familiares; otras,
+                        conversaciones que nunca debieron
+                        llegar a sus oídos.
+                    </p>
+
+                    <p>
+                        Entre ellas se encontraba la historia
+                        de <strong>Akari</strong>.
+                    </p>
+
+                    <p>
+                        A diferencia de la mayoría de los
+                        trabajadores y clientes, Mingi conoce
+                        información relacionada con lo ocurrido
+                        siete años atrás.
+                    </p>
+
                 </div>
 
-  
-<div class="main-character">
 
-    <div class="character-symbol">
-        🏮
-    </div>
+                <div class="character-mystery">
 
-    <div class="character-name">
-        SONG MINGI
-    </div>
+                    <div class="label">
+                        ARCHIVO RESERVADO
+                    </div>
 
-    <div class="character-title">
-        EL HEREDERO DE LA CASA
-    </div>
+                    <p>
+                        La verdad también está ligada
+                        a su propia familia.
+                    </p>
 
-    <div class="character-line"></div>
+                </div>
 
 
-    <!-- DATOS BÁSICOS -->
+                <div class="character-description">
 
-    <div class="character-data">
+                    <div class="character-description-title">
+                        「 EL SECRETO 」
+                    </div>
 
-        <div class="character-data-box">
-            <span>EDAD</span>
-            <strong>27 años</strong>
+                    <p>
+                        Mingi conoce la versión de los
+                        acontecimientos que la antigua
+                        dirección decidió ocultar.
+                    </p>
+
+                    <p>
+                        Sabe qué ocurrió aquella noche
+                        y comprende por qué el nombre
+                        de Akari desapareció de los
+                        registros de YŌRŌ.
+                    </p>
+
+                    <p>
+                        Sin embargo, la verdad también
+                        está ligada a su propia familia.
+                    </p>
+
+                    <p>
+                        Ahora que alguien parece decidido
+                        a sacar el pasado nuevamente a la
+                        luz, Mingi deberá decidir cuánto
+                        está dispuesto a proteger:
+                        a su familia, a YŌRŌ y a sí mismo.
+                    </p>
+
+                </div>
+
+
+                <div class="character-status">
+                    主人 — SHUJIN · DUEÑO DE LA CASA
+                </div>
+
+            </div>
+
+        </details>
+
+    </article>
+
+
+    <div class="story-divider">✦</div>
+
+
+    <!-- AKARI -->
+
+    <article class="secondary-character">
+
+        <div class="secondary-symbol">
+            🌸
         </div>
 
-        <div class="character-data-box">
-            <span>POSICIÓN</span>
-            <strong>OWEN</strong>
+        <div class="secondary-name">
+            AKARI
         </div>
 
-        <div class="character-data-box">
-            <span>ROL</span>
-            <strong>Dueño de YŌRŌ</strong>
+        <div class="secondary-title">
+            LA FLOR DE YŌRŌ
         </div>
-
-        <div class="character-data-box">
-            <span>ESTADO</span>
-            <strong>Activo</strong>
-        </div>
-
-    </div>
-
-
-    <!-- FRASE PRINCIPAL -->
-
-    <div class="character-question">
 
         <p>
-            «Conocer la verdad no significa
-            estar dispuesto a revelarla.»
+            Una figura del pasado cuya desaparición
+            continúa rodeada de preguntas.
         </p>
 
-    </div>
-
-
-    <!-- ARCHIVO COMPLETO -->
-
-    <details class="character-file">
-
-        <summary>
-            VER ARCHIVO COMPLETO
-        </summary>
-
-
-        <div class="character-description">
-
-            <div class="character-description-title">
-                「 HISTORIA 」
-            </div>
-
-            <p>
-                Mingi pertenece a la familia que ha estado
-                al frente de YŌRŌ durante generaciones.
-                Tras recibir la responsabilidad de dirigir
-                el establecimiento, se convirtió en el
-                actual dueño y principal autoridad de la casa.
-            </p>
-
-            <p>
-                Desde pequeño creció escuchando historias
-                sobre YŌRŌ. Algunas eran simples recuerdos
-                familiares; otras, conversaciones que nunca
-                debieron llegar a sus oídos.
-            </p>
-
-            <p>
-                Entre ellas se encontraba la historia de
-                <strong>Akari</strong>.
-            </p>
-
-            <p>
-                A diferencia de la mayoría de los trabajadores
-                y clientes, Mingi conoce información relacionada
-                con lo ocurrido siete años atrás.
-            </p>
-
+        <div class="secondary-status">
+            ARCHIVO · DESAPARECIDA
         </div>
 
-
-        <div class="character-mystery">
-
-            <div class="label">
-                ARCHIVO RESERVADO
-            </div>
-
-            <p>
-                La verdad también está ligada
-                a su propia familia.
-            </p>
-
-        </div>
+    </article>
 
 
-        <div class="character-description">
+    <div class="story-divider">✦</div>
 
-            <div class="character-description-title">
-                「 EL SECRETO 」
-            </div>
-
-            <p>
-                Mingi conoce la versión de los acontecimientos
-                que la antigua dirección decidió ocultar.
-                Sabe qué ocurrió aquella noche y comprende
-                por qué el nombre de Akari desapareció de
-                los registros de YŌRŌ.
-            </p>
-
-            <p>
-                Sin embargo, la verdad también está ligada
-                a su propia familia.
-            </p>
-
-            <p>
-                Ahora que alguien parece decidido a sacar
-                el pasado nuevamente a la luz, Mingi deberá
-                decidir cuánto está dispuesto a proteger:
-                a su familia, a YŌRŌ y a sí mismo.
-            </p>
-
-        </div>
-
-
-        <div class="character-status">
-            主人 — · DUEÑO DE LA CASA
-        </div>
-
-    </details>
-
-</div>
-        
-/* ───── DATOS DISCRETOS DEL PERSONAJE ───── */
-
-.character-data {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px 18px;
-    margin: 20px 0 35px;
-}
-
-.character-data-box {
-    border: none;
-    background: transparent;
-    padding: 0;
-    text-align: center;
-}
-
-.character-data-box span {
-    display: inline;
-    font-family: 'Noto Serif JP', serif;
-    font-size: 8px;
-    letter-spacing: 1.5px;
-    opacity: 0.35;
-    margin-right: 4px;
-}
-
-.character-data-box strong {
-    font-size: 12px;
-    font-weight: 400;
-    opacity: 0.55;
-}
-
-
-/* ───── PREGUNTA PRINCIPAL ───── */
-
-.character-question {
-    text-align: center;
-    margin: 35px 10px;
-}
-
-.character-question p {
-    font-size: 20px;
-    font-style: italic;
-    opacity: 0.85;
-    line-height: 1.6;
-}
-
-
-/* ───── ARCHIVO DESPLEGABLE ───── */
-
-.character-file {
-    margin-top: 30px;
-    border-top: 1px solid rgba(128,96,82,0.35);
-    padding-top: 20px;
-}
-
-.character-file summary {
-    list-style: none;
-    cursor: pointer;
-    text-align: center;
-    font-family: 'Noto Serif JP', serif;
-    font-size: 10px;
-    letter-spacing: 3px;
-    opacity: 0.55;
-    padding: 12px;
-    transition: 0.3s ease;
-}
-
-.character-file summary::-webkit-details-marker {
-    display: none;
-}
-
-.character-file summary::before {
-    content: "＋";
-    margin-right: 8px;
-    opacity: 0.6;
-}
-
-.character-file[open] summary::before {
-    content: "−";
-}
-
-.character-file summary:hover {
-    opacity: 1;
-    letter-spacing: 4px;
-}
-
-
-/* ───── CONTENIDO DEL ARCHIVO ───── */
-
-.character-file .character-description {
-    margin-top: 30px;
-}
-
-.character-file .character-mystery {
-    margin: 30px 0;
-}
-
-.character-file .character-status {
-    margin: 30px 0;
-}
-
-
-/* CELULAR */
-
-@media (max-width: 500px) {
-
-    .character-data {
-        gap: 7px 12px;
-    }
-
-    .character-question p {
-        font-size: 18px;
-    }
-
-}        
 
     <!-- TRABAJADORES -->
 
     <div class="character-category">
 
-        <div class="character-category-title">
-            TRABAJADORES
+        <div class="category-number">
+            02
         </div>
 
+        <h3>TRABAJADORES</h3>
+
+        <div class="jp">
+            働く者 — HATARAKU MONO
+        </div>
 
         <div class="character-grid">
 
-            <div class="character-card">
+            <div class="available-character">
 
-                <div class="character-status">
-                    DISPONIBLE
-                </div>
-
-                <div class="symbol">
+                <div class="available-symbol">
                     🥀
                 </div>
 
-                <div class="character-name">
-                    — — —
-                </div>
+                <h4>TRABAJADOR</h4>
 
-                <div class="character-role">
-                    TRABAJADOR
-                </div>
-
-                <div class="character-description">
-                    Archivo disponible para un personaje
-                    perteneciente al personal de YŌRŌ.
-                </div>
+                <span>
+                    ARCHIVO DISPONIBLE
+                </span>
 
             </div>
 
 
-            <div class="character-card">
+            <div class="available-character">
 
-                <div class="character-status">
-                    DISPONIBLE
-                </div>
-
-                <div class="symbol">
+                <div class="available-symbol">
                     🎭
                 </div>
 
-                <div class="character-name">
-                    — — —
-                </div>
+                <h4>ARTISTA</h4>
 
-                <div class="character-role">
-                    ARTISTA
-                </div>
-
-                <div class="character-description">
-                    Archivo disponible para un artista
-                    relacionado con la casa.
-                </div>
+                <span>
+                    ARCHIVO DISPONIBLE
+                </span>
 
             </div>
 
@@ -3755,70 +3829,51 @@ header {
     </div>
 
 
-    <div class="characters-divider">
-        ✦
-    </div>
+    <div class="story-divider">✦</div>
 
 
     <!-- CLIENTES -->
 
     <div class="character-category">
 
-        <div class="character-category-title">
-            CLIENTES
+        <div class="category-number">
+            03
         </div>
 
+        <h3>CLIENTES</h3>
+
+        <div class="jp">
+            客 — KYAKU
+        </div>
 
         <div class="character-grid">
 
-            <div class="character-card">
+            <div class="available-character">
 
-                <div class="character-status">
-                    DISPONIBLE
-                </div>
-
-                <div class="symbol">
+                <div class="available-symbol">
                     🍷
                 </div>
 
-                <div class="character-name">
-                    — — —
-                </div>
+                <h4>CLIENTE</h4>
 
-                <div class="character-role">
-                    CLIENTE
-                </div>
-
-                <div class="character-description">
-                    Archivo disponible para un cliente
-                    habitual de YŌRŌ.
-                </div>
+                <span>
+                    ARCHIVO DISPONIBLE
+                </span>
 
             </div>
 
 
-            <div class="character-card">
+            <div class="available-character">
 
-                <div class="character-status">
-                    DISPONIBLE
-                </div>
-
-                <div class="symbol">
+                <div class="available-symbol">
                     🥂
                 </div>
 
-                <div class="character-name">
-                    — — —
-                </div>
+                <h4>CLIENTE VIP</h4>
 
-                <div class="character-role">
-                    CLIENTE VIP
-                </div>
-
-                <div class="character-description">
-                    Una figura perteneciente a los círculos
-                    más exclusivos de la ciudad.
-                </div>
+                <span>
+                    ARCHIVO DISPONIBLE
+                </span>
 
             </div>
 
@@ -3827,29 +3882,20 @@ header {
     </div>
 
 
-    <div class="characters-divider">
-        ✦
-    </div>
+    <div class="character-confidential">
 
-
-    <!-- ARCHIVOS CONFIDENCIALES -->
-
-    <div class="confidential">
-
-        <div class="label">
-            ARCHIVO CONFIDENCIAL
-        </div>
+        <span>ARCHIVO CONFIDENCIAL</span>
 
         <p>
-            Algunos personajes poseen información que
-            no debe ser conocida por todos.
+            Algunos personajes poseen información
+            que no debe ser conocida por todos.
         </p>
 
     </div>
 
 
     <button class="close" onclick="closeSections()">
-        CERRAR ARCHIVO
+        CERRAR
     </button>
 
 </section>
