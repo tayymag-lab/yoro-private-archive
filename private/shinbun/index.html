@@ -8,14 +8,13 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
     --bg:#0b0a0b;
-    --paper:#151315;
-    --paper2:#1b191b;
     --text:#e8e0d4;
     --muted:#9d958c;
     --line:#494348;
@@ -39,7 +38,7 @@ body{
         radial-gradient(circle at top, rgba(125,32,41,.12), transparent 35%),
         var(--bg);
     color:var(--text);
-    font-family:"Cormorant Garamond", serif;
+    font-family:"Cormorant Garamond",serif;
     min-height:100vh;
 }
 
@@ -53,14 +52,13 @@ body::before{
     z-index:999;
 }
 
-/* ───────── HEADER ───────── */
+/* HEADER */
 
 header{
     width:100%;
     border-bottom:1px solid var(--line);
     padding:18px 20px;
     text-align:center;
-    position:relative;
 }
 
 .header-top{
@@ -131,14 +129,12 @@ header{
     flex:1;
 }
 
-/* ───────── MAIN ───────── */
+/* MAIN */
 
 main{
     width:min(1100px,92%);
     margin:45px auto 80px;
 }
-
-/* EDICIÓN */
 
 .edition-head{
     text-align:center;
@@ -164,8 +160,6 @@ main{
     font-size:.9rem;
     letter-spacing:3px;
 }
-
-/* TITULARES */
 
 .headline{
     border-top:3px double var(--line);
@@ -197,8 +191,6 @@ main{
     font-size:1.05rem;
     line-height:1.6;
 }
-
-/* GRID */
 
 .news-grid{
     display:grid;
@@ -279,8 +271,6 @@ main{
     line-height:1.5;
 }
 
-/* CITA */
-
 .quote{
     margin:45px 0;
     padding:35px 25px;
@@ -302,8 +292,6 @@ main{
     font-style:italic;
     font-size:1.4rem;
 }
-
-/* RUMORES */
 
 .rumors{
     border:1px solid var(--line);
@@ -334,8 +322,6 @@ main{
     line-height:1.7;
 }
 
-/* BOTONES */
-
 .navigation{
     display:flex;
     justify-content:center;
@@ -362,8 +348,6 @@ main{
     background:rgba(181,154,104,.04);
 }
 
-/* FOOTER */
-
 footer{
     border-top:1px solid var(--line);
     text-align:center;
@@ -382,8 +366,6 @@ footer p{
     font-size:.75rem;
     letter-spacing:2px;
 }
-
-/* RESPONSIVE */
 
 @media(max-width:750px){
 
@@ -434,15 +416,33 @@ footer p{
 <header>
 
     <div class="header-top">
-        <a href="../index.html">← YŌRŌ</a>
+
+        <!-- CORREGIDO: vuelve al portal principal -->
+        <a href="../../index.html">
+            ← YŌRŌ
+        </a>
+
         <span>PRIVATE EDITION</span>
-        <a href="archivo.html">ARCHIVE →</a>
+
+        <!-- MISMA CARPETA -->
+        <a href="archivo.html">
+            ARCHIVE →
+        </a>
+
     </div>
 
     <div class="masthead">
+
         <div class="jp">夜報</div>
-        <div class="roman">YŌRŌ SHINBUN</div>
-        <div class="subtitle">夜間情報局 · INFORMACIÓN NOCTURNA</div>
+
+        <div class="roman">
+            YŌRŌ SHINBUN
+        </div>
+
+        <div class="subtitle">
+            夜間情報局 · INFORMACIÓN NOCTURNA
+        </div>
+
     </div>
 
     <div class="header-line">
@@ -541,9 +541,7 @@ footer p{
 
                 <p>
                     Se han realizado diferentes ajustes en la organización
-                    del rol, sus espacios y sistemas internos. Se recomienda
-                    a todos los miembros mantenerse atentos a los próximos
-                    comunicados.
+                    del rol, sus espacios y sistemas internos.
                 </p>
 
             </article>
@@ -556,7 +554,6 @@ footer p{
             <div class="side-title">
                 今夜の予定 · AGENDA
             </div>
-
 
             <div class="agenda-item">
 
@@ -644,10 +641,12 @@ footer p{
 
     <nav class="navigation">
 
-        <a href="../index.html" class="btn">
+        <!-- CORREGIDO -->
+        <a href="../../index.html" class="btn">
             「 YŌRŌ 」 PORTAL
         </a>
 
+        <!-- MISMA CARPETA -->
         <a href="archivo.html" class="btn">
             「 ARCHIVE 」 EDICIONES
         </a>
