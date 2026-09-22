@@ -1,4 +1,156 @@
-<!DOCTYPE html>
+/* ───── PERSONAJE PRINCIPAL ───── */
+
+.main-character {
+    margin-top: 30px;
+    padding: 25px 20px;
+    border: 1px solid rgba(128, 96, 82, 0.5);
+    background: rgba(35, 27, 25, 0.35);
+    position: relative;
+}
+
+.main-character::before {
+    content: "PERSONAJE PRINCIPAL";
+    position: absolute;
+    top: -8px;
+    left: 20px;
+    padding: 0 10px;
+    background: #100b0b;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 8px;
+    letter-spacing: 3px;
+    opacity: 0.55;
+}
+
+.character-symbol {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 12px;
+    opacity: 0.8;
+}
+
+.character-name {
+    text-align: center;
+    font-size: 34px;
+    letter-spacing: 5px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.character-title {
+    text-align: center;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    opacity: 0.5;
+    margin-bottom: 25px;
+}
+
+.character-line {
+    width: 60px;
+    height: 1px;
+    background: #806052;
+    margin: 0 auto 25px;
+}
+
+.character-data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.character-data-box {
+    padding: 12px 10px;
+    border: 1px solid rgba(128, 96, 82, 0.3);
+    background: rgba(0, 0, 0, 0.12);
+}
+
+.character-data-box span {
+    display: block;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 8px;
+    letter-spacing: 2px;
+    opacity: 0.4;
+    margin-bottom: 5px;
+}
+
+.character-data-box strong {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.character-description {
+    margin: 25px 0;
+    padding-left: 18px;
+    border-left: 1px solid rgba(128, 96, 82, 0.6);
+}
+
+.character-description-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    opacity: 0.45;
+    margin-bottom: 12px;
+}
+
+.character-description p {
+    margin-bottom: 17px;
+}
+
+.character-mystery {
+    margin: 30px 0;
+    padding: 22px 15px;
+    text-align: center;
+    border-top: 1px solid rgba(128, 96, 82, 0.4);
+    border-bottom: 1px solid rgba(128, 96, 82, 0.4);
+}
+
+.character-mystery .label {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    opacity: 0.4;
+    margin-bottom: 12px;
+}
+
+.character-mystery p {
+    font-size: 20px;
+    font-style: italic;
+    margin: 0;
+}
+
+.character-question {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.character-question p {
+    font-size: 20px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.character-status {
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    opacity: 0.4;
+}
+
+@media (max-width: 500px) {
+
+    .character-name {
+        font-size: 28px;
+        letter-spacing: 4px;
+    }
+
+    .character-data {
+        grid-template-columns: 1fr;
+    }
+
+}<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -1901,6 +2053,160 @@ header {
     }
 
 }
+
+/* ───── PERSONAJE PRINCIPAL ───── */
+
+.main-character {
+    margin-top: 30px;
+    padding: 25px 20px;
+    border: 1px solid rgba(128, 96, 82, 0.5);
+    background: rgba(35, 27, 25, 0.35);
+    position: relative;
+}
+
+.main-character::before {
+    content: "PERSONAJE PRINCIPAL";
+    position: absolute;
+    top: -8px;
+    left: 20px;
+    padding: 0 10px;
+    background: #100b0b;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 8px;
+    letter-spacing: 3px;
+    opacity: 0.55;
+}
+
+.character-symbol {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 12px;
+    opacity: 0.8;
+}
+
+.character-name {
+    text-align: center;
+    font-size: 34px;
+    letter-spacing: 5px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.character-title {
+    text-align: center;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    opacity: 0.5;
+    margin-bottom: 25px;
+}
+
+.character-line {
+    width: 60px;
+    height: 1px;
+    background: #806052;
+    margin: 0 auto 25px;
+}
+
+.character-data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.character-data-box {
+    padding: 12px 10px;
+    border: 1px solid rgba(128, 96, 82, 0.3);
+    background: rgba(0, 0, 0, 0.12);
+}
+
+.character-data-box span {
+    display: block;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 8px;
+    letter-spacing: 2px;
+    opacity: 0.4;
+    margin-bottom: 5px;
+}
+
+.character-data-box strong {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.character-description {
+    margin: 25px 0;
+    padding-left: 18px;
+    border-left: 1px solid rgba(128, 96, 82, 0.6);
+}
+
+.character-description-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    opacity: 0.45;
+    margin-bottom: 12px;
+}
+
+.character-description p {
+    margin-bottom: 17px;
+}
+
+.character-mystery {
+    margin: 30px 0;
+    padding: 22px 15px;
+    text-align: center;
+    border-top: 1px solid rgba(128, 96, 82, 0.4);
+    border-bottom: 1px solid rgba(128, 96, 82, 0.4);
+}
+
+.character-mystery .label {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    opacity: 0.4;
+    margin-bottom: 12px;
+}
+
+.character-mystery p {
+    font-size: 20px;
+    font-style: italic;
+    margin: 0;
+}
+
+.character-question {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.character-question p {
+    font-size: 20px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.character-status {
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    opacity: 0.4;
+}
+
+@media (max-width: 500px) {
+
+    .character-name {
+        font-size: 28px;
+        letter-spacing: 4px;
+    }
+
+    .character-data {
+        grid-template-columns: 1fr;
+    }
+
+}   
    
 /* ═══════════════════════════════
    BOTÓN CERRAR
@@ -3265,42 +3571,148 @@ header {
                     continúa rodeada de preguntas.
                 </div>
 
+    <div class="main-character">
+
+        <div class="character-symbol">
+            🏮
+        </div>
+
+        <div class="character-name">
+            SONG MINGI
+        </div>
+
+        <div class="character-title">
+            EL HEREDERO DE LA CASA
+        </div>
+
+        <div class="character-line"></div>
+
+
+        <div class="character-data">
+
+            <div class="character-data-box">
+                <span>EDAD</span>
+                <strong>27 años</strong>
             </div>
 
-
-            <div class="character-card">
-
-                <div class="character-status">
-                    PRÓXIMAMENTE
-                </div>
-
-                <div class="symbol">
-                    🏮
-                </div>
-
-                <div class="character-name">
-                    — — —
-                </div>
-
-                <div class="character-role">
-                    PERSONAJE PRINCIPAL
-                </div>
-
-                <div class="character-description">
-                    Este archivo será actualizado cuando
-                    el personaje sea incorporado.
-                </div>
-
+            <div class="character-data-box">
+                <span>POSICIÓN</span>
+                <strong>Dueño de YŌRŌ</strong>
             </div>
 
+            <div class="character-data-box">
+                <span>ROL</span>
+                <strong>Jefe de la casa</strong>
+            </div>
+
+            <div class="character-data-box">
+                <span>ESTADO</span>
+                <strong>Personaje principal</strong>
+            </div>
+
+        </div>
+
+
+        <div class="character-description">
+
+            <div class="character-description-title">
+                「 HISTORIA 」
+            </div>
+
+            <p>
+                Mingi pertenece a la familia que ha estado
+                al frente de YŌRŌ durante generaciones.
+                Tras recibir la responsabilidad de dirigir
+                el establecimiento, se convirtió en el
+                actual dueño y principal autoridad de la casa.
+            </p>
+
+            <p>
+                Desde pequeño creció escuchando historias
+                sobre YŌRŌ. Algunas eran simples recuerdos
+                familiares; otras, conversaciones que nunca
+                debieron llegar a sus oídos.
+            </p>
+
+            <p>
+                Entre ellas se encontraba la historia de
+                <strong>Akari</strong>.
+            </p>
+
+            <p>
+                A diferencia de la mayoría de los trabajadores
+                y clientes, Mingi conoce información relacionada
+                con lo ocurrido siete años atrás.
+            </p>
+
+        </div>
+
+
+        <div class="character-mystery">
+
+            <div class="label">
+                ARCHIVO RESERVADO
+            </div>
+
+            <p>
+                «Conocer la verdad no significa
+                estar dispuesto a revelarla.»
+            </p>
+
+        </div>
+
+
+        <div class="character-description">
+
+            <div class="character-description-title">
+                「 EL SECRETO 」
+            </div>
+
+            <p>
+                Mingi conoce la versión de los acontecimientos
+                que la antigua dirección decidió ocultar.
+                Sabe qué ocurrió aquella noche y comprende
+                por qué el nombre de Akari desapareció de
+                los registros de YŌRŌ.
+            </p>
+
+            <p>
+                Sin embargo, la verdad también está ligada
+                a su propia familia.
+            </p>
+
+            <p>
+                Ahora que alguien parece decidido a sacar
+                el pasado nuevamente a la luz, Mingi deberá
+                decidir cuánto está dispuesto a proteger:
+                a su familia, a YŌRŌ y a sí mismo.
+            </p>
+
+        </div>
+
+
+        <div class="character-question">
+
+            <p>
+                ¿Qué está dispuesto a hacer
+                quien ya conoce la verdad?
+            </p>
+
+        </div>
+
+
+        <div class="character-status">
+            主人 — SHUJIN · DUEÑO DE LA CASA
         </div>
 
     </div>
 
 
-    <div class="characters-divider">
-        ✦
-    </div>
+    <button class="close" onclick="closeSections()">
+        CERRAR
+    </button>
+           
+
 
 
     <!-- TRABAJADORES -->
