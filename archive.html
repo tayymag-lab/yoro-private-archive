@@ -1111,200 +1111,213 @@ header {
 
 }
 
-   /* ═══════════════════════════════
-   INTEGRANTES — DISEÑO
-═══════════════════════════════ */
 
-.integrantes h2 {
-    font-size: 38px;
-    letter-spacing: 8px;
+/* ═══════════════════════════════════════
+   INTEGRANTES — ARCHIVO DE MIEMBROS
+═══════════════════════════════════════ */
+
+.members-archive {
+    max-width: 620px;
+    margin: 30px auto 10px;
+    padding: 28px 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(35, 27, 25, 0.72),
+            rgba(12, 9, 9, 0.82)
+        );
+
+    border: 1px solid rgba(128, 96, 82, 0.45);
+
+    box-shadow:
+        inset 0 0 35px rgba(0,0,0,0.18),
+        0 10px 35px rgba(0,0,0,0.15);
 }
 
-.members-intro {
-    border-left: 1px solid rgba(128,96,82,0.5);
-    padding-left: 20px;
-    margin-bottom: 35px;
-}
 
-.members-intro p {
-    margin-bottom: 15px;
-}
+/* ENCABEZADO */
 
-.members-intro .opening {
-    font-size: 21px !important;
-    font-style: italic;
-    opacity: 0.95 !important;
-}
-
-.members-divider {
+.members-header {
     text-align: center;
-    margin: 38px 0;
-    color: #a98572;
-    opacity: 0.7;
-    letter-spacing: 5px;
+    padding-bottom: 25px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid rgba(128,96,82,0.3);
 }
 
-/* CONTADOR */
-
-.member-count {
-    text-align: center;
-    margin: 25px 0 35px;
-}
-
-.member-count .number {
-    font-size: 32px;
-    letter-spacing: 4px;
-}
-
-.member-count .label {
-    display: block;
-    font-family: 'Noto Serif JP', serif;
-    font-size: 9px;
-    letter-spacing: 4px;
-    opacity: 0.4;
-    margin-top: 3px;
-}
-
-/* CATEGORÍA */
-
-.member-category {
-    margin: 30px 0;
-}
-
-.member-category-title {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 10px;
-    letter-spacing: 4px;
-    opacity: 0.45;
-    margin-bottom: 16px;
-}
-
-/* TARJETAS */
-
-.member-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-}
-
-.member-card {
-    padding: 20px 18px;
-    background: rgba(20,15,15,0.7);
-    border: 1px solid rgba(128,96,82,0.4);
-    transition: 0.35s ease;
-}
-
-.member-card:hover {
-    background: rgba(128,96,82,0.15);
-    border-color: #a98572;
-    transform: translateY(-2px);
-}
-
-.member-symbol {
-    font-size: 23px;
+.members-header .symbol {
+    font-size: 22px;
     margin-bottom: 10px;
 }
 
-.member-name {
-    font-size: 22px;
-    letter-spacing: 2px;
-    margin-bottom: 3px;
-}
-
-.member-user {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 9px;
-    letter-spacing: 2px;
-    opacity: 0.4;
-    margin-bottom: 15px;
-}
-
-.member-info {
-    border-top: 1px solid rgba(128,96,82,0.25);
-    padding-top: 12px;
-}
-
-.member-info div {
-    margin-bottom: 7px;
-}
-
-.member-info span {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 8px;
-    letter-spacing: 2px;
-    opacity: 0.4;
-}
-
-.member-info strong {
-    font-size: 15px;
+.members-header h3 {
+    font-size: 25px;
     font-weight: 400;
+    letter-spacing: 5px;
+    margin-bottom: 6px;
 }
 
-/* ESTADO */
-
-.member-status {
-    margin-top: 15px;
+.members-header .jp {
     font-family: 'Noto Serif JP', serif;
-    font-size: 8px;
+    font-size: 10px;
     letter-spacing: 3px;
     opacity: 0.45;
 }
 
-/* NOTA */
 
-.member-note {
-    margin: 35px 0;
-    padding: 22px 18px;
-    text-align: center;
-    border-top: 1px solid rgba(128,96,82,0.4);
-    border-bottom: 1px solid rgba(128,96,82,0.4);
+/* FICHA */
+
+.member-card {
+    padding: 25px 22px;
+
+    background: rgba(255,255,255,0.015);
+
+    border: 1px solid rgba(128,96,82,0.35);
 }
 
-.member-note .label {
+
+/* ESTADO */
+
+.member-label {
+    text-align: center;
+
+    font-family: 'Noto Serif JP', serif;
+    font-size: 9px;
+    letter-spacing: 4px;
+
+    opacity: 0.4;
+
+    margin-bottom: 18px;
+}
+
+
+/* NOMBRE */
+
+.member-name {
+    text-align: center;
+
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: 400;
+}
+
+.member-character {
+    text-align: center;
+
+    margin-top: 5px;
+
+    font-family: 'Noto Serif JP', serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+
+    opacity: 0.5;
+}
+
+
+/* LÍNEA */
+
+.member-line {
+    width: 55px;
+    height: 1px;
+
+    background: #806052;
+
+    margin: 20px auto;
+}
+
+
+/* DATOS */
+
+.member-data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.member-data-item {
+    padding: 12px 10px;
+
+    border-top: 1px solid rgba(128,96,82,0.25);
+
+    text-align: center;
+}
+
+.member-data-item span {
+    display: block;
+
     font-family: 'Noto Serif JP', serif;
     font-size: 8px;
-    letter-spacing: 4px;
-    opacity: 0.4;
-    margin-bottom: 10px;
+    letter-spacing: 3px;
+
+    opacity: 0.35;
+
+    margin-bottom: 5px;
 }
 
-.member-note p {
-    font-size: 17px;
-    font-style: italic;
-    opacity: 0.7;
-    margin-bottom: 0;
-}
+.member-data-item strong {
+    display: block;
 
-/* FINAL */
-
-.members-ending {
-    text-align: center;
-    margin: 50px 0 30px;
-    padding-top: 30px;
-    border-top: 1px solid rgba(128,96,82,0.4);
-}
-
-.members-ending .jp {
     font-size: 15px;
-    opacity: 0.7;
+    font-weight: 400;
+    letter-spacing: 1px;
+
+    opacity: 0.85;
 }
 
-.members-ending p {
+
+/* FRASE */
+
+.member-quote {
+    margin-top: 22px;
+    padding: 20px 15px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(128,96,82,0.25);
+    border-bottom: 1px solid rgba(128,96,82,0.25);
+}
+
+.member-quote p {
+    margin: 0;
+
     font-size: 17px;
     font-style: italic;
-    opacity: 0.6;
+    line-height: 1.6;
+
+    opacity: 0.75;
 }
+
+
+/* ESTADO FINAL */
+
+.member-status {
+    margin-top: 20px;
+
+    text-align: center;
+
+    font-family: 'Noto Serif JP', serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+
+    opacity: 0.4;
+}
+
 
 /* CELULAR */
 
 @media (max-width: 500px) {
 
-    .member-grid {
-        grid-template-columns: 1fr;
+    .members-archive {
+        padding: 22px 16px;
     }
 
     .member-card {
-        padding: 18px;
+        padding: 22px 17px;
+    }
+
+    .member-name {
+        font-size: 25px;
+        letter-spacing: 4px;
     }
 
 }
@@ -4476,333 +4489,122 @@ header {
 </section>
 
 
+<!-- INTEGRANTES -->
 
-    <!-- ═══════════════════════════════
-         INTEGRANTES
-    ═══════════════════════════════ -->
+<section id="integrantes" class="section">
 
+    <div class="members-archive">
 
-<section id="integrantes" class="section integrantes">
+        <div class="members-header">
 
-    <div class="chapter-number">
-        01
-    </div>
+            <div class="symbol">
+                👥
+            </div>
 
-    <h2>INTEGRANTES</h2>
+            <h3>INTEGRANTES</h3>
 
-    <div class="jp">
-        在籍者 — ZAISEKISHA
-    </div>
-
-
-    <div class="members-intro">
-
-        <p class="opening">
-            La casa nunca está vacía.
-        </p>
-
-        <p>
-            Detrás de cada personaje existe una persona
-            que forma parte de YŌRŌ. Este registro reúne
-            a los integrantes actuales del team y sus
-            respectivos personajes.
-        </p>
-
-    </div>
-
-
-    <div class="member-count">
-
-        <div class="number">
-            00
-        </div>
-
-        <span class="label">
-            MEMBERS REGISTERED
-        </span>
-
-    </div>
-
-
-    <div class="members-divider">
-        ✦
-    </div>
-
-
-    <!-- STAFF -->
-
-    <div class="member-category">
-
-        <div class="member-category-title">
-            ADMINISTRACIÓN
-        </div>
-
-
-        <div class="member-grid">
-
-            <div class="member-card">
-
-                <div class="member-symbol">
-                    🏮
-                </div>
-
-                <div class="member-name">
-                    TU NOMBRE
-                </div>
-
-                <div class="member-user">
-                    @TUUSUARIO
-                </div>
-
-
-                <div class="member-info">
-
-                    <div>
-                        <span>PERSONAJE</span><br>
-                        <strong>Nombre del personaje</strong>
-                    </div>
-
-                    <div>
-                        <span>ROL</span><br>
-                        <strong>Staff / Admin</strong>
-                    </div>
-
-                </div>
-
-
-                <div class="member-status">
-                    ● ACTIVE
-                </div>
-
+            <div class="jp">
+                参加者 — SANKASHA
             </div>
 
         </div>
 
-    </div>
+
+        <!-- MIEMBRO -->
+
+        <div class="member-card">
+
+            <div class="member-label">
+                MIEMBRO ACTIVO
+            </div>
 
 
-    <div class="members-divider">
-        ✦
-    </div>
+            <div class="member-name">
+                SONG MINGI
+            </div>
+
+            <div class="member-character">
+                JEFE DE YŌRŌ
+            </div>
 
 
-    <!-- TRABAJADORES -->
-
-    <div class="member-category">
-
-        <div class="member-category-title">
-            TRABAJADORES
-        </div>
+            <div class="member-line"></div>
 
 
-        <div class="member-grid">
+            <div class="member-data">
 
-            <div class="member-card">
+                <div class="member-data-item">
 
-                <div class="member-symbol">
-                    🥀
-                </div>
+                    <span>EDAD</span>
 
-                <div class="member-name">
-                    NOMBRE
-                </div>
-
-                <div class="member-user">
-                    @USUARIO
-                </div>
-
-
-                <div class="member-info">
-
-                    <div>
-                        <span>PERSONAJE</span><br>
-                        <strong>Nombre del personaje</strong>
-                    </div>
-
-                    <div>
-                        <span>ROL</span><br>
-                        <strong>Trabajador</strong>
-                    </div>
+                    <strong>
+                        27 AÑOS
+                    </strong>
 
                 </div>
 
 
-                <div class="member-status">
-                    ● ACTIVE
+                <div class="member-data-item">
+
+                    <span>ROL EN EL TEAM</span>
+
+                    <strong>
+                        OWEN · JEFE
+                    </strong>
+
+                </div>
+
+
+                <div class="member-data-item">
+
+                    <span>PERSONAJE</span>
+
+                    <strong>
+                        JEFE DE YŌRŌ
+                    </strong>
+
+                </div>
+
+
+                <div class="member-data-item">
+
+                    <span>ORIENTACIÓN</span>
+
+                    <strong>
+                        PANSEXUAL
+                    </strong>
+
                 </div>
 
             </div>
 
 
-            <div class="member-card">
+            <div class="member-quote">
 
-                <div class="member-symbol">
-                    🎭
-                </div>
-
-                <div class="member-name">
-                    NOMBRE
-                </div>
-
-                <div class="member-user">
-                    @USUARIO
-                </div>
-
-
-                <div class="member-info">
-
-                    <div>
-                        <span>PERSONAJE</span><br>
-                        <strong>Nombre del personaje</strong>
-                    </div>
-
-                    <div>
-                        <span>ROL</span><br>
-                        <strong>Artista</strong>
-                    </div>
-
-                </div>
-
-
-                <div class="member-status">
-                    ● ACTIVE
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="members-divider">
-        ✦
-    </div>
-
-
-    <!-- CLIENTES -->
-
-    <div class="member-category">
-
-        <div class="member-category-title">
-            CLIENTELA
-        </div>
-
-
-        <div class="member-grid">
-
-            <div class="member-card">
-
-                <div class="member-symbol">
-                    🍷
-                </div>
-
-                <div class="member-name">
-                    NOMBRE
-                </div>
-
-                <div class="member-user">
-                    @USUARIO
-                </div>
-
-
-                <div class="member-info">
-
-                    <div>
-                        <span>PERSONAJE</span><br>
-                        <strong>Nombre del personaje</strong>
-                    </div>
-
-                    <div>
-                        <span>ROL</span><br>
-                        <strong>Cliente</strong>
-                    </div>
-
-                </div>
-
-
-                <div class="member-status">
-                    ● ACTIVE
-                </div>
+                <p>
+                    «El pasado deja huellas,
+                    pero son los pasos de hoy
+                    los que abren el camino.»
+                </p>
 
             </div>
 
 
-            <div class="member-card">
-
-                <div class="member-symbol">
-                    🥂
-                </div>
-
-                <div class="member-name">
-                    NOMBRE
-                </div>
-
-                <div class="member-user">
-                    @USUARIO
-                </div>
-
-
-                <div class="member-info">
-
-                    <div>
-                        <span>PERSONAJE</span><br>
-                        <strong>Nombre del personaje</strong>
-                    </div>
-
-                    <div>
-                        <span>ROL</span><br>
-                        <strong>Cliente VIP</strong>
-                    </div>
-
-                </div>
-
-
-                <div class="member-status">
-                    ● ACTIVE
-                </div>
-
+            <div class="member-status">
+                ACTIVO · YŌRŌ
             </div>
 
         </div>
-
-    </div>
-
-
-    <div class="member-note">
-
-        <div class="label">
-            REGISTRO INTERNO
-        </div>
-
-        <p>
-            Los integrantes pueden cambiar.
-            Los archivos permanecen.
-        </p>
-
-    </div>
-
-
-    <div class="members-ending">
-
-        <div class="jp">
-            この家は、まだ生きている。
-        </div>
-
-        <p>
-            Esta casa todavía está viva.
-        </p>
 
     </div>
 
 
     <button class="close" onclick="closeSections()">
-        CERRAR ARCHIVO
+        CERRAR
     </button>
 
 </section>
-
-
+ 
 
 <!-- STAFF -->
 
