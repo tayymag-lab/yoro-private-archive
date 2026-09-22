@@ -1113,6 +1113,225 @@ header {
     }
 
 }
+
+   /* ═══════════════════════════════
+   STAFF — ADMINISTRACIÓN
+═══════════════════════════════ */
+
+.staff h2 {
+    font-size: 38px;
+    letter-spacing: 8px;
+}
+
+.staff-intro {
+    border-left: 1px solid rgba(128,96,82,0.5);
+    padding-left: 20px;
+    margin-bottom: 35px;
+}
+
+.staff-intro p {
+    margin-bottom: 15px;
+}
+
+.staff-intro .opening {
+    font-size: 21px !important;
+    font-style: italic;
+    opacity: 0.95 !important;
+}
+
+/* ENCABEZADO INTERNO */
+
+.staff-label {
+    text-align: center;
+    margin: 25px 0 35px;
+}
+
+.staff-label .symbol {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.staff-label .title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    opacity: 0.45;
+}
+
+/* DIVISORES */
+
+.staff-divider {
+    text-align: center;
+    margin: 38px 0;
+    color: #a98572;
+    opacity: 0.7;
+    letter-spacing: 5px;
+}
+
+/* CATEGORÍAS */
+
+.staff-category {
+    margin: 30px 0;
+}
+
+.staff-category-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    opacity: 0.45;
+    margin-bottom: 16px;
+}
+
+/* TARJETAS */
+
+.staff-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.staff-card {
+    padding: 22px 18px;
+    background: rgba(20,15,15,0.72);
+    border: 1px solid rgba(128,96,82,0.45);
+    transition: 0.35s ease;
+}
+
+.staff-card:hover {
+    background: rgba(128,96,82,0.15);
+    border-color: #a98572;
+    transform: translateY(-2px);
+}
+
+.staff-symbol {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.staff-name {
+    font-size: 23px;
+    letter-spacing: 2px;
+    margin-bottom: 3px;
+}
+
+.staff-user {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+    opacity: 0.4;
+    margin-bottom: 16px;
+}
+
+.staff-info {
+    border-top: 1px solid rgba(128,96,82,0.25);
+    padding-top: 13px;
+}
+
+.staff-info div {
+    margin-bottom: 8px;
+}
+
+.staff-info span {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 8px;
+    letter-spacing: 2px;
+    opacity: 0.4;
+}
+
+.staff-info strong {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/* FUNCIÓN */
+
+.staff-function {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(128,96,82,0.2);
+}
+
+.staff-function span {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 8px;
+    letter-spacing: 2px;
+    opacity: 0.4;
+}
+
+.staff-function p {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    opacity: 0.65 !important;
+    margin-top: 5px;
+}
+
+/* ESTADO */
+
+.staff-status {
+    margin-top: 15px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 8px;
+    letter-spacing: 3px;
+    opacity: 0.45;
+}
+
+/* CÓDIGO DE CONDUCTA */
+
+.staff-code {
+    margin: 35px 0;
+    padding: 25px 20px;
+    text-align: center;
+    background: rgba(35,27,25,0.45);
+    border: 1px solid rgba(128,96,82,0.4);
+}
+
+.staff-code .label {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 8px;
+    letter-spacing: 4px;
+    opacity: 0.4;
+    margin-bottom: 12px;
+}
+
+.staff-code p {
+    font-size: 18px !important;
+    font-style: italic;
+    opacity: 0.75 !important;
+}
+
+/* FRASE FINAL */
+
+.staff-ending {
+    text-align: center;
+    margin: 50px 0 30px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(128,96,82,0.4);
+}
+
+.staff-ending .jp {
+    font-size: 15px;
+    opacity: 0.7;
+}
+
+.staff-ending p {
+    font-size: 17px;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+/* CELULAR */
+
+@media (max-width: 500px) {
+
+    .staff-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .staff-card {
+        padding: 20px 18px;
+    }
+
+}
 /* ═══════════════════════════════
    BOTÓN CERRAR
 ═══════════════════════════════ */
@@ -3486,27 +3705,320 @@ header {
          STAFF
     ═══════════════════════════════ -->
 
-    <section id="staff" class="section">
 
-        <h2>
-            Staff
-        </h2>
+<section id="staff" class="section staff">
 
-        <div class="jp">
-            管理 — KANRI
+    <div class="chapter-number">
+        01
+    </div>
+
+    <h2>STAFF</h2>
+
+    <div class="jp">
+        管理 — KANRI
+    </div>
+
+
+    <div class="staff-intro">
+
+        <p class="opening">
+            Detrás de cada noche existe alguien
+            que mantiene las luces encendidas.
+        </p>
+
+        <p>
+            El Staff de YŌRŌ está encargado de mantener
+            el funcionamiento del universo, organizar
+            actividades y cuidar que la experiencia
+            de todos los integrantes se mantenga
+            dentro de las reglas establecidas.
+        </p>
+
+    </div>
+
+
+    <div class="staff-label">
+
+        <div class="symbol">
+            🏮
+        </div>
+
+        <div class="title">
+            YŌRŌ MANAGEMENT
+        </div>
+
+    </div>
+
+
+    <!-- DIRECCIÓN -->
+
+    <div class="staff-category">
+
+        <div class="staff-category-title">
+            DIRECCIÓN
+        </div>
+
+
+        <div class="staff-grid">
+
+            <div class="staff-card">
+
+                <div class="staff-symbol">
+                    🏮
+                </div>
+
+                <div class="staff-name">
+                    TU NOMBRE
+                </div>
+
+                <div class="staff-user">
+                    @TUUSUARIO
+                </div>
+
+
+                <div class="staff-info">
+
+                    <div>
+                        <span>CARGO</span><br>
+                        <strong>Director/a</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="staff-function">
+
+                    <span>FUNCIÓN</span>
+
+                    <p>
+                        Responsable de la dirección general
+                        y de las decisiones principales
+                        relacionadas con YŌRŌ.
+                    </p>
+
+                </div>
+
+
+                <div class="staff-status">
+                    ● ACTIVE
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="staff-divider">
+        ✦
+    </div>
+
+
+    <!-- ADMINISTRACIÓN -->
+
+    <div class="staff-category">
+
+        <div class="staff-category-title">
+            ADMINISTRACIÓN
+        </div>
+
+
+        <div class="staff-grid">
+
+            <div class="staff-card">
+
+                <div class="staff-symbol">
+                    🎭
+                </div>
+
+                <div class="staff-name">
+                    NOMBRE
+                </div>
+
+                <div class="staff-user">
+                    @USUARIO
+                </div>
+
+
+                <div class="staff-info">
+
+                    <div>
+                        <span>CARGO</span><br>
+                        <strong>Administrador/a</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="staff-function">
+
+                    <span>FUNCIÓN</span>
+
+                    <p>
+                        Apoyo en la organización del rol,
+                        gestión de integrantes y mantenimiento
+                        de la estructura del universo.
+                    </p>
+
+                </div>
+
+
+                <div class="staff-status">
+                    ● ACTIVE
+                </div>
+
+            </div>
+
+
+            <div class="staff-card">
+
+                <div class="staff-symbol">
+                    📜
+                </div>
+
+                <div class="staff-name">
+                    NOMBRE
+                </div>
+
+                <div class="staff-user">
+                    @USUARIO
+                </div>
+
+
+                <div class="staff-info">
+
+                    <div>
+                        <span>CARGO</span><br>
+                        <strong>Administrador/a</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="staff-function">
+
+                    <span>FUNCIÓN</span>
+
+                    <p>
+                        Organización de eventos, actualización
+                        de archivos y apoyo en la coordinación
+                        de las actividades del team.
+                    </p>
+
+                </div>
+
+
+                <div class="staff-status">
+                    ● ACTIVE
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="staff-divider">
+        ✦
+    </div>
+
+
+    <!-- MODERACIÓN -->
+
+    <div class="staff-category">
+
+        <div class="staff-category-title">
+            MODERACIÓN
+        </div>
+
+
+        <div class="staff-grid">
+
+            <div class="staff-card">
+
+                <div class="staff-symbol">
+                    🥀
+                </div>
+
+                <div class="staff-name">
+                    NOMBRE
+                </div>
+
+                <div class="staff-user">
+                    @USUARIO
+                </div>
+
+
+                <div class="staff-info">
+
+                    <div>
+                        <span>CARGO</span><br>
+                        <strong>Moderador/a</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="staff-function">
+
+                    <span>FUNCIÓN</span>
+
+                    <p>
+                        Ayuda a mantener el orden dentro
+                        de los grupos y acompaña a los
+                        integrantes durante el desarrollo
+                        del rol.
+                    </p>
+
+                </div>
+
+
+                <div class="staff-status">
+                    ● ACTIVE
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="staff-code">
+
+        <div class="label">
+            CÓDIGO INTERNO
         </div>
 
         <p>
-            Información sobre la administración
-            de YŌRŌ y sus funciones.
+            La administración existe para mantener
+            viva la casa, no para decidir quién puede
+            habitarla.
         </p>
 
-        <button class="close" onclick="closeSections()">
-            CERRAR ARCHIVO
-        </button>
+    </div>
 
-    </section>
 
+    <div class="staff-ending">
+
+        <div class="jp">
+            夜を守る者たち。
+        </div>
+
+        <p>
+            Quienes mantienen la noche.
+        </p>
+
+    </div>
+
+
+    <button class="close" onclick="closeSections()">
+        CERRAR ARCHIVO
+    </button>
+
+</section>
 
 
     <!-- ═══════════════════════════════
