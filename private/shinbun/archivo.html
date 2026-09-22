@@ -15,11 +15,9 @@
 
 :root{
     --bg:#0b0a0b;
-    --paper:#151315;
     --text:#e8e0d4;
     --muted:#938b83;
     --line:#454046;
-    --red:#7d2029;
     --red-light:#a6424b;
     --gold:#b59a68;
 }
@@ -52,8 +50,6 @@ body::before{
     background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.8'/%3E%3C/svg%3E");
     z-index:999;
 }
-
-/* HEADER */
 
 header{
     border-bottom:1px solid var(--line);
@@ -105,8 +101,6 @@ header{
     margin-top:7px;
 }
 
-/* MAIN */
-
 main{
     width:min(1000px,92%);
     margin:55px auto 90px;
@@ -135,8 +129,6 @@ main{
     letter-spacing:2px;
 }
 
-/* YEAR */
-
 .year{
     margin-bottom:45px;
 }
@@ -158,8 +150,6 @@ main{
     background:var(--line);
     flex:1;
 }
-
-/* EDITIONS */
 
 .edition{
     display:grid;
@@ -203,8 +193,6 @@ main{
     letter-spacing:2px;
 }
 
-/* BUTTON */
-
 .read{
     display:inline-block;
     border:1px solid var(--line);
@@ -222,8 +210,6 @@ main{
     color:var(--gold);
 }
 
-/* EMPTY */
-
 .empty{
     text-align:center;
     padding:35px 20px;
@@ -232,8 +218,6 @@ main{
     font-size:.95rem;
     line-height:1.6;
 }
-
-/* NAV */
 
 .navigation{
     text-align:center;
@@ -257,8 +241,6 @@ main{
     border-color:var(--gold);
 }
 
-/* FOOTER */
-
 footer{
     border-top:1px solid var(--line);
     text-align:center;
@@ -276,8 +258,6 @@ footer p{
     font-size:.7rem;
     letter-spacing:2px;
 }
-
-/* MOBILE */
 
 @media(max-width:650px){
 
@@ -317,7 +297,8 @@ footer p{
 
     <div class="header-top">
 
-        <a href="../index.html">
+        <!-- CORREGIDO: vuelve al portal principal -->
+        <a href="../../index.html">
             ← YŌRŌ
         </a>
 
@@ -325,6 +306,7 @@ footer p{
             PRIVATE ARCHIVE
         </span>
 
+        <!-- MISMA CARPETA -->
         <a href="index.html">
             SHINBUN →
         </a>
@@ -371,9 +353,7 @@ footer p{
     </section>
 
 
-    <!-- ═══════════════════════════════════
-         SEPTIEMBRE 2026
-         ═══════════════════════════════════ -->
+    <!-- SEPTIEMBRE 2026 -->
 
     <section class="year">
 
@@ -408,6 +388,7 @@ footer p{
 
                 <br>
 
+                <!-- MISMA CARPETA -->
                 <a href="index.html" class="read">
                     LEER
                 </a>
@@ -416,51 +397,10 @@ footer p{
 
         </article>
 
-
-        <!--
-        PARA AGREGAR OTRA EDICIÓN:
-
-        <article class="edition">
-
-            <div class="edition-number">
-                Nº 002
-            </div>
-
-            <div class="edition-info">
-
-                <h2>
-                    Título de la edición
-                </h2>
-
-                <p>
-                    Breve descripción.
-                </p>
-
-            </div>
-
-            <div>
-
-                <div class="edition-date">
-                    30 · 09 · 2026
-                </div>
-
-                <br>
-
-                <a href="edicion-002.html" class="read">
-                    LEER
-                </a>
-
-            </div>
-
-        </article>
-        -->
-
     </section>
 
 
-    <!-- ═══════════════════════════════════
-         ARCHIVO FUTURO
-         ═══════════════════════════════════ -->
+    <!-- FUTURAS EDICIONES -->
 
     <section class="year">
 
@@ -486,6 +426,7 @@ footer p{
 
     <div class="navigation">
 
+        <!-- MISMA CARPETA -->
         <a href="index.html" class="btn">
             「 SHINBUN 」 EDICIÓN ACTUAL
         </a>
