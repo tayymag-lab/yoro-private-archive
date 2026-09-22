@@ -1512,6 +1512,263 @@ header {
     }
 
 }
+
+   /* ═══════════════════════════════
+   EVENTOS — 行事
+═══════════════════════════════ */
+
+.eventos h2 {
+    font-size: 38px;
+    letter-spacing: 8px;
+}
+
+.events-intro {
+    border-left: 1px solid rgba(128,96,82,0.5);
+    padding-left: 20px;
+    margin-bottom: 35px;
+}
+
+.events-intro p {
+    margin-bottom: 15px;
+}
+
+.events-intro .opening {
+    font-size: 21px !important;
+    font-style: italic;
+    opacity: 0.95 !important;
+}
+
+/* ENCABEZADOS */
+
+.events-section {
+    margin: 38px 0;
+}
+
+.events-section-title {
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.events-section-title .icon {
+    font-size: 23px;
+    margin-bottom: 7px;
+}
+
+.events-section-title .title {
+    font-size: 21px;
+    letter-spacing: 3px;
+}
+
+.events-section-title .jp {
+    margin: 5px 0 0;
+    font-size: 9px;
+    letter-spacing: 3px;
+    opacity: 0.4;
+}
+
+/* TARJETAS DE EVENTOS */
+
+.event-card {
+    margin: 18px 0;
+    padding: 22px 20px;
+    background: rgba(20,15,15,0.72);
+    border: 1px solid rgba(128,96,82,0.4);
+    transition: 0.35s ease;
+}
+
+.event-card:hover {
+    background: rgba(128,96,82,0.14);
+    border-color: #a98572;
+    transform: translateY(-2px);
+}
+
+.event-date {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    opacity: 0.45;
+    margin-bottom: 8px;
+}
+
+.event-name {
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.event-description {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    opacity: 0.7 !important;
+    margin-bottom: 15px !important;
+}
+
+.event-meta {
+    border-top: 1px solid rgba(128,96,82,0.22);
+    padding-top: 12px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 8px;
+    letter-spacing: 2px;
+    opacity: 0.45;
+}
+
+/* ESTADO */
+
+.event-status {
+    display: inline-block;
+    margin-top: 13px;
+    padding: 5px 10px;
+    border: 1px solid rgba(128,96,82,0.4);
+    font-family: 'Noto Serif JP', serif;
+    font-size: 8px;
+    letter-spacing: 2px;
+    opacity: 0.65;
+}
+
+/* EVENTO DESTACADO */
+
+.event-featured {
+    text-align: center;
+    padding: 30px 20px;
+    margin: 25px 0;
+    background: rgba(35,27,25,0.5);
+    border: 1px solid rgba(128,96,82,0.5);
+}
+
+.event-featured .symbol {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.event-featured .label {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 8px;
+    letter-spacing: 4px;
+    opacity: 0.4;
+    margin-bottom: 12px;
+}
+
+.event-featured h3 {
+    font-size: 27px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.event-featured p {
+    font-size: 15px !important;
+    opacity: 0.65 !important;
+}
+
+/* LÍNEA TEMPORAL */
+
+.timeline {
+    position: relative;
+    margin: 35px 5px;
+    padding-left: 25px;
+    border-left: 1px solid rgba(128,96,82,0.45);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 4px;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #a98572;
+    background: #0c0909;
+}
+
+.timeline-year {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    opacity: 0.4;
+    margin-bottom: 5px;
+}
+
+.timeline-title {
+    font-size: 21px;
+    letter-spacing: 2px;
+    margin-bottom: 7px;
+}
+
+.timeline-text {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    opacity: 0.65 !important;
+    margin-bottom: 0 !important;
+}
+
+/* SEPARADOR */
+
+.events-divider {
+    text-align: center;
+    margin: 40px 0;
+    color: #a98572;
+    opacity: 0.7;
+    letter-spacing: 5px;
+}
+
+/* ARCHIVO VACÍO */
+
+.no-events {
+    padding: 25px 18px;
+    text-align: center;
+    border: 1px dashed rgba(128,96,82,0.3);
+    opacity: 0.55;
+}
+
+.no-events p {
+    margin-bottom: 0 !important;
+    font-style: italic;
+}
+
+/* FINAL */
+
+.events-ending {
+    text-align: center;
+    margin: 50px 0 30px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(128,96,82,0.4);
+}
+
+.events-ending .jp {
+    font-size: 15px;
+    opacity: 0.7;
+}
+
+.events-ending p {
+    font-size: 17px;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+/* CELULAR */
+
+@media (max-width: 500px) {
+
+    .event-card {
+        padding: 20px 17px;
+    }
+
+    .event-name {
+        font-size: 23px;
+    }
+
+    .timeline {
+        margin-left: 3px;
+    }
+
+}
+
+   
 /* ═══════════════════════════════
    BOTÓN CERRAR
 ═══════════════════════════════ */
@@ -4670,26 +4927,327 @@ header {
          EVENTOS
     ═══════════════════════════════ -->
 
-    <section id="eventos" class="section">
+<section id="eventos" class="section eventos">
 
-        <h2>
-            Eventos
-        </h2>
+    <div class="chapter-number">
+        01
+    </div>
+
+    <h2>EVENTOS</h2>
+
+    <div class="jp">
+        行事 — GYŌJI
+    </div>
+
+
+    <div class="events-intro">
+
+        <p class="opening">
+            Algunas noches se recuerdan para siempre.
+        </p>
+
+        <p>
+            Este archivo reúne las actividades, celebraciones
+            y acontecimientos especiales que forman parte
+            de la historia de YŌRŌ.
+        </p>
+
+    </div>
+
+
+    <!-- PRÓXIMO EVENTO -->
+
+    <div class="events-section">
+
+        <div class="events-section-title">
+
+            <div class="icon">
+                🏮
+            </div>
+
+            <div class="title">
+                PRÓXIMOS EVENTOS
+            </div>
+
+            <div class="jp">
+                予定 — YOTEI
+            </div>
+
+        </div>
+
+
+        <div class="event-featured">
+
+            <div class="symbol">
+                🎎
+            </div>
+
+            <div class="label">
+                PRÓXIMAMENTE
+            </div>
+
+            <h3>
+                PRIMERA NOCHE
+            </h3>
+
+            <p>
+                El comienzo oficial de una nueva noche
+                dentro de YŌRŌ.
+            </p>
+
+            <div class="event-status">
+                UPCOMING
+            </div>
+
+        </div>
+
+
+        <!-- COPIAR ESTA TARJETA PARA AGREGAR EVENTOS -->
+
+        <div class="event-card">
+
+            <div class="event-date">
+                DD · MM · 2026
+            </div>
+
+            <div class="event-name">
+                NOMBRE DEL EVENTO
+            </div>
+
+            <p class="event-description">
+                Descripción breve del evento, actividad
+                o situación especial que tendrá lugar
+                dentro de YŌRŌ.
+            </p>
+
+            <div class="event-meta">
+                PARTICIPANTES · TODOS
+            </div>
+
+            <div class="event-status">
+                UPCOMING
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="events-divider">
+        ✦
+    </div>
+
+
+    <!-- EVENTOS FINALIZADOS -->
+
+    <div class="events-section">
+
+        <div class="events-section-title">
+
+            <div class="icon">
+                🕯️
+            </div>
+
+            <div class="title">
+                EVENTOS FINALIZADOS
+            </div>
+
+            <div class="jp">
+                記録 — KIROKU
+            </div>
+
+        </div>
+
+
+        <div class="event-card">
+
+            <div class="event-date">
+                DD · MM · 2026
+            </div>
+
+            <div class="event-name">
+                PRIMER EVENTO
+            </div>
+
+            <p class="event-description">
+                Registro del primer evento realizado
+                dentro de YŌRŌ.
+            </p>
+
+            <div class="event-meta">
+                ARCHIVADO · 2026
+            </div>
+
+            <div class="event-status">
+                COMPLETED
+            </div>
+
+        </div>
+
+
+        <div class="no-events">
+
+            <p>
+                Los próximos acontecimientos serán
+                registrados aquí cuando finalicen.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="events-divider">
+        ✦
+    </div>
+
+
+    <!-- LÍNEA TEMPORAL -->
+
+    <div class="events-section">
+
+        <div class="events-section-title">
+
+            <div class="icon">
+                🌙
+            </div>
+
+            <div class="title">
+                CRONOLOGÍA DE YŌRŌ
+            </div>
+
+            <div class="jp">
+                年表 — NENPYŌ
+            </div>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+                    HACE 7 AÑOS
+                </div>
+
+                <div class="timeline-title">
+                    LA DESAPARICIÓN
+                </div>
+
+                <p class="timeline-text">
+                    Akari desaparece después de recibir
+                    a un cliente cuya identidad nunca
+                    fue revelada.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+                    AÑOS POSTERIORES
+                </div>
+
+                <div class="timeline-title">
+                    EL SILENCIO
+                </div>
+
+                <p class="timeline-text">
+                    La dirección mantiene la versión
+                    oficial de que Akari abandonó
+                    YŌRŌ por voluntad propia.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+                    PRESENTE
+                </div>
+
+                <div class="timeline-title">
+                    ELLA NUNCA SE FUE
+                </div>
+
+                <p class="timeline-text">
+                    Una fotografía de Akari aparece
+                    acompañada de un mensaje anónimo
+                    que reabre el misterio.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+                    ACTUALIDAD
+                </div>
+
+                <div class="timeline-title">
+                    LA NOCHE CONTINÚA
+                </div>
+
+                <p class="timeline-text">
+                    Los integrantes de YŌRŌ comienzan
+                    a descubrir que algunos secretos
+                    nunca desaparecieron.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <div class="event-featured">
+
+        <div class="symbol">
+            🏮
+        </div>
+
+        <div class="label">
+            ARCHIVO ABIERTO
+        </div>
+
+        <h3>
+            LA HISTORIA CONTINÚA
+        </h3>
+
+        <p>
+            Cada nuevo evento puede convertirse
+            en una nueva página de la historia.
+        </p>
+
+    </div>
+
+
+    <div class="events-ending">
 
         <div class="jp">
-            行事 — GYŌJI
+            夜は、まだ続いている。
         </div>
 
         <p>
-            Próximos eventos, celebraciones y
-            acontecimientos especiales del rol.
+            La noche todavía continúa.
         </p>
 
-        <button class="close" onclick="closeSections()">
-            CERRAR ARCHIVO
-        </button>
+    </div>
 
-    </section>
+
+    <button class="close" onclick="closeSections()">
+        CERRAR ARCHIVO
+    </button>
+
+</section>
+
 
 
 
