@@ -536,6 +536,233 @@ header {
     font-style: italic;
     opacity: 0.6;
 }
+
+   /* ═══════════════════════════════
+   PERSONAJES — DISEÑO
+═══════════════════════════════ */
+
+.personajes h2 {
+    font-size: 38px;
+    letter-spacing: 8px;
+}
+
+.personajes-intro {
+    border-left: 1px solid rgba(128,96,82,0.5);
+    padding-left: 20px;
+    margin-bottom: 35px;
+}
+
+.personajes-intro p {
+    margin-bottom: 15px;
+}
+
+.personajes-intro .opening {
+    font-size: 21px !important;
+    font-style: italic;
+    opacity: 0.95 !important;
+}
+
+/* CATÁLOGO */
+
+.character-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.character-card {
+    position: relative;
+    min-height: 170px;
+    padding: 22px 18px;
+    background: rgba(20,15,15,0.75);
+    border: 1px solid rgba(128,96,82,0.45);
+    transition: 0.35s ease;
+}
+
+.character-card:hover {
+    background: rgba(128,96,82,0.15);
+    border-color: #a98572;
+    transform: translateY(-3px);
+}
+
+.character-card .symbol {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.character-card .character-name {
+    font-size: 24px;
+    letter-spacing: 3px;
+    margin-bottom: 4px;
+}
+
+.character-card .character-role {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    opacity: 0.45;
+    margin-bottom: 15px;
+}
+
+.character-card .character-description {
+    font-size: 15px;
+    line-height: 1.5;
+    opacity: 0.65;
+}
+
+/* ESTADO */
+
+.character-status {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 8px;
+    letter-spacing: 2px;
+    opacity: 0.4;
+}
+
+/* DIVISOR */
+
+.characters-divider {
+    text-align: center;
+    margin: 38px 0;
+    color: #a98572;
+    opacity: 0.7;
+}
+
+/* CATEGORÍAS */
+
+.character-category {
+    margin-top: 35px;
+}
+
+.character-category-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    opacity: 0.5;
+    margin-bottom: 18px;
+}
+
+/* FICHA */
+
+.character-profile {
+    margin-top: 35px;
+    padding: 25px 20px;
+    border-top: 1px solid rgba(128,96,82,0.45);
+    border-bottom: 1px solid rgba(128,96,82,0.35);
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-header .profile-symbol {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.profile-header h3 {
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+.profile-header .profile-role {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    opacity: 0.45;
+    margin-top: 5px;
+}
+
+.profile-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.profile-info div {
+    padding: 12px;
+    background: rgba(255,255,255,0.02);
+    border-left: 1px solid rgba(128,96,82,0.4);
+}
+
+.profile-info span {
+    display: block;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 8px;
+    letter-spacing: 2px;
+    opacity: 0.4;
+    margin-bottom: 4px;
+}
+
+.profile-info strong {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.profile-section {
+    margin: 25px 0;
+}
+
+.profile-section h4 {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 9px;
+}
+
+.profile-section p {
+    margin-bottom: 0;
+}
+
+/* CONFIDENCIAL */
+
+.confidential {
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgba(128,96,82,0.35);
+    background: rgba(35,27,25,0.35);
+}
+
+.confidential .label {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 8px;
+    letter-spacing: 4px;
+    opacity: 0.4;
+    margin-bottom: 8px;
+}
+
+.confidential p {
+    font-size: 16px;
+    font-style: italic;
+    opacity: 0.65;
+    margin-bottom: 0;
+}
+
+/* CELULAR */
+
+@media (max-width: 500px) {
+
+    .character-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-info {
+        grid-template-columns: 1fr;
+    }
+
+    .character-card {
+        min-height: 150px;
+    }
+
+}
 /* ═══════════════════════════════
    BOTÓN CERRAR
 ═══════════════════════════════ */
@@ -1831,27 +2058,277 @@ header {
          PERSONAJES
     ═══════════════════════════════ -->
 
-    <section id="personajes" class="section">
 
-        <h2>
-            Personajes
-        </h2>
+<section id="personajes" class="section personajes">
 
-        <div class="jp">
-            登場人物 — TŌJŌJINBUTSU
+    <div class="chapter-number">
+        01
+    </div>
+
+    <h2>PERSONAJES</h2>
+
+    <div class="jp">
+        登場人物 — TŌJŌJINBUTSU
+    </div>
+
+
+    <div class="personajes-intro">
+
+        <p class="opening">
+            Nadie es exactamente quien dice ser.
+        </p>
+
+        <p>
+            Cada persona que entra en YŌRŌ trae consigo
+            una historia, una identidad y secretos que
+            pueden cambiar el curso de la noche.
+        </p>
+
+    </div>
+
+
+    <div class="characters-divider">
+        ✦
+    </div>
+
+
+    <!-- PERSONAJES PRINCIPALES -->
+
+    <div class="character-category">
+
+        <div class="character-category-title">
+            PERSONAJES PRINCIPALES
+        </div>
+
+
+        <div class="character-grid">
+
+            <div class="character-card">
+
+                <div class="character-status">
+                    ARCHIVO
+                </div>
+
+                <div class="symbol">
+                    🌸
+                </div>
+
+                <div class="character-name">
+                    AKARI
+                </div>
+
+                <div class="character-role">
+                    LA FLOR DE YŌRŌ
+                </div>
+
+                <div class="character-description">
+                    Una figura del pasado cuya desaparición
+                    continúa rodeada de preguntas.
+                </div>
+
+            </div>
+
+
+            <div class="character-card">
+
+                <div class="character-status">
+                    PRÓXIMAMENTE
+                </div>
+
+                <div class="symbol">
+                    🏮
+                </div>
+
+                <div class="character-name">
+                    — — —
+                </div>
+
+                <div class="character-role">
+                    PERSONAJE PRINCIPAL
+                </div>
+
+                <div class="character-description">
+                    Este archivo será actualizado cuando
+                    el personaje sea incorporado.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="characters-divider">
+        ✦
+    </div>
+
+
+    <!-- TRABAJADORES -->
+
+    <div class="character-category">
+
+        <div class="character-category-title">
+            TRABAJADORES
+        </div>
+
+
+        <div class="character-grid">
+
+            <div class="character-card">
+
+                <div class="character-status">
+                    DISPONIBLE
+                </div>
+
+                <div class="symbol">
+                    🥀
+                </div>
+
+                <div class="character-name">
+                    — — —
+                </div>
+
+                <div class="character-role">
+                    TRABAJADOR
+                </div>
+
+                <div class="character-description">
+                    Archivo disponible para un personaje
+                    perteneciente al personal de YŌRŌ.
+                </div>
+
+            </div>
+
+
+            <div class="character-card">
+
+                <div class="character-status">
+                    DISPONIBLE
+                </div>
+
+                <div class="symbol">
+                    🎭
+                </div>
+
+                <div class="character-name">
+                    — — —
+                </div>
+
+                <div class="character-role">
+                    ARTISTA
+                </div>
+
+                <div class="character-description">
+                    Archivo disponible para un artista
+                    relacionado con la casa.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="characters-divider">
+        ✦
+    </div>
+
+
+    <!-- CLIENTES -->
+
+    <div class="character-category">
+
+        <div class="character-category-title">
+            CLIENTES
+        </div>
+
+
+        <div class="character-grid">
+
+            <div class="character-card">
+
+                <div class="character-status">
+                    DISPONIBLE
+                </div>
+
+                <div class="symbol">
+                    🍷
+                </div>
+
+                <div class="character-name">
+                    — — —
+                </div>
+
+                <div class="character-role">
+                    CLIENTE
+                </div>
+
+                <div class="character-description">
+                    Archivo disponible para un cliente
+                    habitual de YŌRŌ.
+                </div>
+
+            </div>
+
+
+            <div class="character-card">
+
+                <div class="character-status">
+                    DISPONIBLE
+                </div>
+
+                <div class="symbol">
+                    🥂
+                </div>
+
+                <div class="character-name">
+                    — — —
+                </div>
+
+                <div class="character-role">
+                    CLIENTE VIP
+                </div>
+
+                <div class="character-description">
+                    Una figura perteneciente a los círculos
+                    más exclusivos de la ciudad.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="characters-divider">
+        ✦
+    </div>
+
+
+    <!-- ARCHIVOS CONFIDENCIALES -->
+
+    <div class="confidential">
+
+        <div class="label">
+            ARCHIVO CONFIDENCIAL
         </div>
 
         <p>
-            Aquí aparecerán los personajes pertenecientes
-            al universo de YŌRŌ.
+            Algunos personajes poseen información que
+            no debe ser conocida por todos.
         </p>
 
-        <button class="close" onclick="closeSections()">
-            CERRAR ARCHIVO
-        </button>
+    </div>
 
-    </section>
 
+    <button class="close" onclick="closeSections()">
+        CERRAR ARCHIVO
+    </button>
+
+</section>
 
 
     <!-- ═══════════════════════════════
