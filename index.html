@@ -62,38 +62,30 @@
            FONDO
         ───────────────────────── */
 
-        .background {
+   .background {
 
-            position: fixed;
+    position: fixed;
 
-            inset: -8%;
+    inset: -5%;
 
-            background:
+    background-image:
+        linear-gradient(
+            rgba(5, 3, 3, 0.58),
+            rgba(5, 3, 3, 0.78)
+        ),
+        url("images/yoro-night.jpg");
 
-                radial-gradient(
-                    ellipse at 50% 35%,
-                    rgba(130, 65, 50, 0.24),
-                    transparent 45%
-                ),
+    background-size: cover;
 
-                radial-gradient(
-                    ellipse at 20% 80%,
-                    rgba(90, 35, 35, 0.15),
-                    transparent 45%
-                ),
+    background-position: center;
 
-                linear-gradient(
-                    120deg,
-                    #080606,
-                    #1a0d0e,
-                    #080606
-                );
+    background-repeat: no-repeat;
 
-            animation:
-                backgroundMove 14s ease-in-out infinite alternate;
+    animation:
+        backgroundMove 18s ease-in-out infinite alternate;
 
-            z-index: 0;
-        }
+    z-index: 0;
+}
 
 
         @keyframes backgroundMove {
