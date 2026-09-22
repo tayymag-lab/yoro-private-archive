@@ -959,158 +959,207 @@ header {
     }
 
 }
-   /* ═══════════════════════════════
-   ROLES — DISEÑO
-═══════════════════════════════ */
+  
+/* ═══════════════════════════════════════
+   ROLES — ARCHIVO DE CATEGORÍAS
+═══════════════════════════════════════ */
 
-.roles h2 {
-    font-size: 38px;
-    letter-spacing: 8px;
+.roles-archive {
+    max-width: 650px;
+    margin: 30px auto;
 }
 
-.roles-intro {
-    border-left: 1px solid rgba(128,96,82,0.5);
-    padding-left: 20px;
-    margin-bottom: 35px;
+
+/* GRUPO */
+
+.role-group {
+    margin-bottom: 38px;
 }
 
-.roles-intro p {
-    margin-bottom: 15px;
-}
-
-.roles-intro .opening {
-    font-size: 21px !important;
-    font-style: italic;
-    opacity: 0.95 !important;
-}
-
-.roles-divider {
+.role-group-title {
     text-align: center;
-    margin: 38px 0;
-    color: #a98572;
-    opacity: 0.7;
-    letter-spacing: 5px;
-}
 
-.role-category {
-    margin: 30px 0;
-}
-
-.role-category-title {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 10px;
-    letter-spacing: 4px;
-    opacity: 0.45;
-    margin-bottom: 15px;
-}
-
-.role-card {
-    margin: 15px 0;
-    padding: 20px;
-    background: rgba(20,15,15,0.65);
-    border: 1px solid rgba(128,96,82,0.4);
-    border-left: 1px solid rgba(169,133,114,0.7);
-}
-
-.role-card h3 {
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 400;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
+
     margin-bottom: 5px;
 }
 
-.role-card .role-jp {
+.role-group-jp {
+    text-align: center;
+
     font-family: 'Noto Serif JP', serif;
     font-size: 9px;
     letter-spacing: 3px;
+
     opacity: 0.4;
-    margin-bottom: 12px;
+
+    margin-bottom: 18px;
 }
 
-.role-card p {
-    margin-bottom: 0;
+
+/* GRID */
+
+.role-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
 }
 
-.role-card ul {
-    margin: 15px 0 0;
-    padding-left: 20px;
+
+/* TARJETA */
+
+.role-item {
+    background: rgba(20,15,15,0.45);
+
+    border: 1px solid rgba(128,96,82,0.4);
+
+    transition: 0.3s ease;
 }
 
-.role-card li {
-    margin-bottom: 8px;
-    line-height: 1.5;
+.role-item:hover {
+    border-color: rgba(169,133,114,0.7);
 }
 
-.role-note {
-    margin: 30px 0;
-    padding: 22px 18px;
+
+/* TÍTULO CLICKEABLE */
+
+.role-item summary {
+    list-style: none;
+
+    cursor: pointer;
+
+    min-height: 72px;
+
+    padding: 17px 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     text-align: center;
-    border-top: 1px solid rgba(128,96,82,0.4);
-    border-bottom: 1px solid rgba(128,96,82,0.4);
-}
 
-.role-note .label {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 8px;
-    letter-spacing: 4px;
-    opacity: 0.4;
-    margin-bottom: 10px;
-}
-
-.role-note p {
-    font-size: 18px;
-    font-style: italic;
-    margin-bottom: 0;
-}
-
-.role-rule {
-    margin: 18px 0;
-    padding: 17px;
-    background: rgba(255,255,255,0.015);
-    border-left: 1px solid rgba(128,96,82,0.5);
-}
-
-.role-rule h4 {
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 16px;
     letter-spacing: 2px;
-    margin-bottom: 7px;
+
+    position: relative;
+
+    transition: 0.3s ease;
 }
 
-.role-rule p {
-    margin-bottom: 0;
+.role-item summary::-webkit-details-marker {
+    display: none;
 }
 
-.roles-ending {
-    text-align: center;
-    margin: 50px 0 30px;
-    padding-top: 30px;
-    border-top: 1px solid rgba(128,96,82,0.4);
+
+/* SÍMBOLO */
+
+.role-item summary::after {
+    content: "＋";
+
+    position: absolute;
+
+    right: 10px;
+    top: 9px;
+
+    font-size: 12px;
+
+    opacity: 0.35;
+
+    transition: 0.3s ease;
 }
 
-.roles-ending .jp {
-    font-size: 15px;
+
+/* ABIERTO */
+
+.role-item[open] summary {
+    border-bottom: 1px solid rgba(128,96,82,0.3);
+}
+
+.role-item[open] summary::after {
+    content: "−";
     opacity: 0.7;
 }
 
-.roles-ending p {
-    font-size: 17px;
-    font-style: italic;
-    opacity: 0.6;
+
+/* CONTENIDO */
+
+.role-content {
+    padding: 18px 17px 20px;
+
+    animation: roleFade 0.35s ease;
 }
+
+.role-content p {
+    font-size: 15px;
+
+    line-height: 1.65;
+
+    opacity: 0.75;
+
+    margin: 0;
+}
+
+
+/* ETIQUETA */
+
+.role-label {
+    font-family: 'Noto Serif JP', serif;
+
+    font-size: 8px;
+    letter-spacing: 3px;
+
+    opacity: 0.35;
+
+    margin-bottom: 9px;
+}
+
+
+/* ANIMACIÓN */
+
+@keyframes roleFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* SEPARADOR */
+
+.role-divider {
+    width: 45px;
+    height: 1px;
+
+    background: #806052;
+
+    opacity: 0.5;
+
+    margin: 0 auto 38px;
+}
+
+
+/* CELULAR */
 
 @media (max-width: 500px) {
 
-    .role-card {
-        padding: 18px;
+    .role-grid {
+        grid-template-columns: 1fr;
     }
 
-    .role-card h3 {
-        font-size: 21px;
+    .role-item summary {
+        min-height: 62px;
     }
 
 }
-
 
 /* ═══════════════════════════════════════
    INTEGRANTES — ARCHIVO DE MIEMBROS
@@ -3638,478 +3687,462 @@ header {
 </section>
 
 
-    <!-- ═══════════════════════════════
-         ROLES
-    ═══════════════════════════════ -->
-   
+<!-- ROLES -->
 
-<section id="roles" class="section roles">
+<section id="roles" class="section">
 
-    <div class="chapter-number">
-        01
-    </div>
-
-    <h2>ROLES</h2>
+    <h2>Roles</h2>
 
     <div class="jp">
         役割 — YAKUWARI
     </div>
 
 
-    <div class="roles-intro">
-
-        <p class="opening">
-            Cada personaje ocupa un lugar dentro de
-            la noche.
-        </p>
-
-        <p>
-            En YŌRŌ existen diferentes tipos de roles.
-            Cada uno permite explorar una parte distinta
-            del universo y construir relaciones entre
-            personajes.
-        </p>
-
-    </div>
+    <div class="roles-archive">
 
 
-    <div class="roles-divider">
-        ✦
-    </div>
+        <!-- ═══════════════════════════════
+             TRABAJADORES
+        ═══════════════════════════════ -->
 
+        <div class="role-group">
 
-    <!-- TRABAJADORES -->
-
-    <div class="chapter-number">
-        02
-    </div>
-
-    <div class="role-category">
-
-        <div class="role-category-title">
-            PERSONAL DE YŌRŌ
-        </div>
-
-
-        <div class="role-card">
-
-            <h3>🏮 Acompañantes</h3>
-
-            <div class="role-jp">
-                同伴者 — DŌHANSHA
+            <div class="role-group-title">
+                TRABAJADORES
             </div>
 
-            <p>
-                Son quienes reciben a los clientes,
-                conversan con ellos y los acompañan
-                durante su estadía en la casa.
-            </p>
-
-            <ul>
-                <li>
-                    Pueden desarrollar vínculos
-                    personales con los clientes.
-                </li>
-
-                <li>
-                    Pueden tener una vida pública
-                    completamente diferente.
-                </li>
-
-                <li>
-                    Pueden poseer secretos relacionados
-                    con YŌRŌ.
-                </li>
-            </ul>
-
-        </div>
-
-
-        <div class="role-card">
-
-            <h3>🎭 Anfitriones</h3>
-
-            <div class="role-jp">
-                ホスト — HOSUTO
+            <div class="role-group-jp">
+                働く者 — HATARAKU MONO
             </div>
 
-            <p>
-                Se encargan de crear un ambiente agradable
-                para los visitantes y mantener las
-                relaciones dentro de la casa.
-            </p>
 
-            <ul>
-                <li>
-                    Reciben y atienden a los clientes.
-                </li>
-
-                <li>
-                    Pueden organizar reuniones privadas.
-                </li>
-
-                <li>
-                    Suelen conocer información de
-                    diferentes personas dentro de YŌRŌ.
-                </li>
-            </ul>
-
-        </div>
+            <div class="role-grid">
 
 
-        <div class="role-card">
+                <details class="role-item">
 
-            <h3>🎶 Artistas</h3>
+                    <summary>
+                        ANFITRIÓN / ANFITRIONA
+                    </summary>
 
-            <div class="role-jp">
-                芸術家 — GEIJUTSUKA
+                    <div class="role-content">
+
+                        <div class="role-label">
+                            PERSONAL DE YŌRŌ
+                        </div>
+
+                        <p>
+                            Persona encargada de recibir y acompañar
+                            a los clientes. Su función principal es
+                            brindar conversación, compañía y
+                            entretenimiento dentro de la casa.
+                        </p>
+
+                    </div>
+
+                </details>
+
+
+                <details class="role-item">
+
+                    <summary>
+                        ARTISTA
+                    </summary>
+
+                    <div class="role-content">
+
+                        <div class="role-label">
+                            PERSONAL DE YŌRŌ
+                        </div>
+
+                        <p>
+                            Trabajador dedicado a presentaciones,
+                            espectáculos o actividades artísticas
+                            destinadas al entretenimiento de los
+                            clientes.
+                        </p>
+
+                    </div>
+
+                </details>
+
+
+                <details class="role-item">
+
+                    <summary>
+                        ACOMPAÑANTE
+                    </summary>
+
+                    <div class="role-content">
+
+                        <div class="role-label">
+                            PERSONAL DE YŌRŌ
+                        </div>
+
+                        <p>
+                            Persona contratada para ofrecer
+                            compañía privada a los clientes,
+                            adaptándose a las necesidades y
+                            límites establecidos dentro de YŌRŌ.
+                        </p>
+
+                    </div>
+
+                </details>
+
+
+                <details class="role-item">
+
+                    <summary>
+                        MÚSICO
+                    </summary>
+
+                    <div class="role-content">
+
+                        <div class="role-label">
+                            PERSONAL DE YŌRŌ
+                        </div>
+
+                        <p>
+                            Artista encargado de interpretar música
+                            dentro de YŌRŌ, ya sea durante eventos,
+                            presentaciones o en los distintos espacios
+                            de la casa.
+                        </p>
+
+                    </div>
+
+                </details>
+
+
+                <details class="role-item">
+
+                    <summary>
+                        BAILARINA / BAILARÍN
+                    </summary>
+
+                    <div class="role-content">
+
+                        <div class="role-label">
+                            PERSONAL DE YŌRŌ
+                        </div>
+
+                        <p>
+                            Artista dedicado a la danza y a las
+                            presentaciones escénicas, participando
+                            en espectáculos y eventos dentro de YŌRŌ.
+                        </p>
+
+                    </div>
+
+                </details>
+
+
+                <details class="role-item">
+
+                    <summary>
+                        BARTENDER
+                    </summary>
+
+                    <div class="role-content">
+
+                        <div class="role-label">
+                            PERSONAL DE YŌRŌ
+                        </div>
+
+                        <p>
+                            Encargado de preparar y servir bebidas
+                            a los clientes, además de formar parte
+                            de la dinámica social de los espacios
+                            comunes de la casa.
+                        </p>
+
+                    </div>
+
+                </details>
+
+
             </div>
 
-            <p>
-                Cantantes, músicos, bailarines y otros
-                artistas que forman parte de las
-                presentaciones de YŌRŌ.
-            </p>
-
-            <ul>
-                <li>
-                    Pueden actuar en el escenario.
-                </li>
-
-                <li>
-                    Pueden tener una carrera fuera
-                    de YŌRŌ.
-                </li>
-
-                <li>
-                    Su fama puede convertirlos en
-                    personajes especialmente observados.
-                </li>
-            </ul>
-
-        </div>
-
-    </div>
-
-
-    <div class="roles-divider">
-        ✦
-    </div>
-
-
-    <!-- CLIENTES -->
-
-    <div class="chapter-number">
-        03
-    </div>
-
-    <div class="role-category">
-
-        <div class="role-category-title">
-            CLIENTELA
         </div>
 
 
-        <div class="role-card">
+        <div class="role-divider"></div>
 
-            <h3>🍷 Cliente regular</h3>
 
-            <div class="role-jp">
-                常連客 — JŌRENKYAKU
+        <!-- ═══════════════════════════════
+             CLIENTES
+        ═══════════════════════════════ -->
+
+        <div class="role-group">
+
+            <div class="role-group-title">
+                CLIENTES
             </div>
 
-            <p>
-                Personas que visitan YŌRŌ con frecuencia
-                y ya poseen cierta relación con la casa.
-            </p>
-
-            <ul>
-                <li>
-                    Pueden conocer a varios trabajadores.
-                </li>
-
-                <li>
-                    Pueden desarrollar relaciones
-                    personales.
-                </li>
-
-                <li>
-                    Pueden conocer algunos secretos
-                    de YŌRŌ.
-                </li>
-            </ul>
-
-        </div>
-
-
-        <div class="role-card">
-
-            <h3>🥂 Cliente VIP</h3>
-
-            <div class="role-jp">
-                特別客 — TOKUBETSU KYAKU
+            <div class="role-group-jp">
+                客 — KYAKU
             </div>
 
-            <p>
-                Miembros de círculos exclusivos que
-                reciben un trato especial dentro de
-                la casa.
-            </p>
 
-            <ul>
-                <li>
-                    Pueden acceder a determinadas
-                    áreas restringidas.
-                </li>
-
-                <li>
-                    Pueden tener vínculos con figuras
-                    importantes de la ciudad.
-                </li>
-
-                <li>
-                    Su presencia puede generar conflictos
-                    o secretos.
-                </li>
-            </ul>
-
-        </div>
+            <div class="role-grid">
 
 
-        <div class="role-card">
+                <details class="role-item">
 
-            <h3>🎎 Invitados</h3>
+                    <summary>
+                        CLIENTE HABITUAL
+                    </summary>
 
-            <div class="role-jp">
-                招待客 — SHŌTAI KYAKU
+                    <div class="role-content">
+
+                        <div class="role-label">
+                            CLIENTELA
+                        </div>
+
+                        <p>
+                            Persona que frecuenta YŌRŌ con
+                            regularidad y mantiene vínculos
+                            establecidos con uno o varios
+                            trabajadores de la casa.
+                        </p>
+
+                    </div>
+
+                </details>
+
+
+                <details class="role-item">
+
+                    <summary>
+                        CLIENTE EXCLUSIVO
+                    </summary>
+
+                    <div class="role-content">
+
+                        <div class="role-label">
+                            CLIENTELA
+                        </div>
+
+                        <p>
+                            Cliente con acceso a servicios,
+                            espacios o encuentros reservados
+                            debido a su posición, influencia
+                            o relación con YŌRŌ.
+                        </p>
+
+                    </div>
+
+                </details>
+
+
             </div>
 
-            <p>
-                Personas que llegan a YŌRŌ mediante una
-                invitación especial o acompañando a otro
-                cliente.
-            </p>
-
-            <ul>
-                <li>
-                    Pueden conocer el distrito por
-                    primera vez.
-                </li>
-
-                <li>
-                    Pueden terminar involucrándose
-                    con los habitantes de YŌRŌ.
-                </li>
-            </ul>
-
-        </div>
-
-    </div>
-
-
-    <div class="roles-divider">
-        ✦
-    </div>
-
-
-    <!-- MUNDO EXTERIOR -->
-
-    <div class="chapter-number">
-        04
-    </div>
-
-    <div class="role-category">
-
-        <div class="role-category-title">
-            MUNDO EXTERIOR
         </div>
 
 
-        <div class="role-card">
+        <div class="role-divider"></div>
 
-            <h3>🌃 Figuras externas</h3>
 
-            <div class="role-jp">
-                外部 — GAIBU
+        <!-- ═══════════════════════════════
+             PERSONAJES INDEPENDIENTES
+        ═══════════════════════════════ -->
+
+        <div class="role-group">
+
+            <div class="role-group-title">
+                PERSONAJES INDEPENDIENTES
             </div>
 
-            <p>
-                Personajes que no pertenecen directamente
-                a YŌRŌ, pero poseen algún vínculo con
-                la casa o con sus habitantes.
-            </p>
-
-            <ul>
-                <li>
-                    Empresarios.
-                </li>
-
-                <li>
-                    Celebridades.
-                </li>
-
-                <li>
-                    Idols y artistas.
-                </li>
-
-                <li>
-                    Personas relacionadas con el pasado
-                    de alguno de los personajes.
-                </li>
-            </ul>
-
-        </div>
-
-
-        <div class="role-card">
-
-            <h3>🕯️ Personajes independientes</h3>
-
-            <div class="role-jp">
+            <div class="role-group-jp">
                 独立 — DOKURITSU
             </div>
 
-            <p>
-                Personajes que pueden moverse libremente
-                entre el distrito y el mundo exterior,
-                sin pertenecer oficialmente a YŌRŌ.
-            </p>
+
+            <div class="role-grid">
+
+
+                <details class="role-item">
+
+                    <summary>
+                        PERSONAJE INDEPENDIENTE
+                    </summary>
+
+                    <div class="role-content">
+
+                        <div class="role-label">
+                            FUERA DE YŌRŌ
+                        </div>
+
+                        <p>
+                            Personaje que no trabaja ni es cliente
+                            habitual de YŌRŌ, pero puede relacionarse
+                            con sus integrantes y participar en la
+                            historia.
+                        </p>
+
+                    </div>
+
+                </details>
+
+
+                <details class="role-item">
+
+                    <summary>
+                        CIVIL
+                    </summary>
+
+                    <div class="role-content">
+
+                        <div class="role-label">
+                            MUNDO EXTERIOR
+                        </div>
+
+                        <p>
+                            Persona sin relación directa con
+                            YŌRŌ que puede involucrarse en los
+                            acontecimientos por circunstancias
+                            personales o externas.
+                        </p>
+
+                    </div>
+
+                </details>
+
+
+            </div>
 
         </div>
 
-    </div>
+
+        <div class="role-divider"></div>
 
 
-    <div class="roles-divider">
-        ✦
-    </div>
+        <!-- ═══════════════════════════════
+             FIGURAS EXTERNAS
+        ═══════════════════════════════ -->
+
+        <div class="role-group">
+
+            <div class="role-group-title">
+                FIGURAS EXTERNAS
+            </div>
+
+            <div class="role-group-jp">
+                外部の人物 — GAIBU NO JINBUTSU
+            </div>
 
 
-    <!-- REGLAS DEL ROL -->
-
-    <div class="chapter-number">
-        05
-    </div>
-
-    <h3>Reglas del rol</h3>
-
-    <div class="jp">
-        ロールルール — RŌRU RŪRU
-    </div>
+            <div class="role-grid">
 
 
-    <div class="role-note">
+                <details class="role-item">
 
-        <div class="label">
-            IMPORTANTE
+                    <summary>
+                        FIGURA PÚBLICA
+                    </summary>
+
+                    <div class="role-content">
+
+                        <div class="role-label">
+                            MUNDO EXTERIOR
+                        </div>
+
+                        <p>
+                            Artistas, idols, celebridades o
+                            personas reconocidas públicamente
+                            que pueden tener vínculos con YŌRŌ.
+                        </p>
+
+                    </div>
+
+                </details>
+
+
+                <details class="role-item">
+
+                    <summary>
+                        FIGURA EMPRESARIAL
+                    </summary>
+
+                    <div class="role-content">
+
+                        <div class="role-label">
+                            MUNDO EXTERIOR
+                        </div>
+
+                        <p>
+                            Empresarios, herederos o personas
+                            vinculadas a negocios e instituciones
+                            con intereses relacionados con YŌRŌ.
+                        </p>
+
+                    </div>
+
+                </details>
+
+
+                <details class="role-item">
+
+                    <summary>
+                        CONTACTO EXTERNO
+                    </summary>
+
+                    <div class="role-content">
+
+                        <div class="role-label">
+                            MUNDO EXTERIOR
+                        </div>
+
+                        <p>
+                            Persona que mantiene algún tipo de
+                            relación con trabajadores, clientes
+                            o acontecimientos de YŌRŌ sin formar
+                            parte de la casa.
+                        </p>
+
+                    </div>
+
+                </details>
+
+
+                <details class="role-item">
+
+                    <summary>
+                        FIGURA VINCULADA
+                    </summary>
+
+                    <div class="role-content">
+
+                        <div class="role-label">
+                            MUNDO EXTERIOR
+                        </div>
+
+                        <p>
+                            Personaje relacionado con la historia
+                            de YŌRŌ, sus secretos o acontecimientos
+                            pasados, aunque actualmente no pertenezca
+                            al establecimiento.
+                        </p>
+
+                    </div>
+
+                </details>
+
+
+            </div>
+
         </div>
 
-        <p>
-            El rol es una historia compartida.
-            Ningún personaje existe de manera aislada.
-        </p>
-
-    </div>
-
-
-    <div class="role-rule">
-
-        <h4>✦ Respetar al personaje ajeno</h4>
-
-        <p>
-            No controlar las acciones, pensamientos o
-            decisiones del personaje de otra persona
-            sin su consentimiento.
-        </p>
-
-    </div>
-
-
-    <div class="role-rule">
-
-        <h4>✦ Diferenciar personaje y usuario</h4>
-
-        <p>
-            Los conflictos, romances o rivalidades entre
-            personajes pertenecen a la historia y no
-            representan necesariamente una relación
-            entre quienes los interpretan.
-        </p>
-
-    </div>
-
-
-    <div class="role-rule">
-
-        <h4>✦ Mantener la coherencia</h4>
-
-        <p>
-            Las acciones de cada personaje deben respetar
-            su historia, personalidad, posición y la
-            información establecida dentro del universo.
-        </p>
-
-    </div>
-
-
-    <div class="role-rule">
-
-        <h4>✦ No utilizar información externa</h4>
-
-        <p>
-            La información que el usuario conoce fuera
-            del rol no debe utilizarse automáticamente
-            como conocimiento del personaje.
-        </p>
-
-    </div>
-
-
-    <div class="role-rule">
-
-        <h4>✦ Las historias pueden cambiar</h4>
-
-        <p>
-            Los personajes pueden evolucionar,
-            establecer nuevas relaciones, cometer errores
-            y cambiar su posición dentro de la historia.
-        </p>
-
-    </div>
-
-
-    <div class="role-rule">
-
-        <h4>✦ Los secretos tienen consecuencias</h4>
-
-        <p>
-            La información confidencial puede formar
-            parte de la trama. Descubrir un secreto debe
-            ocurrir dentro del desarrollo del rol.
-        </p>
-
-    </div>
-
-
-    <div class="roles-ending">
-
-        <div class="jp">
-            物語は、夜と共に続く。
-        </div>
-
-        <p>
-            La historia continúa con cada personaje.
-        </p>
 
     </div>
 
 
     <button class="close" onclick="closeSections()">
-        CERRAR ARCHIVO
+        CERRAR
     </button>
 
 </section>
-
 
 <!-- INTEGRANTES -->
 
