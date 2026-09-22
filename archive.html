@@ -1528,182 +1528,194 @@ header {
 
 }
 
-   /* ═══════════════════════════════
-   REGLAMENTO — 規則
-═══════════════════════════════ */
+ /* ═══════════════════════════════════════
+   REGLAMENTO — ARCHIVO INTERNO
+═══════════════════════════════════════ */
 
-.reglamento h2 {
-    font-size: 38px;
-    letter-spacing: 8px;
+.rules-archive {
+    margin: 30px auto 10px;
+    padding: 28px 24px;
+    max-width: 620px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(35, 27, 25, 0.72),
+            rgba(12, 9, 9, 0.82)
+        );
+
+    border: 1px solid rgba(128, 96, 82, 0.45);
+    box-shadow:
+        inset 0 0 35px rgba(0,0,0,0.18),
+        0 10px 35px rgba(0,0,0,0.15);
 }
 
-.rules-intro {
-    border-left: 1px solid rgba(128,96,82,0.5);
-    padding-left: 20px;
-    margin-bottom: 35px;
-}
 
-.rules-intro p {
-    margin-bottom: 15px;
-}
+/* ENCABEZADO */
 
-.rules-intro .opening {
-    font-size: 21px !important;
-    font-style: italic;
-    opacity: 0.95 !important;
-}
-
-/* CATEGORÍAS */
-
-.rules-category {
-    margin: 35px 0;
-}
-
-.rules-category-title {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 18px;
-}
-
-.rules-category-title .icon {
-    font-size: 20px;
-}
-
-.rules-category-title .name {
-    font-size: 21px;
-    letter-spacing: 3px;
-}
-
-.rules-category-title .jp {
-    margin: 0;
-    font-size: 9px;
-    letter-spacing: 2px;
-    opacity: 0.4;
-}
-
-/* REGLAS */
-
-.rule {
-    display: flex;
-    gap: 15px;
-    padding: 16px 5px;
-    border-bottom: 1px solid rgba(128,96,82,0.18);
-}
-
-.rule-number {
-    min-width: 28px;
-    font-family: 'Noto Serif JP', serif;
-    font-size: 10px;
-    letter-spacing: 1px;
-    opacity: 0.4;
-    padding-top: 3px;
-}
-
-.rule-content {
-    flex: 1;
-}
-
-.rule-content strong {
-    display: block;
-    font-size: 17px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    margin-bottom: 4px;
-}
-
-.rule-content p {
-    font-size: 15px !important;
-    line-height: 1.55 !important;
-    opacity: 0.65 !important;
-    margin-bottom: 0 !important;
-}
-
-/* REGLA DESTACADA */
-
-.rule-important {
-    margin: 25px 0;
-    padding: 22px 18px;
+.rules-header {
     text-align: center;
-    border-top: 1px solid rgba(128,96,82,0.45);
-    border-bottom: 1px solid rgba(128,96,82,0.45);
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(128,96,82,0.3);
 }
 
-.rule-important .symbol {
-    font-size: 20px;
-    margin-bottom: 8px;
-}
-
-.rule-important strong {
-    display: block;
-    font-size: 19px;
-    font-weight: 400;
-    letter-spacing: 1px;
-}
-
-.rule-important p {
-    margin-top: 8px;
-    font-size: 14px !important;
-    opacity: 0.55 !important;
-}
-
-/* CONSECUENCIAS */
-
-.rules-warning {
-    margin: 35px 0;
-    padding: 22px 18px;
-    background: rgba(35,27,25,0.45);
-    border: 1px solid rgba(128,96,82,0.35);
-}
-
-.rules-warning .label {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 8px;
-    letter-spacing: 4px;
-    opacity: 0.4;
+.rules-header .symbol {
+    font-size: 22px;
     margin-bottom: 10px;
 }
 
-.rules-warning p {
-    font-size: 16px !important;
-    line-height: 1.6 !important;
-    opacity: 0.7 !important;
+.rules-header h3 {
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    margin-bottom: 6px;
 }
 
-/* FINAL */
+.rules-header .jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    opacity: 0.45;
+}
 
-.rules-ending {
+
+/* INTRODUCCIÓN */
+
+.rules-intro {
     text-align: center;
-    margin: 50px 0 30px;
-    padding-top: 30px;
-    border-top: 1px solid rgba(128,96,82,0.4);
+    margin-bottom: 28px;
 }
 
-.rules-ending .jp {
-    font-size: 15px;
+.rules-intro p {
+    font-size: 16px;
+    line-height: 1.7;
     opacity: 0.7;
 }
 
-.rules-ending p {
-    font-size: 17px;
-    font-style: italic;
+
+/* CADA REGLA */
+
+.rule-item {
+    padding: 20px 18px;
+    margin-bottom: 12px;
+
+    border-left: 1px solid rgba(128,96,82,0.55);
+
+    background: rgba(255,255,255,0.015);
+
+    transition: 0.3s ease;
+}
+
+.rule-item:hover {
+    background: rgba(128,96,82,0.07);
+    border-left-color: #a98572;
+}
+
+.rule-number {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    opacity: 0.35;
+    margin-bottom: 7px;
+}
+
+.rule-item h4 {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    margin-bottom: 7px;
+}
+
+.rule-item p {
+    font-size: 15px;
+    line-height: 1.65;
+    opacity: 0.68;
+    margin: 0;
+}
+
+
+/* SEPARADOR */
+
+.rules-divider {
+    text-align: center;
+    margin: 28px 0;
+    color: #a98572;
     opacity: 0.6;
 }
+
+
+/* REGLAS DE ORO */
+
+.rules-important {
+    margin-top: 25px;
+    padding: 22px 18px;
+    text-align: center;
+
+    border-top: 1px solid rgba(128,96,82,0.35);
+    border-bottom: 1px solid rgba(128,96,82,0.35);
+}
+
+.rules-important .label {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 9px;
+    letter-spacing: 4px;
+    opacity: 0.4;
+    margin-bottom: 12px;
+}
+
+.rules-important p {
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.7;
+    opacity: 0.85;
+}
+
+
+/* PIE */
+
+.rules-footer {
+    text-align: center;
+    margin-top: 28px;
+    opacity: 0.45;
+}
+
+.rules-footer .jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+.rules-footer p {
+    margin-top: 7px;
+    font-size: 14px;
+    font-style: italic;
+}
+
 
 /* CELULAR */
 
 @media (max-width: 500px) {
 
-    .rule {
-        gap: 10px;
+    .rules-archive {
+        padding: 22px 16px;
     }
 
-    .rule-number {
-        min-width: 24px;
+    .rules-header h3 {
+        font-size: 22px;
+        letter-spacing: 4px;
     }
 
-    .rules-category-title .name {
-        font-size: 19px;
+    .rule-item {
+        padding: 17px 15px;
+    }
+
+    .rule-item h4 {
+        font-size: 17px;
+    }
+
+    .rule-item p {
+        font-size: 14px;
     }
 
 }
@@ -5110,456 +5122,203 @@ header {
 
 <section id="reglas" class="section reglamento">
 
-    <div class="chapter-number">
-        01
-    </div>
+<div class="rules-archive">
 
-    <h2>REGLAMENTO</h2>
+    <div class="rules-header">
 
-    <div class="jp">
-        規則 — KISOKU
+        <div class="symbol">
+            📖
+        </div>
+
+        <h3>REGLAMENTO</h3>
+
+        <div class="jp">
+            規則 — KISOKU
+        </div>
+
     </div>
 
 
     <div class="rules-intro">
 
-        <p class="opening">
+        <p>
             Toda casa necesita reglas.
+            <br>
+            Estas son las normas que mantienen
+            YŌRŌ en equilibrio.
         </p>
+
+    </div>
+
+
+    <!-- REGLA 01 -->
+
+    <div class="rule-item">
+
+        <div class="rule-number">
+            01
+        </div>
+
+        <h4>Respeto entre integrantes</h4>
 
         <p>
-            El reglamento establece las normas básicas
-            para mantener YŌRŌ como un espacio organizado,
-            respetuoso y cómodo para todos sus integrantes.
+            Todos los participantes deben mantener
+            un trato respetuoso dentro y fuera del rol.
         </p>
 
     </div>
 
 
-    <!-- CONVIVENCIA -->
+    <!-- REGLA 02 -->
 
-    <div class="rules-category">
+    <div class="rule-item">
 
-        <div class="rules-category-title">
-
-            <div class="icon">🏮</div>
-
-            <div>
-                <div class="name">
-                    CONVIVENCIA
-                </div>
-
-                <div class="jp">
-                    共存 — KYŌZON
-                </div>
-            </div>
-
+        <div class="rule-number">
+            02
         </div>
 
-
-        <div class="rule">
-
-            <div class="rule-number">01</div>
-
-            <div class="rule-content">
-
-                <strong>Respeto entre integrantes</strong>
-
-                <p>
-                    Todos los participantes deben mantener
-                    un trato respetuoso dentro y fuera del rol.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="rule">
-
-            <div class="rule-number">02</div>
-
-            <div class="rule-content">
-
-                <strong>Sin conflictos personales</strong>
-
-                <p>
-                    Los problemas fuera del personaje no
-                    deben trasladarse al desarrollo del rol.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="rule">
-
-            <div class="rule-number">03</div>
-
-            <div class="rule-content">
-
-                <strong>Privacidad</strong>
-
-                <p>
-                    No se deben compartir conversaciones,
-                    información personal o contenido privado
-                    de otros integrantes sin autorización.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="staff-divider">
-        ✦
-    </div>
-
-
-    <!-- ROL -->
-
-    <div class="rules-category">
-
-        <div class="rules-category-title">
-
-            <div class="icon">🎭</div>
-
-            <div>
-                <div class="name">
-                    DENTRO DEL ROL
-                </div>
-
-                <div class="jp">
-                    演技 — ENGI
-                </div>
-            </div>
-
-        </div>
-
-
-        <div class="rule">
-
-            <div class="rule-number">04</div>
-
-            <div class="rule-content">
-
-                <strong>Separar personaje e integrante</strong>
-
-                <p>
-                    Las acciones, relaciones y conflictos
-                    de un personaje pertenecen a la historia
-                    y no representan necesariamente a su
-                    intérprete.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="rule">
-
-            <div class="rule-number">05</div>
-
-            <div class="rule-content">
-
-                <strong>No controlar personajes ajenos</strong>
-
-                <p>
-                    Cada participante controla únicamente
-                    las acciones de su propio personaje,
-                    salvo acuerdos previos.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="rule">
-
-            <div class="rule-number">06</div>
-
-            <div class="rule-content">
-
-                <strong>Coherencia narrativa</strong>
-
-                <p>
-                    Las acciones deben respetar la personalidad,
-                    historia y características establecidas
-                    para cada personaje.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="rule-important">
-
-        <div class="symbol">
-            「
-        </div>
-
-        <strong>
-            El rol es una historia compartida.
-        </strong>
+        <h4>Separar personaje y usuario</h4>
 
         <p>
-            Nadie escribe solo.
+            Los conflictos, romances, rivalidades o
+            vínculos entre personajes pertenecen a la
+            historia y no representan necesariamente
+            una relación entre quienes los interpretan.
         </p>
 
     </div>
 
 
-    <div class="staff-divider">
+    <!-- REGLA 03 -->
+
+    <div class="rule-item">
+
+        <div class="rule-number">
+            03
+        </div>
+
+        <h4>No controlar personajes ajenos</h4>
+
+        <p>
+            No se deben controlar las acciones,
+            pensamientos o decisiones del personaje
+            de otra persona sin su consentimiento.
+        </p>
+
+    </div>
+
+
+    <!-- REGLA 04 -->
+
+    <div class="rule-item">
+
+        <div class="rule-number">
+            04
+        </div>
+
+        <h4>Respetar la coherencia</h4>
+
+        <p>
+            Las acciones de cada personaje deben
+            respetar su historia, personalidad,
+            posición y la información establecida
+            dentro del universo de YŌRŌ.
+        </p>
+
+    </div>
+
+
+    <!-- REGLA 05 -->
+
+    <div class="rule-item">
+
+        <div class="rule-number">
+            05
+        </div>
+
+        <h4>No utilizar información externa</h4>
+
+        <p>
+            La información que el usuario conoce
+            fuera del rol no debe utilizarse
+            automáticamente como conocimiento
+            del personaje.
+        </p>
+
+    </div>
+
+
+    <!-- REGLA 06 -->
+
+    <div class="rule-item">
+
+        <div class="rule-number">
+            06
+        </div>
+
+        <h4>Respetar los límites</h4>
+
+        <p>
+            Toda interacción debe desarrollarse
+            respetando los límites establecidos
+            entre los participantes.
+        </p>
+
+    </div>
+
+
+    <!-- REGLA 07 -->
+
+    <div class="rule-item">
+
+        <div class="rule-number">
+            07
+        </div>
+
+        <h4>Los secretos pertenecen a la historia</h4>
+
+        <p>
+            La información confidencial de un personaje
+            forma parte de la trama. Descubrir un secreto
+            debe ocurrir dentro del desarrollo del rol.
+        </p>
+
+    </div>
+
+
+    <div class="rules-divider">
         ✦
     </div>
 
 
-    <!-- CONTENIDO -->
-
-    <div class="rules-category">
-
-        <div class="rules-category-title">
-
-            <div class="icon">🌙</div>
-
-            <div>
-                <div class="name">
-                    CONTENIDO
-                </div>
-
-                <div class="jp">
-                    内容 — NAIYŌ
-                </div>
-            </div>
-
-        </div>
-
-
-        <div class="rule">
-
-            <div class="rule-number">07</div>
-
-            <div class="rule-content">
-
-                <strong>Contenido sensible</strong>
-
-                <p>
-                    Los contenidos sensibles deben manejarse
-                    con responsabilidad y respetando los límites
-                    establecidos por los participantes.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="rule">
-
-            <div class="rule-number">08</div>
-
-            <div class="rule-content">
-
-                <strong>Consentimiento</strong>
-
-                <p>
-                    Ninguna situación narrativa que afecte
-                    directamente a otro personaje debe avanzar
-                    sin el acuerdo correspondiente cuando
-                    sea necesario.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="rule">
-
-            <div class="rule-number">09</div>
-
-            <div class="rule-content">
-
-                <strong>Contenido fuera de contexto</strong>
-
-                <p>
-                    Las conversaciones fuera de personaje
-                    deben mantenerse separadas de las escenas
-                    narrativas cuando sea necesario.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="staff-divider">
-        ✦
-    </div>
-
-
-    <!-- ACTIVIDAD -->
-
-    <div class="rules-category">
-
-        <div class="rules-category-title">
-
-            <div class="icon">🕯️</div>
-
-            <div>
-                <div class="name">
-                    ACTIVIDAD
-                </div>
-
-                <div class="jp">
-                    活動 — KATSUDŌ
-                </div>
-            </div>
-
-        </div>
-
-
-        <div class="rule">
-
-            <div class="rule-number">10</div>
-
-            <div class="rule-content">
-
-                <strong>Participación</strong>
-
-                <p>
-                    Se espera que los integrantes participen
-                    activamente en el desarrollo de sus personajes
-                    y en las actividades del grupo.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="rule">
-
-            <div class="rule-number">11</div>
-
-            <div class="rule-content">
-
-                <strong>Avisar ausencias</strong>
-
-                <p>
-                    Si un integrante necesita ausentarse durante
-                    un período prolongado, puede comunicarlo
-                    al Staff.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- ADMINISTRACIÓN -->
-
-    <div class="rules-category">
-
-        <div class="rules-category-title">
-
-            <div class="icon">🏮</div>
-
-            <div>
-                <div class="name">
-                    ADMINISTRACIÓN
-                </div>
-
-                <div class="jp">
-                    管理 — KANRI
-                </div>
-            </div>
-
-        </div>
-
-
-        <div class="rule">
-
-            <div class="rule-number">12</div>
-
-            <div class="rule-content">
-
-                <strong>Decisiones del Staff</strong>
-
-                <p>
-                    La administración puede intervenir cuando
-                    sea necesario para resolver conflictos,
-                    mantener el orden o proteger el desarrollo
-                    del rol.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="rule">
-
-            <div class="rule-number">13</div>
-
-            <div class="rule-content">
-
-                <strong>Actualización del reglamento</strong>
-
-                <p>
-                    Las normas pueden modificarse cuando el
-                    funcionamiento del grupo lo requiera.
-                    Los cambios serán comunicados a los
-                    integrantes.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="rules-warning">
+    <div class="rules-important">
 
         <div class="label">
-            IMPORTANTE
+            REGLA PRINCIPAL
         </div>
 
         <p>
-            El desconocimiento de una norma no impide su
-            aplicación. Ante cualquier duda o situación
-            particular, los integrantes pueden consultar
-            directamente con el Staff.
+            La historia es compartida.
+            <br>
+            Ningún personaje existe de manera aislada.
         </p>
 
     </div>
 
 
-    <div class="rules-ending">
+    <div class="rules-footer">
 
         <div class="jp">
-            規則は、家を守る。
+            物語は、夜と共に続く。
         </div>
 
         <p>
-            Las reglas protegen la casa.
+            La historia continúa con cada personaje.
         </p>
 
     </div>
 
+</div>
 
     <button class="close" onclick="closeSections()">
         CERRAR ARCHIVO
