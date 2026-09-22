@@ -1,217 +1,1023 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>YŌRŌ — Private Archive</title>
+    <meta charset="UTF-8">
 
-<style>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Noto+Serif+JP:wght@300;400&display=swap');
+    <title>YŌRŌ — Private Archive</title>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-body {
-    min-height: 100vh;
-    background:
-        radial-gradient(circle at center, #25191a 0%, #0d0b0b 55%, #050505 100%);
-    color: #e8dfd2;
-    font-family: 'Cormorant Garamond', serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background:
-        linear-gradient(90deg, transparent 48%, rgba(255,255,255,0.025) 50%, transparent 52%);
-    pointer-events: none;
-}
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Noto+Serif+JP:wght@300;400&display=swap"
+          rel="stylesheet">
 
-.container {
-    width: 90%;
-    max-width: 500px;
-    text-align: center;
-    animation: appear 2s ease;
-}
 
-.symbol {
-    font-size: 38px;
-    margin-bottom: 20px;
-    opacity: 0.9;
-}
+    <style>
 
-h1 {
-    font-size: 64px;
-    font-weight: 400;
-    letter-spacing: 12px;
-    margin-left: 12px;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.subtitle {
-    margin-top: 8px;
-    font-family: 'Noto Serif JP', serif;
-    font-size: 13px;
-    letter-spacing: 5px;
-    opacity: 0.65;
-}
 
-.line {
-    width: 130px;
-    height: 1px;
-    background: #8f6b55;
-    margin: 28px auto;
-    opacity: 0.7;
-}
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
 
-.jp {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 15px;
-    letter-spacing: 5px;
-    opacity: 0.7;
-}
 
-button {
-    margin-top: 35px;
-    padding: 13px 42px;
-    background: transparent;
-    border: 1px solid #806052;
-    color: #e8dfd2;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 16px;
-    letter-spacing: 4px;
-    cursor: pointer;
-    transition: all 0.4s ease;
-}
+        body {
 
-button:hover {
-    background: #806052;
-    color: #0b0909;
-}
+            overflow: hidden;
 
-#access {
-    display: none;
-    margin-top: 30px;
-}
+            background:
+                radial-gradient(
+                    circle at 50% 35%,
+                    #351d1d 0%,
+                    #160d0e 38%,
+                    #080606 72%,
+                    #030303 100%
+                );
 
-input {
-    width: 210px;
-    padding: 12px;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #806052;
-    outline: none;
-    color: #e8dfd2;
-    text-align: center;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 17px;
-    letter-spacing: 4px;
-}
+            color: #e8dfd2;
 
-.error {
-    margin-top: 12px;
-    color: #9e6c65;
-    font-size: 14px;
-    display: none;
-}
+            font-family:
+                'Cormorant Garamond',
+                serif;
+        }
 
-@keyframes appear {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+        /* ─────────────────────────
+           FONDO
+        ───────────────────────── */
 
-</style>
+        .background {
+
+            position: fixed;
+
+            inset: -8%;
+
+            background:
+
+                radial-gradient(
+                    ellipse at 50% 35%,
+                    rgba(130, 65, 50, 0.24),
+                    transparent 45%
+                ),
+
+                radial-gradient(
+                    ellipse at 20% 80%,
+                    rgba(90, 35, 35, 0.15),
+                    transparent 45%
+                ),
+
+                linear-gradient(
+                    120deg,
+                    #080606,
+                    #1a0d0e,
+                    #080606
+                );
+
+            animation:
+                backgroundMove 14s ease-in-out infinite alternate;
+
+            z-index: 0;
+        }
+
+
+        @keyframes backgroundMove {
+
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.08);
+            }
+
+        }
+
+
+        /* ─────────────────────────
+           LUZ CENTRAL
+        ───────────────────────── */
+
+        .light {
+
+            position: fixed;
+
+            width: 420px;
+            height: 420px;
+
+            left: 50%;
+            top: 42%;
+
+            transform:
+                translate(-50%, -50%);
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(151, 83, 62, 0.16),
+                    rgba(100, 45, 40, 0.06) 45%,
+                    transparent 70%
+                );
+
+            filter: blur(20px);
+
+            animation:
+                breathing 6s ease-in-out infinite;
+
+            pointer-events: none;
+
+            z-index: 1;
+        }
+
+
+        @keyframes breathing {
+
+            0%,
+            100% {
+                opacity: 0.65;
+                transform:
+                    translate(-50%, -50%)
+                    scale(0.95);
+            }
+
+            50% {
+                opacity: 1;
+                transform:
+                    translate(-50%, -50%)
+                    scale(1.08);
+            }
+
+        }
+
+
+        /* ─────────────────────────
+           LLUVIA / PARTÍCULAS
+        ───────────────────────── */
+
+        .rain {
+
+            position: fixed;
+
+            inset: 0;
+
+            pointer-events: none;
+
+            opacity: 0.12;
+
+            background-image:
+
+                repeating-linear-gradient(
+                    105deg,
+                    transparent 0px,
+                    transparent 45px,
+                    rgba(232, 223, 210, 0.18) 46px,
+                    transparent 47px
+                );
+
+            background-size: 90px 90px;
+
+            animation:
+                rainMove 7s linear infinite;
+
+            z-index: 2;
+        }
+
+
+        @keyframes rainMove {
+
+            from {
+                background-position:
+                    0 0;
+            }
+
+            to {
+                background-position:
+                    -180px 360px;
+            }
+
+        }
+
+
+        /* ─────────────────────────
+           VIÑETA
+        ───────────────────────── */
+
+        .vignette {
+
+            position: fixed;
+
+            inset: 0;
+
+            background:
+                radial-gradient(
+                    ellipse at center,
+                    transparent 25%,
+                    rgba(0,0,0,0.35) 65%,
+                    rgba(0,0,0,0.82) 100%
+                );
+
+            pointer-events: none;
+
+            z-index: 3;
+        }
+
+
+        /* ─────────────────────────
+           CONTENIDO
+        ───────────────────────── */
+
+        .entrance {
+
+            position: relative;
+
+            width: 100%;
+            height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            z-index: 4;
+        }
+
+
+        .content {
+
+            width: 90%;
+            max-width: 520px;
+
+            animation:
+                appear 2s ease forwards;
+
+        }
+
+
+        @keyframes appear {
+
+            from {
+                opacity: 0;
+                transform:
+                    translateY(18px);
+            }
+
+            to {
+                opacity: 1;
+                transform:
+                    translateY(0);
+            }
+
+        }
+
+
+        /* ─────────────────────────
+           SÍMBOLO
+        ───────────────────────── */
+
+        .symbol {
+
+            font-size: 30px;
+
+            margin-bottom: 22px;
+
+            opacity: 0;
+
+            animation:
+                fadeIn 1.5s ease 0.3s forwards;
+        }
+
+
+        /* ─────────────────────────
+           LOGO
+        ───────────────────────── */
+
+        .logo {
+
+            font-size: clamp(48px, 14vw, 72px);
+
+            font-weight: 400;
+
+            letter-spacing: 13px;
+
+            padding-left: 13px;
+
+            opacity: 0;
+
+            animation:
+                fadeIn 1.8s ease 0.5s forwards;
+
+            text-shadow:
+                0 0 25px rgba(160, 95, 70, 0.15);
+        }
+
+
+        /* ─────────────────────────
+           SUBTÍTULO
+        ───────────────────────── */
+
+        .subtitle {
+
+            margin-top: 8px;
+
+            font-family:
+                'Noto Serif JP',
+                serif;
+
+            font-size: 10px;
+
+            letter-spacing: 5px;
+
+            opacity: 0;
+
+            animation:
+                fadeIn 1.5s ease 0.9s forwards;
+        }
+
+
+        /* ─────────────────────────
+           LÍNEA
+        ───────────────────────── */
+
+        .line {
+
+            width: 85px;
+
+            height: 1px;
+
+            margin: 27px auto;
+
+            background:
+                #806052;
+
+            opacity: 0;
+
+            animation:
+                expandLine 1.2s ease 1.2s forwards;
+        }
+
+
+        @keyframes expandLine {
+
+            from {
+                opacity: 0;
+                width: 0;
+            }
+
+            to {
+                opacity: 0.7;
+                width: 85px;
+            }
+
+        }
+
+
+        /* ─────────────────────────
+           FRASE
+        ───────────────────────── */
+
+        .phrase {
+
+            margin-bottom: 38px;
+
+            opacity: 0;
+
+            animation:
+                fadeIn 1.5s ease 1.4s forwards;
+        }
+
+
+        .phrase .japanese {
+
+            font-family:
+                'Noto Serif JP',
+                serif;
+
+            font-size: 14px;
+
+            letter-spacing: 4px;
+
+            opacity: 0.7;
+        }
+
+
+        .phrase p {
+
+            margin-top: 9px;
+
+            font-size: 15px;
+
+            font-style: italic;
+
+            opacity: 0.45;
+        }
+
+
+        /* ─────────────────────────
+           BOTÓN
+        ───────────────────────── */
+
+        .enter-button {
+
+            position: relative;
+
+            display: inline-block;
+
+            min-width: 170px;
+
+            padding: 13px 30px;
+
+            background:
+                rgba(20, 13, 13, 0.5);
+
+            border:
+                1px solid
+                rgba(128, 96, 82, 0.7);
+
+            color: #e8dfd2;
+
+            font-family:
+                'Cormorant Garamond',
+                serif;
+
+            font-size: 15px;
+
+            letter-spacing: 4px;
+
+            cursor: pointer;
+
+            transition:
+                0.4s ease;
+
+            opacity: 0;
+
+            animation:
+                fadeIn 1.5s ease 1.7s forwards;
+        }
+
+
+        .enter-button:hover {
+
+            background:
+                rgba(128, 96, 82, 0.16);
+
+            border-color:
+                #b38b76;
+
+            box-shadow:
+                0 0 25px
+                rgba(128, 96, 82, 0.12);
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        /* ─────────────────────────
+           CÓDIGO DE ACCESO
+        ───────────────────────── */
+
+        .access {
+
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+
+            transform:
+                translate(-50%, -50%);
+
+            width: 90%;
+            max-width: 350px;
+
+            padding: 35px 25px;
+
+            background:
+                rgba(9, 6, 6, 0.94);
+
+            border:
+                1px solid
+                rgba(128, 96, 82, 0.55);
+
+            box-shadow:
+                0 20px 80px
+                rgba(0,0,0,0.6);
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transition:
+                0.5s ease;
+
+            z-index: 10;
+        }
+
+
+        .access.active {
+
+            opacity: 1;
+
+            visibility: visible;
+        }
+
+
+        .access-title {
+
+            font-family:
+                'Noto Serif JP',
+                serif;
+
+            font-size: 10px;
+
+            letter-spacing: 4px;
+
+            opacity: 0.45;
+
+            margin-bottom: 18px;
+        }
+
+
+        .access h2 {
+
+            font-size: 25px;
+
+            font-weight: 400;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .access input {
+
+            width: 100%;
+
+            padding: 12px;
+
+            background:
+                rgba(255,255,255,0.025);
+
+            border:
+                1px solid
+                rgba(128,96,82,0.5);
+
+            outline: none;
+
+            color: #e8dfd2;
+
+            text-align: center;
+
+            font-family:
+                'Cormorant Garamond',
+                serif;
+
+            font-size: 17px;
+
+            letter-spacing: 4px;
+
+            transition:
+                0.3s ease;
+        }
+
+
+        .access input:focus {
+
+            border-color:
+                #a98572;
+
+            background:
+                rgba(128,96,82,0.06);
+        }
+
+
+        .access-button {
+
+            width: 100%;
+
+            margin-top: 15px;
+
+            padding: 11px;
+
+            background: transparent;
+
+            border:
+                1px solid
+                rgba(128,96,82,0.6);
+
+            color: #e8dfd2;
+
+            font-family:
+                'Cormorant Garamond',
+                serif;
+
+            letter-spacing: 3px;
+
+            cursor: pointer;
+
+            transition:
+                0.3s ease;
+        }
+
+
+        .access-button:hover {
+
+            background:
+                rgba(128,96,82,0.15);
+        }
+
+
+        .error {
+
+            height: 18px;
+
+            margin-top: 12px;
+
+            font-size: 13px;
+
+            font-style: italic;
+
+            color: #b99483;
+
+            opacity: 0;
+
+            transition:
+                0.3s ease;
+        }
+
+
+        .error.show {
+
+            opacity: 0.8;
+        }
+
+
+        .cancel {
+
+            margin-top: 15px;
+
+            background: none;
+
+            border: none;
+
+            color: #e8dfd2;
+
+            font-family:
+                'Cormorant Garamond',
+                serif;
+
+            font-size: 13px;
+
+            letter-spacing: 2px;
+
+            opacity: 0.4;
+
+            cursor: pointer;
+        }
+
+
+        .cancel:hover {
+            opacity: 0.8;
+        }
+
+
+        /* ─────────────────────────
+           TRANSICIÓN
+        ───────────────────────── */
+
+        .transition {
+
+            position: fixed;
+
+            inset: 0;
+
+            background: #050303;
+
+            z-index: 100;
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transition:
+                opacity 1s ease;
+        }
+
+
+        .transition.active {
+
+            opacity: 1;
+
+            visibility: visible;
+        }
+
+
+        /* ─────────────────────────
+           ANIMACIONES
+        ───────────────────────── */
+
+        @keyframes fadeIn {
+
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+
+        }
+
+
+        /* ─────────────────────────
+           CELULAR
+        ───────────────────────── */
+
+        @media (max-width: 500px) {
+
+            .logo {
+
+                font-size: 44px;
+
+                letter-spacing: 9px;
+
+                padding-left: 9px;
+            }
+
+
+            .phrase {
+
+                margin-bottom: 32px;
+            }
+
+
+            .phrase .japanese {
+
+                font-size: 12px;
+
+                letter-spacing: 3px;
+            }
+
+
+            .phrase p {
+
+                font-size: 14px;
+            }
+
+
+            .access {
+
+                padding: 30px 20px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-<div class="container">
 
-    <div class="symbol">🏮</div>
+    <!-- FONDO -->
 
-    <h1>YŌRŌ</h1>
+    <div class="background"></div>
 
-    <div class="subtitle">
-        PRIVATE ARCHIVE
-    </div>
+    <div class="light"></div>
 
-    <div class="line"></div>
+    <div class="rain"></div>
 
-    <div class="jp">
-        ようこそ
-    </div>
+    <div class="vignette"></div>
 
-    <button onclick="showAccess()">
-        ENTRAR
-    </button>
 
-    <div id="access">
+    <!-- PORTADA -->
 
-        <input
-            type="password"
-            id="code"
-            placeholder="ACCESS CODE"
-        >
+    <main class="entrance">
 
-        <br>
+        <div class="content">
 
-        <button onclick="checkCode()">
-            ACCEDER
-        </button>
+            <div class="symbol">
+                🏮
+            </div>
 
-        <div class="error" id="error">
-            Código incorrecto.
+
+            <div class="logo">
+                YŌRŌ
+            </div>
+
+
+            <div class="subtitle">
+                PRIVATE ARCHIVE
+            </div>
+
+
+            <div class="line"></div>
+
+
+            <div class="phrase">
+
+                <div class="japanese">
+                    七年前の夜
+                </div>
+
+                <p>
+                    La noche de hace siete años.
+                </p>
+
+            </div>
+
+
+            <button
+                class="enter-button"
+                onclick="openAccess()">
+
+                ENTRAR
+
+            </button>
+
         </div>
 
+
+        <!-- CÓDIGO -->
+
+        <div
+            class="access"
+            id="accessPanel">
+
+            <div class="access-title">
+                PRIVATE ARCHIVE
+            </div>
+
+
+            <h2>
+                CÓDIGO DE ACCESO
+            </h2>
+
+
+            <input
+                type="password"
+                id="accessCode"
+                placeholder="••••••••"
+                autocomplete="off"
+                onkeydown="handleEnter(event)"
+            >
+
+
+            <button
+                class="access-button"
+                onclick="checkAccess()">
+
+                ACCEDER
+
+            </button>
+
+
+            <div
+                class="error"
+                id="errorMessage">
+
+                Código incorrecto.
+
+            </div>
+
+
+            <button
+                class="cancel"
+                onclick="closeAccess()">
+
+                VOLVER
+
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- TRANSICIÓN -->
+
+    <div
+        class="transition"
+        id="transition">
     </div>
 
-</div>
 
-<script>
+    <script>
 
-function showAccess() {
-    document.getElementById("access").style.display = "block";
-}
+        const ACCESS_CODE = "YORO2026";
 
-function checkCode() {
 
-    const code = document.getElementById("code").value;
+        function openAccess() {
 
-    /*
-       CAMBIAR ESTE CÓDIGO
-       por el código que quieras utilizar.
-    */
+            document
+                .getElementById("accessPanel")
+                .classList.add("active");
 
-    const accessCode = "YORO2026";
+            setTimeout(() => {
 
-    if (code === accessCode) {
+                document
+                    .getElementById("accessCode")
+                    .focus();
 
-        window.location.href = "archive.html";
+            }, 400);
 
-    } else {
+        }
 
-        document.getElementById("error").style.display = "block";
 
-    }
-}
+        function closeAccess() {
 
-</script>
+            document
+                .getElementById("accessPanel")
+                .classList.remove("active");
+
+            document
+                .getElementById("accessCode")
+                .value = "";
+
+            document
+                .getElementById("errorMessage")
+                .classList.remove("show");
+
+        }
+
+
+        function handleEnter(event) {
+
+            if (event.key === "Enter") {
+
+                checkAccess();
+
+            }
+
+        }
+
+
+        function checkAccess() {
+
+            const input =
+                document
+                    .getElementById("accessCode")
+                    .value
+                    .trim();
+
+
+            const error =
+                document
+                    .getElementById("errorMessage");
+
+
+            if (input === ACCESS_CODE) {
+
+                document
+                    .getElementById("transition")
+                    .classList.add("active");
+
+
+                setTimeout(() => {
+
+                    window.location.href =
+                        "archive.html";
+
+                }, 900);
+
+
+            } else {
+
+                error.classList.add("show");
+
+                document
+                    .getElementById("accessCode")
+                    .value = "";
+
+                document
+                    .getElementById("accessCode")
+                    .focus();
+
+            }
+
+        }
+
+    </script>
+
 
 </body>
+
 </html>
