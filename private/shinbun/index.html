@@ -1915,6 +1915,291 @@ header{
 
 }
 
+/* ═══════════════════════════════════════
+   YŌRŌ SHINBUN — NOTICIAS FUNCIONALES
+   ═══════════════════════════════════════ */
+
+.news-modal{
+    position:fixed;
+    inset:0;
+
+    z-index:1000;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:30px;
+
+    background:rgba(5,4,5,.88);
+
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:
+        opacity .35s ease,
+        visibility .35s ease;
+}
+
+.news-modal.active{
+    opacity:1;
+    visibility:visible;
+}
+
+
+.news-modal-box{
+    position:relative;
+
+    width:min(760px,100%);
+    max-height:85vh;
+
+    overflow-y:auto;
+
+    padding:
+        55px
+        55px
+        50px;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(181,154,104,.055),
+            transparent 55%
+        ),
+        #0d0c0d;
+
+    border:1px solid var(--line);
+
+    box-shadow:
+        0 25px 80px rgba(0,0,0,.55);
+
+    transform:translateY(20px);
+
+    transition:
+        transform .4s ease;
+}
+
+.news-modal.active .news-modal-box{
+    transform:translateY(0);
+}
+
+
+/* ───────── DECORACIÓN SUPERIOR ───────── */
+
+.news-modal-box::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:15%;
+    right:15%;
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            var(--gold),
+            transparent
+        );
+
+    opacity:.6;
+}
+
+
+/* ───────── CERRAR ───────── */
+
+.news-modal-close{
+    position:absolute;
+
+    top:18px;
+    right:22px;
+
+    border:none;
+    background:none;
+
+    color:#756e68;
+
+    font-family:"Noto Serif JP",serif;
+
+    font-size:1.1rem;
+
+    cursor:pointer;
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+.news-modal-close:hover{
+    color:var(--gold);
+
+    transform:rotate(90deg);
+}
+
+
+/* ───────── CATEGORÍA ───────── */
+
+.news-modal-category{
+    color:var(--red-light);
+
+    font-family:"Noto Serif JP",serif;
+
+    font-size:.52rem;
+
+    letter-spacing:3px;
+
+    text-align:center;
+}
+
+
+/* ───────── TÍTULO ───────── */
+
+.news-modal-title{
+    margin:
+        20px
+        0
+        12px;
+
+    color:var(--text);
+
+    font-family:"Playfair Display",serif;
+
+    font-size:
+        clamp(
+            2rem,
+            5vw,
+            3.4rem
+        );
+
+    font-weight:500;
+
+    line-height:1;
+
+    letter-spacing:2px;
+
+    text-align:center;
+}
+
+
+/* ───────── FECHA ───────── */
+
+.news-modal-date{
+    color:#5e5853;
+
+    font-family:"Noto Serif JP",serif;
+
+    font-size:.45rem;
+
+    letter-spacing:2px;
+
+    text-align:center;
+}
+
+
+/* ───────── DIVISOR ───────── */
+
+.news-modal-divider{
+    width:90px;
+
+    height:1px;
+
+    margin:28px auto;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            var(--gold),
+            transparent
+        );
+
+    opacity:.55;
+}
+
+
+/* ───────── CONTENIDO ───────── */
+
+.news-modal-content{
+    color:#a49c95;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:1.12rem;
+
+    line-height:1.7;
+
+    letter-spacing:.2px;
+}
+
+.news-modal-content p{
+    margin-bottom:18px;
+}
+
+.news-modal-content p:last-child{
+    margin-bottom:0;
+}
+
+
+/* ───────── MOBILE ───────── */
+
+@media(max-width:700px){
+
+    .news-modal{
+        padding:15px;
+    }
+
+    .news-modal-box{
+        max-height:90vh;
+
+        padding:
+            50px
+            22px
+            35px;
+    }
+
+    .news-modal-title{
+        font-size:2.15rem;
+    }
+
+    .news-modal-content{
+        font-size:1.05rem;
+
+        line-height:1.6;
+    }
+
+}
+
+.news-read{
+    border:none;
+    background:none;
+
+    padding:0;
+
+    color:#817970;
+
+    font-family:"Noto Serif JP",serif;
+
+    font-size:.42rem;
+    letter-spacing:2px;
+
+    cursor:pointer;
+
+    transition:
+        color .3s ease,
+        letter-spacing .3s ease;
+}
+
+.news-read:hover{
+    color:var(--gold);
+    letter-spacing:2.5px;
+}
+
 </style>
 
 </head>
@@ -2565,7 +2850,223 @@ header{
 
 
 </footer>
+<!-- ═══════════════════════════════════════
+     YŌRŌ SHINBUN — VISOR DE NOTICIAS
+     ═══════════════════════════════════════ -->
 
+<div class="news-modal" id="newsModal">
+
+    <div class="news-modal-box">
+
+        <button
+            class="news-modal-close"
+            onclick="closeNews()"
+            aria-label="Cerrar noticia">
+            ×
+        </button>
+
+
+        <div
+            class="news-modal-category"
+            id="newsCategory">
+        </div>
+
+
+        <h2
+            class="news-modal-title"
+            id="newsTitle">
+        </h2>
+
+
+        <div
+            class="news-modal-date"
+            id="newsDate">
+        </div>
+
+
+        <div class="news-modal-divider"></div>
+
+
+        <div
+            class="news-modal-content"
+            id="newsContent">
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* ═══════════════════════════════════════
+   BASE DE DATOS DE NOTICIAS
+   ═══════════════════════════════════════ */
+
+const newsData = {
+
+    noticia1: {
+
+        category: "IC · YŌRŌ",
+
+        title: "NUEVOS ROSTROS EN LA CIUDAD",
+
+        date: "21 · SEPTIEMBRE · 2026",
+
+        content: `
+            <p>
+                Nuevos personajes comienzan a formar parte
+                de la vida nocturna de YŌRŌ.
+            </p>
+
+            <p>
+                Durante los últimos días, distintos rostros
+                han comenzado a aparecer dentro de los
+                círculos sociales de la ciudad.
+            </p>
+
+            <p>
+                Sus historias recién comienzan y todavía
+                queda mucho por descubrir.
+            </p>
+        `
+    },
+
+
+    noticia2: {
+
+        category: "OOC · COMUNIDAD",
+
+        title: "ACTUALIZACIÓN DEL REGLAMENTO",
+
+        date: "20 · SEPTIEMBRE · 2026",
+
+        content: `
+            <p>
+                Se incorporaron nuevas disposiciones para
+                mejorar la organización general del rol.
+            </p>
+
+            <p>
+                Las modificaciones buscan mantener una
+                experiencia ordenada y clara para todos
+                los participantes de YŌRŌ.
+            </p>
+
+            <p>
+                Se recomienda revisar el reglamento
+                actualizado antes de continuar con las
+                actividades dentro del grupo.
+            </p>
+        `
+    },
+
+
+    noticia3: {
+
+        category: "EVENTO",
+
+        title: "UNA NUEVA NOCHE SE ACERCA",
+
+        date: "18 · SEPTIEMBRE · 2026",
+
+        content: `
+            <p>
+                Próximamente se anunciarán nuevos
+                acontecimientos dentro de YŌRŌ.
+            </p>
+
+            <p>
+                La administración se encuentra preparando
+                nuevas propuestas para ampliar las
+                posibilidades de interacción entre
+                personajes.
+            </p>
+
+            <p>
+                Permanecé atento a los próximos avisos.
+            </p>
+        `
+    }
+
+};
+
+
+/* ═══════════════════════════════════════
+   ABRIR NOTICIA
+   ═══════════════════════════════════════ */
+
+function openNews(newsId){
+
+    const news = newsData[newsId];
+
+    if(!news) return;
+
+
+    document.getElementById("newsCategory").textContent =
+        news.category;
+
+    document.getElementById("newsTitle").textContent =
+        news.title;
+
+    document.getElementById("newsDate").textContent =
+        news.date;
+
+    document.getElementById("newsContent").innerHTML =
+        news.content;
+
+
+    document.getElementById("newsModal")
+        .classList.add("active");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+/* ═══════════════════════════════════════
+   CERRAR NOTICIA
+   ═══════════════════════════════════════ */
+
+function closeNews(){
+
+    document.getElementById("newsModal")
+        .classList.remove("active");
+
+    document.body.style.overflow = "";
+}
+
+
+/* ═══════════════════════════════════════
+   CERRAR HACIENDO CLICK FUERA
+   ═══════════════════════════════════════ */
+
+document.getElementById("newsModal")
+    .addEventListener("click", function(event){
+
+        if(event.target === this){
+
+            closeNews();
+
+        }
+
+    });
+
+
+/* ═══════════════════════════════════════
+   CERRAR CON ESC
+   ═══════════════════════════════════════ */
+
+document.addEventListener("keydown", function(event){
+
+    if(event.key === "Escape"){
+
+        closeNews();
+
+    }
+
+});
+
+</script>
 
 </body>
 
