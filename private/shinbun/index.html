@@ -521,6 +521,213 @@ header{
 
 }
 
+/* ═══════════════════════════════════════
+   YŌRŌ SHINBUN — FOOTER
+   ═══════════════════════════════════════ */
+
+.shinbun-footer{
+    width:100%;
+    margin-top:80px;
+    padding:55px 25px 35px;
+    text-align:center;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(255,255,255,.008),
+            rgba(0,0,0,.12)
+        );
+
+    border-top:1px solid var(--line);
+    color:var(--muted);
+}
+
+.footer-mark{
+    font-family:"Noto Serif JP",serif;
+    color:var(--gold);
+    font-size:1.15rem;
+    letter-spacing:8px;
+    opacity:.8;
+}
+
+.footer-name{
+    margin-top:12px;
+    font-family:"Playfair Display",serif;
+    color:var(--text);
+    font-size:1.45rem;
+    font-weight:500;
+    letter-spacing:7px;
+}
+
+.footer-subtitle{
+    margin-top:8px;
+    font-family:"Noto Serif JP",serif;
+    color:#6f6963;
+    font-size:.53rem;
+    letter-spacing:3px;
+}
+
+.footer-divider{
+    width:min(500px,75%);
+    margin:27px auto;
+
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.footer-divider span{
+    height:1px;
+    flex:1;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            var(--line)
+        );
+}
+
+.footer-divider span:last-child{
+    background:
+        linear-gradient(
+            to left,
+            transparent,
+            var(--line)
+        );
+}
+
+.footer-divider b{
+    color:var(--gold);
+    font-size:.5rem;
+    font-weight:400;
+    opacity:.75;
+}
+
+.footer-nav{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:28px;
+}
+
+.footer-nav a{
+    position:relative;
+
+    color:#827a72;
+    text-decoration:none;
+
+    font-family:"Noto Serif JP",serif;
+    font-size:.57rem;
+    letter-spacing:3px;
+
+    transition:color .3s ease;
+}
+
+.footer-nav a:not(:last-child)::after{
+    content:"◆";
+
+    position:absolute;
+    right:-17px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:var(--red-light);
+    font-size:.3rem;
+    opacity:.7;
+}
+
+.footer-nav a:hover{
+    color:var(--gold);
+}
+
+.footer-motto{
+    margin-top:38px;
+
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+}
+
+.footer-motto-jp{
+    font-family:"Noto Serif JP",serif;
+    color:#9a9188;
+    font-size:.67rem;
+    letter-spacing:3px;
+}
+
+.footer-motto-es{
+    font-family:"Cormorant Garamond",serif;
+    color:#625c57;
+    font-size:.82rem;
+    font-style:italic;
+    letter-spacing:1px;
+}
+
+.footer-year{
+    margin-top:35px;
+
+    color:#514c48;
+
+    font-family:"Noto Serif JP",serif;
+    font-size:.5rem;
+    letter-spacing:3px;
+}
+
+
+/* ───────── MOBILE ───────── */
+
+@media(max-width:600px){
+
+    .shinbun-footer{
+        margin-top:60px;
+        padding:45px 18px 30px;
+    }
+
+    .footer-name{
+        font-size:1.2rem;
+        letter-spacing:5px;
+    }
+
+    .footer-subtitle{
+        font-size:.48rem;
+        letter-spacing:2px;
+    }
+
+    .footer-divider{
+        width:85%;
+        margin:24px auto;
+    }
+
+    .footer-nav{
+        gap:23px;
+    }
+
+    .footer-nav a{
+        font-size:.52rem;
+        letter-spacing:2px;
+    }
+
+    .footer-nav a:not(:last-child)::after{
+        right:-14px;
+    }
+
+    .footer-motto{
+        margin-top:32px;
+    }
+
+    .footer-motto-jp{
+        font-size:.58rem;
+        letter-spacing:2px;
+    }
+
+    .footer-motto-es{
+        font-size:.78rem;
+    }
+
+}
+
 </style>
 </head>
 
