@@ -837,6 +837,18 @@ header{
 
     letter-spacing:2px;
 }
+.news-read{
+    color:#817970;
+    text-decoration:none;
+    font-family:"Noto Serif JP",serif;
+    font-size:.42rem;
+    letter-spacing:2px;
+    transition:color .3s ease;
+}
+
+.news-read:hover{
+    color:var(--gold);
+}
 
 .news-read{
     color:#817970;
@@ -1864,20 +1876,19 @@ header{
             </div>
 
 
-            <div class="recent-news-footer">
+<div class="recent-news-footer">
 
-                <span>
-                    21 · SEP · 2026
-                </span>
+    <span>
+        21 · SEP · 2026
+    </span>
 
-                <button
-                    class="news-read"
-                    onclick="openNews('news1')">
-                    → LEER
-                </button>
+    <a
+        href="noticias/la-noche-comienza.html"
+        class="news-read">
+        → LEER
+    </a>
 
-            </div>
-
+</div>
         </article>
 
 
