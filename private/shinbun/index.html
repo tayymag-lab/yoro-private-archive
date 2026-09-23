@@ -1620,6 +1620,41 @@ header{
     }
 
 }
+/* ═══════════════════════════════════════
+   FEATURED NEWS — INTERACTIVA
+   ═══════════════════════════════════════ */
+
+.featured-news{
+    cursor:pointer;
+
+    transition:
+        border-color .35s ease,
+        background .35s ease,
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.featured-news:hover{
+    border-color:
+        rgba(181,154,104,.45);
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(181,154,104,.07),
+            transparent 68%
+        );
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 12px 35px
+        rgba(0,0,0,.25);
+}
+
+.featured-news:active{
+    transform:translateY(0);
+}
 
 </style>
 </head>
@@ -1766,76 +1801,78 @@ header{
      NOTICIA PRINCIPAL
      ═══════════════════════════════════════ -->
 
-<a href="noticias/la-noche-comienza.html" class="featured-news-link">
+<article
+    class="featured-news"
+    onclick="openNews('night')"
+    role="button"
+    tabindex="0"
+    onkeydown="if(event.key==='Enter') openNews('night')"
+>
 
-    <article class="featured-news">
+    <div class="featured-news-inner">
 
-        <div class="featured-news-inner">
+        <div class="featured-news-kicker">
 
-            <div class="featured-news-kicker">
+            <span>◆</span>
 
-                <span>◆</span>
+            IC · ACTUALIDAD
 
-                IC · ACTUALIDAD
-
-                <span>◆</span>
-
-            </div>
-
-
-            <h1>
-                LA NOCHE<br>
-                COMIENZA
-            </h1>
-
-
-            <div class="featured-news-rule"></div>
-
-
-            <p class="featured-news-lead">
-                Nuevos rostros, acontecimientos y movimientos
-                comienzan a cambiar el ritmo de YŌRŌ.
-            </p>
-
-
-            <div class="featured-news-meta">
-
-                <span>
-                    22 · SEPTIEMBRE · 2026
-                </span>
-
-                <span class="meta-dot">
-                    ◆
-                </span>
-
-                <span>
-                    EDICIÓN Nº 001
-                </span>
-
-            </div>
+            <span>◆</span>
 
         </div>
 
 
-        <div class="featured-news-corner top-left">
-            夜
+        <h1>
+            LA NOCHE<br>
+            COMIENZA
+        </h1>
+
+
+        <div class="featured-news-rule"></div>
+
+
+        <p class="featured-news-lead">
+            Nuevos rostros, acontecimientos y movimientos
+            comienzan a cambiar el ritmo de YŌRŌ.
+        </p>
+
+
+        <div class="featured-news-meta">
+
+            <span>
+                22 · SEPTIEMBRE · 2026
+            </span>
+
+            <span class="meta-dot">
+                ◆
+            </span>
+
+            <span>
+                EDICIÓN Nº 001
+            </span>
+
         </div>
 
-        <div class="featured-news-corner top-right">
-            報
-        </div>
+    </div>
 
-        <div class="featured-news-corner bottom-left">
-            01
-        </div>
 
-        <div class="featured-news-corner bottom-right">
-            YŌRŌ
-        </div>
+    <div class="featured-news-corner top-left">
+        夜
+    </div>
 
-    </article>
+    <div class="featured-news-corner top-right">
+        報
+    </div>
 
-</a>
+    <div class="featured-news-corner bottom-left">
+        01
+    </div>
+
+    <div class="featured-news-corner bottom-right">
+        YŌRŌ
+    </div>
+
+</article>
   
 
     <!-- ═══════════════════════════════════════
