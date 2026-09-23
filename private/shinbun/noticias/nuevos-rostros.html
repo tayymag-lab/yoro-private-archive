@@ -16,7 +16,12 @@
 
 <style>
 
+/* ═══════════════════════════════════════
+   YŌRŌ SHINBUN — ARTICLE
+   ═══════════════════════════════════════ */
+
 :root{
+
     --bg:#0b0a0b;
     --text:#e8e0d4;
     --muted:#9d958c;
@@ -24,35 +29,50 @@
     --red:#7d2029;
     --red-light:#a6424b;
     --gold:#b59a68;
+
 }
+
 
 *{
+
     box-sizing:border-box;
+
     margin:0;
     padding:0;
+
 }
+
 
 html{
+
     scroll-behavior:smooth;
+
 }
 
+
 body{
+
+    min-height:100vh;
+
     background:
+
         radial-gradient(
             circle at top,
             rgba(125,32,41,.12),
             transparent 35%
         ),
+
         var(--bg);
 
     color:var(--text);
 
     font-family:"Cormorant Garamond",serif;
 
-    min-height:100vh;
 }
 
+
 body::before{
+
     content:"";
 
     position:fixed;
@@ -68,6 +88,7 @@ body::before{
     );
 
     z-index:999;
+
 }
 
 
@@ -75,45 +96,721 @@ body::before{
    HEADER
    ═══════════════════════════════════════ */
 
-.news-header{
+.article-header{
+
     width:100%;
 
-    padding:20px 25px;
+    padding:
+        22px
+        25px
+        25px;
 
-    border-bottom:1px solid var(--line);
+    border-bottom:
+        1px solid
+        var(--line);
+
+    text-align:center;
+
 }
 
-.news-header-inner{
+
+.article-top{
+
     width:min(1100px,100%);
 
-    margin:auto;
+    margin:0 auto;
 
     display:flex;
 
     justify-content:space-between;
 
     align-items:center;
+
 }
 
-.news-header a{
+
+.article-top a{
+
     color:var(--muted);
 
     text-decoration:none;
 
     font-family:"Noto Serif JP",serif;
 
-    font-size:.58rem;
+    font-size:.62rem;
 
     letter-spacing:2.5px;
 
     transition:color .3s ease;
+
 }
 
-.news-header a:hover{
+
+.article-top a:hover{
+
     color:var(--gold);
+
+}
+
+
+.article-brand{
+
+    margin-top:35px;
+
+}
+
+
+.article-brand-jp{
+
+    color:var(--text);
+
+    font-family:"Noto Serif JP",serif;
+
+    font-size:2.5rem;
+
+    letter-spacing:10px;
+
+}
+
+
+.article-brand-name{
+
+    margin-top:10px;
+
+    color:var(--text);
+
+    font-family:"Playfair Display",serif;
+
+    font-size:1.4rem;
+
+    letter-spacing:6px;
+
+}
+
+
+.article-brand-sub{
+
+    margin-top:8px;
+
+    color:var(--gold);
+
+    font-family:"Noto Serif JP",serif;
+
+    font-size:.5rem;
+
+    letter-spacing:3px;
+
+    opacity:.8;
+
 }
 
 
 /* ═══════════════════════════════════════
    ARTICLE
-   ═══════════════════════════════════════
+   ═══════════════════════════════════════ */
+
+.article{
+
+    width:min(850px,90%);
+
+    margin:0 auto;
+
+    padding:
+        80px
+        0
+        90px;
+
+}
+
+
+/* CATEGORY */
+
+.article-category{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:var(--red-light);
+
+    font-family:"Noto Serif JP",serif;
+
+    font-size:.55rem;
+
+    letter-spacing:3px;
+
+}
+
+
+.article-category span{
+
+    color:var(--gold);
+
+    font-size:.4rem;
+
+}
+
+
+/* TITLE */
+
+.article h1{
+
+    margin:
+        25px
+        auto
+        20px;
+
+    max-width:750px;
+
+    text-align:center;
+
+    color:var(--text);
+
+    font-family:"Playfair Display",serif;
+
+    font-size:
+        clamp(
+            3rem,
+            7vw,
+            5.5rem
+        );
+
+    font-weight:500;
+
+    line-height:.98;
+
+    letter-spacing:2px;
+
+}
+
+
+/* SUBTITLE */
+
+.article-lead{
+
+    max-width:620px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+    color:#aaa19a;
+
+    font-size:1.2rem;
+
+    line-height:1.55;
+
+}
+
+
+/* META */
+
+.article-meta{
+
+    margin-top:30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    color:#625c57;
+
+    font-family:"Noto Serif JP",serif;
+
+    font-size:.48rem;
+
+    letter-spacing:2px;
+
+}
+
+
+.article-meta .dot{
+
+    color:var(--red-light);
+
+}
+
+
+/* DIVIDER */
+
+.article-divider{
+
+    width:min(500px,80%);
+
+    height:1px;
+
+    margin:
+        45px
+        auto
+        50px;
+
+    background:
+
+        linear-gradient(
+            to right,
+            transparent,
+            var(--line),
+            transparent
+        );
+
+}
+
+
+/* ═══════════════════════════════════════
+   ARTICLE BODY
+   ═══════════════════════════════════════ */
+
+.article-body{
+
+    max-width:680px;
+
+    margin:0 auto;
+
+}
+
+
+.article-body p{
+
+    margin-bottom:25px;
+
+    color:#aaa19a;
+
+    font-size:1.18rem;
+
+    line-height:1.75;
+
+    letter-spacing:.2px;
+
+}
+
+
+.article-body .opening{
+
+    color:var(--text);
+
+    font-size:1.35rem;
+
+}
+
+
+.article-body .opening::first-letter{
+
+    float:left;
+
+    margin:
+
+        7px
+        10px
+        0
+        0;
+
+    color:var(--gold);
+
+    font-family:"Playfair Display",serif;
+
+    font-size:4.5rem;
+
+    line-height:.75;
+
+}
+
+
+/* QUOTE */
+
+.article-quote{
+
+    margin:
+        45px
+        0;
+
+    padding:
+        25px
+        30px;
+
+    border-left:
+        2px solid
+        var(--red-light);
+
+    background:
+        rgba(255,255,255,.015);
+
+}
+
+
+.article-quote p{
+
+    margin:0;
+
+    color:#b8afa6;
+
+    font-size:1.25rem;
+
+    font-style:italic;
+
+}
+
+
+/* ═══════════════════════════════════════
+   ARTICLE END
+   ═══════════════════════════════════════ */
+
+.article-end{
+
+    margin-top:60px;
+
+    text-align:center;
+
+}
+
+
+.article-end-symbol{
+
+    color:var(--gold);
+
+    font-size:.65rem;
+
+    letter-spacing:8px;
+
+}
+
+
+.article-end-text{
+
+    margin-top:15px;
+
+    color:#625c57;
+
+    font-family:"Noto Serif JP",serif;
+
+    font-size:.48rem;
+
+    letter-spacing:3px;
+
+}
+
+
+/* ═══════════════════════════════════════
+   NAVIGATION
+   ═══════════════════════════════════════ */
+
+.article-navigation{
+
+    width:min(850px,90%);
+
+    margin:0 auto;
+
+    padding:
+
+        25px
+        0
+        50px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    border-top:
+        1px solid
+        var(--line);
+
+}
+
+
+.article-navigation a{
+
+    color:#817970;
+
+    text-decoration:none;
+
+    font-family:"Noto Serif JP",serif;
+
+    font-size:.52rem;
+
+    letter-spacing:2px;
+
+    transition:
+
+        color .3s ease;
+
+}
+
+
+.article-navigation a:hover{
+
+    color:var(--gold);
+
+}
+
+
+/* ═══════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════ */
+
+.article-footer{
+
+    padding:
+        40px
+        20px
+        35px;
+
+    text-align:center;
+
+    border-top:
+        1px solid
+        var(--line);
+
+}
+
+
+.article-footer-mark{
+
+    color:var(--gold);
+
+    font-family:"Noto Serif JP",serif;
+
+    font-size:.95rem;
+
+    letter-spacing:6px;
+
+}
+
+
+.article-footer-name{
+
+    margin-top:10px;
+
+    color:var(--text);
+
+    font-family:"Playfair Display",serif;
+
+    font-size:1.1rem;
+
+    letter-spacing:5px;
+
+}
+
+
+.article-footer-year{
+
+    margin-top:15px;
+
+    color:#514c48;
+
+    font-family:"Noto Serif JP",serif;
+
+    font-size:.43rem;
+
+    letter-spacing:2px;
+
+}
+
+
+/* ═══════════════════════════════════════
+   MOBILE
+   ═══════════════════════════════════════ */
+
+@media(max-width:600px){
+
+    .article-header{
+
+        padding:
+            17px
+            16px
+            22px;
+
+    }
+
+
+    .article-top a{
+
+        font-size:.5rem;
+
+        letter-spacing:1.5px;
+
+    }
+
+
+    .article-brand{
+
+        margin-top:30px;
+
+    }
+
+
+    .article-brand-jp{
+
+        font-size:2rem;
+
+        letter-spacing:7px;
+
+    }
+
+
+    .article-brand-name{
+
+        font-size:1.05rem;
+
+        letter-spacing:4px;
+
+    }
+
+
+    .article{
+
+        width:90%;
+
+        padding:
+            55px
+            0
+            65px;
+
+    }
+
+
+    .article h1{
+
+        font-size:3rem;
+
+        letter-spacing:1px;
+
+    }
+
+
+    .article-lead{
+
+        font-size:1.05rem;
+
+    }
+
+
+    .article-meta{
+
+        flex-direction:column;
+
+        gap:7px;
+
+    }
+
+
+    .article-meta .dot{
+
+        display:none;
+
+    }
+
+
+    .article-body p{
+
+        font-size:1.08rem;
+
+        line-height:1.7;
+
+    }
+
+
+    .article-body .opening{
+
+        font-size:1.2rem;
+
+    }
+
+
+    .article-quote{
+
+        padding:
+            20px
+            20px;
+
+    }
+
+
+    .article-navigation{
+
+        width:90%;
+
+        gap:20px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ═══════════════════════════════════════
+     CABECERA
+     ═══════════════════════════════════════ -->
+
+<header class="article-header">
+
+    <div class="article-top">
+
+        <a href="../index.html">
+            ← SHINBUN
+        </a>
+
+        <a href="../archivo.html">
+            ARCHIVO →
+        </a>
+
+    </div>
+
+
+    <div class="article-brand">
+
+        <div class="article-brand-jp">
+            夜報
+        </div>
+
+        <div class="article-brand-name">
+            YŌRŌ SHINBUN
+        </div>
+
+        <div class="article-brand-sub">
+            INFORMACIÓN NOCTURNA · CIRCULACIÓN PRIVADA
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- ═══════════════════════════════════════
+     ARTÍCULO
+     ═══════════════════════════════════════ -->
+
+<main class="article">
+
+
+    <div class="article-category">
+
+        <span>◆</span>
+
+        IC · YŌRŌ
+
+        <span>◆</span>
+
+    </div>
+
+
+    <h1>
+        NUEVOS ROSTROS<br>
+        EN LA CIUDAD
+    </h1>
+
+
+    <p
