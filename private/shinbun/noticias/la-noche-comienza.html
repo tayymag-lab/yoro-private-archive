@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LA NOCHE COMIENZA — YŌRŌ SHINBUN</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+/* ═══════════════════════════════════════
+   YŌRŌ SHINBUN — ARTICLE
+   ═══════════════════════════════════════ */
+
+:root{
+
+    --bg:#0b0a0b;
+    --text:#e8e0d4;
+    --muted:#9d958c;
+    --line:#494348;
+    --red:#7d2029;
+    --red-light:#a6424b;
+    --gold:#b59a68;
+
+}
+
+
+*{
+
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+
+}
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+body{
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(125,32,41,.12),
+            transparent 35%
+        ),
+        var(--bg);
+
+    color:var(--text);
+
+    font-family:"Cormorant Garamond",serif;
+
+    min-height:100vh;
+
+}
+
+
+/* ═══════════════════════════════════════
+   TEXTURE
+   ═══════════════════════════════════════ */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    opacity:.045;
+
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.8'/%3E%3C/svg%3E");
+
+    z-index:999;
+
+}
+
+
+/* ═══════════════════════════════════════
+   HEADER
+   ═══════════════════════════════════════ */
+
+.article-header{
+
+    width:100%;
+
+    padding:
+        18px
+        25px
+        25px;
+
+    border-bottom:
+        1px solid
+        var(--line);
+
+    text-align:center;
+
+}
+
+
+.article-top{
+
+    width:min(1180px,100%);
+
+    margin:0 auto;
+
+    display:grid;
+
+    grid-template-columns:
+        1fr
+        auto
+        1fr;
+
+    align-items:center;
+
+    font-family:"Noto Serif JP",serif;
+
+    font-size:.62rem;
+
+    letter-spacing:2.5px;
+
+}
+
+
+.article-top a{
+
+    color:var(--muted);
+
+    text-decoration:none;
+
+    transition:
+        color .3s ease,
+        letter-spacing .3s ease;
+
+}
+
+
+.article-top a:hover{
+
+    color:var(--gold);
+
+    letter-spacing:3px;
+
+}
+
+
+.article-back{
+
+    text-align:left;
+
+}
+
+
+.article-archive{
+
+    text-align:right;
+
+}
+
+
+.article-status{
+
+    color:#6f6963;
+
+    font-size:.52rem;
+
+    letter-spacing:4px;
+
+}
+
+
+/* ═══════════════════════════════════════
+   MASTHEAD
+   ═══════════════════════════════════════ */
+
+.article-masthead{
+
+    margin-top:38px;
+
+}
+
+
+.article-masthead-jp{
+
+    font-family:"Noto Serif JP",serif;
+
+    color:var(--text);
+
+    font-size:2rem;
+
+    letter-spacing:8px;
+
+}
+
+
+.article-masthead-name{
+
+    margin-top:8px;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:1.2rem;
+
+    letter-spacing:6px;
+
+    color:var(--text);
+
+}
+
+
+.article-masthead-subtitle{
+
+    margin-top:7px;
+
+    font-family:"Noto Serif JP",serif;
+
+    color:var(--gold);
+
+    font-size:.48rem;
+
+    letter-spacing:3px;
+
+}
+
+
+/* ═══════════════════════════════════════
+   ARTICLE
+   ═══════════════════════════════════════ */
+
+.article{
+
+    width:min(900px,90%);
+
+    margin:0 auto;
+
+    padding:
+        80px
+        0
+        100px;
+
+}
+
+
+/* ═══════════════════════════════════════
+   CATEGORY
+   ═══════════════════════════════════════ */
+
+.article-category{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:var(--red-light);
+
+    font-family:"Noto Serif JP",serif;
+
+    font-size:.52rem;
+
+    letter-spacing:3px;
+
+}
+
+
+.article-category span{
+
+    color:var(--gold);
+
+    font-size:.35rem;
+
+    opacity:.75;
+
+}
+
+
+/* ═══════════════════════════════════════
+   TITLE
+   ═══════════════════════════════════════ */
+
+.article h1{
+
+    margin:
+        25px
+        auto
+        25px;
+
+    max-width:800px;
+
+    text-align:center;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:
+        clamp(
+            3rem,
+            8vw,
+            5.8rem
+        );
+
+    font-weight:500;
+
+    line-height:.95;
+
+    letter-spacing:3px;
+
+}
+
+
+.article-rule{
+
+    width:110px;
+
+    height:1px;
+
+    margin:
+        0
+        auto
+        28px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            var(--gold),
+            transparent
+        );
+
+    opacity:.55;
+
+}
+
+
+/* ═══════════════════════════════════════
+   META
+   ═══════════════════════════════════════ */
+
+.article-meta{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    color:#69625d;
+
+    font-family:"Noto Serif JP",serif;
+
+    font-size:.46rem;
+
+    letter-spacing:2px;
+
+}
+
+
+.article-meta .dot{
+
+    color:var(--red-light);
+
+    font-size:.35rem;
+
+}
+
+
+/* ═══════════════════════════════════════
+   HERO
+   ═══════════════════════════════════════ */
+
+.article-hero{
+
+    margin:
+        55px
+        auto
+        50px;
+
+    width:100%;
+
+    min-height:300px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border:
+        1px solid
+        var(--line);
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(181,154,104,.055),
+            transparent 65%
+        );
+
+}
+
+
+.article-hero span{
+
+    font-family:"Noto Serif JP",serif;
+
+    color:#514c48;
+
+    font-size:3rem;
+
+    letter-spacing:12px;
+
+}
+
+
+/* ═══════════════════════════════════════
+   LEAD
+   ═══════════════════════════════════════ */
+
+.article-lead{
+
+    max-width:700px;
+
+    margin:
+        0
+        auto
+        45px;
+
+    color:#b1a8a0;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:1.35rem;
+
+    line-height:1.55;
+
+    text-align:center;
+
+}
+
+
+/* ═══════════════════════════════════════
+   BODY
+   ═══════════════════════════════════════ */
+
+.article-body{
+
+    max-width:680px;
+
+    margin:0 auto;
+
+}
+
+
+.article-body p{
+
+    margin-bottom:25px;
+
+    color:#9b938c;
+
+    font-size:1.12rem;
+
+    line-height:1.7;
+
+}
+
+
+.article-body p:first-child::first-letter{
+
+    float:left;
+
+    margin:
+        5px
+        10px
+        0
+        0;
+
+    color:var(--gold);
+
+    font-family:"Playfair Display",serif;
+
+    font-size:3.7rem;
+
+    line-height:.75;
+
+}
+
+
+/* ═══════════════════════════════════════
+   QUOTE
+   ═══════════════════════════════════════ */
+
+.article-quote{
+
+    margin:
+        45px
+        0;
+
+    padding:
+        25px
+        30px;
+
+    border-left:
+        2px solid
+        var(--red-light);
+
+    color:#aaa19a;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:1.25rem;
+
+    font-style:italic;
+
+    line-height:1.5;
+
+}
+
+
+/* ═══════════════════════════════════════
+   ARTICLE FOOTER
+   ═══════════════════════════════════════ */
+
+.article-footer{
+
+    margin-top:70px;
+
+    padding-top:25px;
+
+    border-top:
+        1px solid
+        var(--line);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    color:#5e5853;
+
+    font-family:"Noto Serif JP",serif;
+
+    font-size:.45rem;
+
+    letter-spacing:2px;
+
+}
+
+
+/* ═══════════════════════════════════════
+   BACK BUTTON
+   ═══════════════════════════════════════ */
+
+.back-news{
+
+    display:block;
+
+    width:max-content;
+
+    margin:
+        55px
+        auto
+        0;
+
+    padding:
+        12px
+        22px;
+
+    border:
+        1px solid
+        var(--line);
+
+    color:#817970;
+
+    text-decoration:none;
+
+    font-family:"Noto Serif JP",serif;
+
+    font-size:.5rem;
+
+    letter-spacing:2px;
+
+    transition:
+        color .3s ease,
+        border-color .3s ease,
+        background .3s ease;
+
+}
+
+
+.back-news:hover{
+
+    color:var(--gold);
+
+    border-color:
+        var(--gold);
+
+    background:
+        rgba(181,154,104,.025);
+
+}
+
+
+/* ═══════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════ */
+
+.article-site-footer{
+
+    padding:
+        40px
+        20px;
+
+    text-align:center;
+
+    border-top:
+        1px solid
+        var(--line);
+
+}
+
+
+.article-site-footer .jp{
+
+    color:var(--gold);
+
+    font-family:"Noto Serif JP",serif;
+
+    font-size:.9rem;
+
+    letter-spacing:5px;
+
+}
+
+
+.article-site-footer .name{
+
+    margin-top:8px;
+
+    color:var(--text);
+
+    font-family:"Playfair Display",serif;
+
+    font-size:1rem;
+
+    letter-spacing:5px;
+
+}
+
+
+.article-site-footer .year{
+
+    margin-top:15px;
+
+    color:#514c48;
+
+    font-family:"Noto Serif JP",serif;
+
+    font-size:.43rem;
+
+    letter-spacing:2px;
+
+}
+
+
+/* ═══════════════════════════════════════
+   MOBILE
+   ═══════════════════════════════════════ */
+
+@media(max-width:650px){
+
+    .article-header{
+
+        padding:
+            15px
+            16px
+            22px;
+
+    }
+
+
+    .article-top{
+
+        grid-template-columns:
+            1fr
+            1fr;
+
+        font-size:.52rem;
+
+        letter-spacing:1.5px;
+
+    }
+
+
+    .article-status{
+
+        display:none;
+
+    }
+
+
+    .article-masthead{
+
+        margin-top:30px;
+
+    }
+
+
+    .article-masthead-jp{
+
+        font-size:1.65rem;
+
+    }
+
+
+    .article-masthead-name{
+
+        font-size:1rem;
+
+        letter-spacing:4px;
+
+    }
+
+
+    .article{
+
+        width:90%;
+
+        padding:
+            55px
+            0
+            70px;
+
+    }
+
+
+    .article h1{
+
+        font-size:3rem;
+
+        letter-spacing:1px;
+
+    }
+
+
+    .article-meta{
+
+        flex-direction:column;
+
+        gap:7px;
+
+    }
+
+
+    .article-meta .dot{
+
+        display:none;
+
+    }
+
+
+    .article-hero{
+
+        min-height:220px;
+
+        margin:
+            40px
+            auto;
+
+    }
+
+
+    .article-hero span{
+
+        font-size:2rem;
+
+    }
+
+
+    .article-lead{
+
+        font-size:1.15rem;
+
+    }
+
+
+    .article-body p{
+
+        font-size:1.05rem;
+
+    }
+
+
+    .article-quote{
+
+        padding:
+            20px;
+
+        font-size:1.1rem;
+
+    }
+
+
+    .article-footer{
+
+        flex-direction:column;
+
+        gap:8px;
+
+        text-align:center;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ═══════════════════════════════════════
+     HEADER
+     ═══════════════════════════════════════ -->
+
+<header class="article-header">
+
+    <div class="article-top">
+
+        <a
+            href="../index.html"
+            class="article-back"
+        >
+            ← NOTICIAS
+        </a>
+
+        <span class="article-status">
+            PRIVATE CIRCULATION
+        </span>
+
+        <a
+            href="../archivo.html"
+            class="article-archive"
+        >
+            ARCHIVE →
+        </a>
+
+    </div>
+
+
+    <div class="article-masthead">
+
+        <div class="article-masthead-jp">
+            夜報
+        </div>
+
+        <div class="article-masthead-name">
+            YŌRŌ SHINBUN
+        </div>
+
+        <div class="article-masthead-subtitle">
+            夜間情報局 · INFORMACIÓN NOCTURNA
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- ═══════════════════════════════════════
+     ARTICLE
+     ═══════════════════════════════════════ -->
+
+<main class="article">
+
+
+    <div class="article-category">
+
+        <span>◆</span>
+
+        IC · ACTUALIDAD
+
+        <span>◆</span>
+
+    </div>
+
+
+
+    <h1>
+
+        LA NOCHE<br>
+        COMIENZA
+
+    </h1>
+
+
+
+    <div class="article-rule"></div>
+
+
+
+    <div class="article-meta">
+
+        <span>
+            22 · SEPTIEMBRE · 2026
+        </span>
+
+        <span class="dot">
+            ◆
+        </span>
+
+        <span>
+            EDICIÓN Nº 001
+        </span>
+
+    </div>
+
+
+
+    <!-- IMAGEN / PORTADA -->
+
+    <div class="article-hero">
+
+        <span>
+            夜報
+        </span>
+
+    </div>
+
+
+
+    <!-- ENTRADILLA -->
+
+    <p class="article-lead">
+
+        Nuevos rostros, acontecimientos y movimientos
+        comienzan a cambiar el ritmo de YŌRŌ.
+
+    </p>
+
+
+
+    <!-- CUERPO -->
+
+    <div class="article-body">
+
+        <p>
+
+            Cuando cae la noche, YŌRŌ vuelve a cobrar vida.
+            Las luces comienzan a encenderse, las puertas se
+            abren y nuevos rostros empiezan a formar parte
+            de la ciudad.
+
+        </p>
+
+
+        <p>
+
+            Esta nueva edición de YŌRŌ SHINBUN nace como
+            un espacio destinado a reunir las novedades,
+            acontecimientos y movimientos más importantes
+            que tengan lugar dentro del rol.
+
+        </p>
+
+
+        <div class="article-quote">
+
+            «Cada noche tiene una historia.
+            Algunas simplemente tardan un poco
+            más en ser contadas.»
+
+        </div>
+
+
+        <p>
+
+            A partir de ahora, este espacio irá registrando
+            los acontecimientos que marquen el desarrollo
+            de YŌRŌ, permitiendo que tanto los nuevos
+            integrantes como quienes hayan estado ausentes
+            puedan mantenerse al tanto de lo que sucede.
+
+        </p>
+
+
+        <p>
+
+            Nuevos personajes, eventos, cambios,
+            comunicados y rumores encontrarán aquí
+            su lugar.
+
+        </p>
+
+    </div>
+
+
+
+    <!-- INFORMACIÓN FINAL -->
+
+    <div class="article-footer">
+
+        <span>
+            YŌRŌ SHINBUN
+        </span>
+
+        <span>
+            22 · 09 · 2026
+        </span>
+
+    </div>
+
+
+
+    <a
+        href="../index.html"
+        class="back-news"
+    >
+        ← VOLVER A NOTICIAS
+    </a>
+
+
+</main>
+
+
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════ -->
+
+<footer class="article-site-footer">
+
+    <div class="jp">
+        夜報
+    </div>
+
+    <div class="name">
+        YŌRŌ SHINBUN
+    </div>
+
+    <div class="year">
+        ◆ · PRIVATE NIGHT CIRCULATION · 2026 · ◆
+    </div>
+
+</footer>
+
+
+</body>
+</html>
