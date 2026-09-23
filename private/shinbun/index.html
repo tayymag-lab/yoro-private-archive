@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,56 +13,109 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+
 <style>
 
+/* ═══════════════════════════════════════
+   YŌRŌ SHINBUN — VARIABLES
+   ═══════════════════════════════════════ */
+
 :root{
+
     --bg:#0b0a0b;
+
     --text:#e8e0d4;
+
     --muted:#9d958c;
+
     --line:#494348;
+
     --red:#7d2029;
+
     --red-light:#a6424b;
+
     --gold:#b59a68;
+
 }
 
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    background:
-        radial-gradient(circle at top, rgba(125,32,41,.12), transparent 35%),
-        var(--bg);
-    color:var(--text);
-    font-family:"Cormorant Garamond",serif;
-    min-height:100vh;
-}
-
-body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    opacity:.045;
-    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.8'/%3E%3C/svg%3E");
-    z-index:999;
-}
-
-/* HEADER */
 
 /* ═══════════════════════════════════════
-   YŌRŌ SHINBUN — HEADER
+   RESET
+   ═══════════════════════════════════════ */
+
+*{
+
+    box-sizing:border-box;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+body{
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(125,32,41,.12),
+            transparent 35%
+        ),
+        var(--bg);
+
+    color:var(--text);
+
+    font-family:"Cormorant Garamond",serif;
+
+    min-height:100vh;
+
+}
+
+
+/* TEXTURE */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    opacity:.045;
+
+    background-image:url(
+        "data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.8'/%3E%3C/svg%3E"
+    );
+
+    z-index:999;
+
+}
+
+
+/* ═══════════════════════════════════════
+   HEADER
    ═══════════════════════════════════════ */
 
 header{
+
     width:100%;
-    padding:18px 25px 26px;
+
+    padding:
+        18px
+        25px
+        26px;
+
     text-align:center;
 
     background:
@@ -70,117 +125,166 @@ header{
             transparent 70%
         );
 
-    border-bottom:1px solid var(--line);
+    border-bottom:
+        1px solid
+        var(--line);
 
     position:relative;
+
 }
 
 
-/* ───────── TOP NAVIGATION ───────── */
+/* TOP */
 
 .header-top{
+
     width:min(1180px,100%);
+
     margin:0 auto;
 
     display:grid;
-    grid-template-columns:1fr auto 1fr;
+
+    grid-template-columns:
+        1fr
+        auto
+        1fr;
+
     align-items:center;
 
     font-family:"Noto Serif JP",serif;
+
     font-size:.66rem;
 
     letter-spacing:2.5px;
+
     color:var(--muted);
+
 }
 
+
 .header-top a{
+
     color:var(--muted);
+
     text-decoration:none;
 
     transition:
         color .3s ease,
         letter-spacing .3s ease;
+
 }
+
 
 .header-top a:hover{
+
     color:var(--gold);
+
     letter-spacing:3px;
+
 }
+
 
 .header-link:first-child{
+
     text-align:left;
+
 }
+
 
 .header-link:last-child{
+
     text-align:right;
+
 }
 
+
 .header-status{
+
     color:#6f6963;
 
     font-family:"Noto Serif JP",serif;
+
     font-size:.58rem;
 
     letter-spacing:4px;
+
 }
 
 
-/* ───────── MASTHEAD ───────── */
+/* MASTHEAD */
 
 .masthead{
-    margin:43px auto 0;
+
+    margin:
+        43px
+        auto
+        0;
+
 }
 
+
 .masthead-jp{
+
     font-family:"Noto Serif JP",serif;
 
     color:var(--text);
 
-    font-size:clamp(
-        4rem,
-        10vw,
-        7rem
-    );
+    font-size:
+        clamp(
+            4rem,
+            10vw,
+            7rem
+        );
 
     font-weight:500;
 
     letter-spacing:
-        clamp(12px,3vw,25px);
+        clamp(
+            12px,
+            3vw,
+            25px
+        );
 
     line-height:.9;
 
     text-shadow:
-        0 0 30px rgba(181,154,104,.05);
+        0 0 30px
+        rgba(181,154,104,.05);
+
 }
 
 
-/* ───────── ROMAN NAME ───────── */
-
 .masthead-name{
+
     margin-top:18px;
 
     font-family:"Playfair Display",serif;
 
     color:var(--text);
 
-    font-size:clamp(
-        1.7rem,
-        4vw,
-        3rem
-    );
+    font-size:
+        clamp(
+            1.7rem,
+            4vw,
+            3rem
+        );
 
     font-weight:500;
 
     letter-spacing:
-        clamp(7px,1.8vw,13px);
+        clamp(
+            7px,
+            1.8vw,
+            13px
+        );
 
     line-height:1;
+
 }
 
 
-/* ───────── SUBTITLE ───────── */
-
 .masthead-subtitle{
+
     margin-top:13px;
 
     font-family:"Noto Serif JP",serif;
@@ -192,22 +296,32 @@ header{
     letter-spacing:4px;
 
     opacity:.85;
+
 }
 
 
-/* ───────── DECORATIVE DIVIDER ───────── */
+/* DIVIDER */
 
 .masthead-divider{
+
     width:min(720px,80%);
-    margin:27px auto 20px;
+
+    margin:
+        27px
+        auto
+        20px;
 
     display:flex;
+
     align-items:center;
 
     gap:15px;
+
 }
 
+
 .masthead-divider span{
+
     height:1px;
 
     background:
@@ -218,18 +332,24 @@ header{
         );
 
     flex:1;
+
 }
 
+
 .masthead-divider span:last-child{
+
     background:
         linear-gradient(
             to left,
             transparent,
             var(--line)
         );
+
 }
 
+
 .masthead-divider b{
+
     color:var(--gold);
 
     font-size:.55rem;
@@ -237,15 +357,18 @@ header{
     font-weight:400;
 
     opacity:.8;
+
 }
 
 
-/* ───────── EDITION INFO ───────── */
+/* EDITION */
 
 .edition-info{
+
     display:flex;
 
     justify-content:center;
+
     align-items:center;
 
     gap:16px;
@@ -257,10 +380,14 @@ header{
     font-size:.58rem;
 
     letter-spacing:3px;
+
 }
 
+
 .edition-info i{
+
     width:3px;
+
     height:3px;
 
     border-radius:50%;
@@ -268,99 +395,262 @@ header{
     background:var(--red-light);
 
     opacity:.8;
+
 }
 
 
 /* ═══════════════════════════════════════
-   MOBILE
+   NAVIGATION
    ═══════════════════════════════════════ */
 
-@media(max-width:600px){
+.shinbun-nav{
 
-    header{
-        padding:
-            15px
-            16px
-            23px;
-    }
+    width:min(1100px,92%);
 
+    margin:0 auto;
 
-    .header-top{
-        grid-template-columns:1fr 1fr;
+    display:grid;
 
-        font-size:.55rem;
+    grid-template-columns:
+        repeat(5,1fr);
 
-        letter-spacing:1.5px;
-    }
+    border-left:
+        1px solid
+        var(--line);
 
-    .header-status{
-        display:none;
-    }
+    border-right:
+        1px solid
+        var(--line);
 
+    border-bottom:
+        1px solid
+        var(--line);
 
-    .masthead{
-        margin-top:36px;
-    }
-
-
-    .masthead-jp{
-        font-size:4rem;
-
-        letter-spacing:10px;
-    }
-
-
-    .masthead-name{
-        margin-top:15px;
-
-        font-size:1.55rem;
-
-        letter-spacing:6px;
-    }
-
-
-    .masthead-subtitle{
-        margin-top:12px;
-
-        font-size:.53rem;
-
-        letter-spacing:2.5px;
-    }
-
-
-    .masthead-divider{
-        width:88%;
-
-        margin-top:25px;
-
-        gap:10px;
-    }
-
-
-    .edition-info{
-        gap:8px;
-
-        font-size:.48rem;
-
-        letter-spacing:1.5px;
-    }
+    background:
+        rgba(255,255,255,.008);
 
 }
+
+
+.shinbun-nav-item{
+
+    position:relative;
+
+    min-height:76px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:6px;
+
+    color:var(--muted);
+
+    text-decoration:none;
+
+    border-right:
+        1px solid
+        var(--line);
+
+    transition:
+        color .3s ease,
+        background .3s ease;
+
+}
+
+
+.shinbun-nav-item:last-child{
+
+    border-right:none;
+
+}
+
+
+.nav-jp{
+
+    font-family:"Noto Serif JP",serif;
+
+    font-size:.72rem;
+
+    letter-spacing:2px;
+
+    color:var(--text);
+
+}
+
+
+.nav-es{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:.85rem;
+
+    letter-spacing:2.5px;
+
+    color:#817970;
+
+}
+
+
+.shinbun-nav-item:hover{
+
+    background:
+        rgba(181,154,104,.035);
+
+}
+
+
+.shinbun-nav-item:hover .nav-jp{
+
+    color:var(--gold);
+
+}
+
+
+.shinbun-nav-item:hover .nav-es{
+
+    color:var(--text);
+
+}
+
+
+.shinbun-nav-item.active::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-1px;
+
+    left:22%;
+
+    right:22%;
+
+    height:2px;
+
+    background:var(--red-light);
+
+}
+
+
+.shinbun-nav-item.active .nav-jp{
+
+    color:var(--text);
+
+}
+
+
+.shinbun-nav-item.active .nav-es{
+
+    color:var(--red-light);
+
+}
+
+
 /* ═══════════════════════════════════════
-   YŌRŌ SHINBUN — NEWS POLISH
+   MAIN
    ═══════════════════════════════════════ */
 
+.shinbun-main{
 
-/* ───────── SECTION SPACING ───────── */
+    width:min(1100px,92%);
+
+    margin:0 auto;
+
+    padding:
+        70px
+        0
+        20px;
+
+}
+
+
+/* SECTION HEADING */
+
+.section-heading{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    margin-bottom:30px;
+
+}
+
+
+.section-heading-jp{
+
+    font-family:"Noto Serif JP",serif;
+
+    color:var(--gold);
+
+    font-size:.65rem;
+
+    letter-spacing:2px;
+
+    white-space:nowrap;
+
+}
+
+
+.section-heading-line{
+
+    height:1px;
+
+    flex:1;
+
+    background:
+        linear-gradient(
+            to right,
+            var(--line),
+            transparent
+        );
+
+}
+
+
+.section-heading-es{
+
+    font-family:"Cormorant Garamond",serif;
+
+    color:#817970;
+
+    font-size:.72rem;
+
+    letter-spacing:3px;
+
+    white-space:nowrap;
+
+}
+
+
+/* ═══════════════════════════════════════
+   NEWS
+   ═══════════════════════════════════════ */
 
 .news-section{
+
+    width:100%;
+
     padding-top:10px;
+
 }
 
 
-/* ───────── FEATURED NEWS ───────── */
+/* FEATURED */
 
 .featured-news{
+
+    position:relative;
+
+    overflow:hidden;
+
     margin-top:42px;
 
     min-height:430px;
@@ -371,6 +661,10 @@ header{
 
     justify-content:center;
 
+    border:
+        1px solid
+        rgba(73,67,72,.9);
+
     background:
         radial-gradient(
             circle at center,
@@ -378,12 +672,38 @@ header{
             transparent 62%
         );
 
-    border-color:
-        rgba(73,67,72,.9);
+}
+
+
+.featured-news::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:15%;
+
+    right:15%;
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            var(--gold),
+            transparent
+        );
+
+    opacity:.55;
+
 }
 
 
 .featured-news-inner{
+
     position:relative;
 
     z-index:2;
@@ -392,12 +712,16 @@ header{
         75px
         55px
         65px;
+
+    text-align:center;
+
 }
 
 
-/* ───────── KICKER ───────── */
+/* KICKER */
 
 .featured-news-kicker{
+
     display:flex;
 
     align-items:center;
@@ -413,25 +737,33 @@ header{
     font-size:.52rem;
 
     letter-spacing:3px;
+
 }
 
 
 .featured-news-kicker span{
+
     color:var(--gold);
 
     font-size:.38rem;
 
     opacity:.7;
+
 }
 
 
-/* ───────── MAIN TITLE ───────── */
+/* TITLE */
 
 .featured-news h1{
+
     margin:
         24px
         0
         20px;
+
+    font-family:"Playfair Display",serif;
+
+    color:var(--text);
 
     font-size:
         clamp(
@@ -439,6 +771,10 @@ header{
             8vw,
             6.2rem
         );
+
+    font-weight:500;
+
+    line-height:.95;
 
     letter-spacing:
         clamp(
@@ -450,17 +786,20 @@ header{
     text-shadow:
         0 0 35px
         rgba(181,154,104,.035);
+
 }
 
 
-/* ───────── DECORATIVE RULE ───────── */
-
 .featured-news-rule{
+
     width:100px;
 
     height:1px;
 
-    margin:0 auto 24px;
+    margin:
+        0
+        auto
+        24px;
 
     background:
         linear-gradient(
@@ -471,45 +810,63 @@ header{
         );
 
     opacity:.55;
+
 }
 
 
-/* ───────── LEAD ───────── */
-
 .featured-news-lead{
+
     max-width:580px;
 
-    font-size:1.16rem;
+    margin:0 auto;
 
     color:#aaa19a;
 
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:1.16rem;
+
     line-height:1.55;
+
 }
 
 
-/* ───────── META ───────── */
-
 .featured-news-meta{
+
     margin-top:32px;
 
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
     gap:15px;
+
+    color:#69625d;
+
+    font-family:"Noto Serif JP",serif;
 
     font-size:.46rem;
 
     letter-spacing:2.5px;
+
 }
 
 
 .meta-dot{
+
     color:var(--red-light);
 
     font-size:.35rem;
+
 }
 
 
-/* ───────── CORNERS ───────── */
+/* CORNERS */
 
 .featured-news-corner{
+
     position:absolute;
 
     z-index:3;
@@ -523,40 +880,54 @@ header{
     letter-spacing:2px;
 
     opacity:.75;
+
 }
 
 
 .top-left{
+
     top:18px;
+
     left:20px;
+
 }
 
 
 .top-right{
+
     top:18px;
+
     right:20px;
+
 }
 
 
 .bottom-left{
+
     bottom:18px;
+
     left:20px;
 
     font-family:"Playfair Display",serif;
+
 }
 
 
 .bottom-right{
+
     bottom:18px;
+
     right:20px;
+
 }
 
 
 /* ═══════════════════════════════════════
-   RECENT HEADER
+   RECENT NEWS
    ═══════════════════════════════════════ */
 
 .recent-news-header{
+
     margin-top:65px;
 
     padding-bottom:14px;
@@ -566,10 +937,12 @@ header{
     align-items:center;
 
     gap:15px;
+
 }
 
 
 .recent-news-title{
+
     display:flex;
 
     align-items:center;
@@ -577,10 +950,12 @@ header{
     gap:12px;
 
     white-space:nowrap;
+
 }
 
 
 .recent-news-jp{
+
     color:var(--gold);
 
     font-family:"Noto Serif JP",serif;
@@ -588,10 +963,12 @@ header{
     font-size:.65rem;
 
     letter-spacing:3px;
+
 }
 
 
 .recent-news-title strong{
+
     color:#817970;
 
     font-family:"Cormorant Garamond",serif;
@@ -601,10 +978,12 @@ header{
     font-weight:500;
 
     letter-spacing:3px;
+
 }
 
 
 .recent-news-line{
+
     height:1px;
 
     flex:1;
@@ -615,25 +994,28 @@ header{
             var(--line),
             transparent
         );
+
 }
 
 
 .recent-news-count{
+
     color:#514c48;
 
     font-family:"Playfair Display",serif;
 
     font-size:.75rem;
 
-    letter-spacing:1px;
 }
 
 
-/* ═══════════════════════════════════════
-   RECENT CARDS
-   ═══════════════════════════════════════ */
-
 .recent-news-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
     border-top:
         1px solid
         var(--line);
@@ -641,16 +1023,30 @@ header{
     border-left:
         1px solid
         var(--line);
+
 }
 
 
 .recent-news-card{
+
     min-height:285px;
 
     padding:
         27px
         27px
         22px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    border-right:
+        1px solid
+        var(--line);
+
+    border-bottom:
+        1px solid
+        var(--line);
 
     background:
         linear-gradient(
@@ -661,12 +1057,13 @@ header{
 
     transition:
         background .35s ease,
-        border-color .35s ease,
         transform .35s ease;
+
 }
 
 
 .recent-news-card:hover{
+
     background:
         linear-gradient(
             to bottom,
@@ -675,66 +1072,97 @@ header{
         );
 
     transform:translateY(-2px);
+
 }
 
 
-/* ───────── TOP ───────── */
-
 .recent-news-top{
+
     padding-bottom:13px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
 
     border-bottom:
         1px solid
         rgba(73,67,72,.65);
+
 }
 
 
 .recent-news-category{
+
+    color:var(--red-light);
+
+    font-family:"Noto Serif JP",serif;
+
     font-size:.46rem;
 
     letter-spacing:2.5px;
+
 }
 
 
 .recent-news-number{
-    font-size:.82rem;
 
     color:#514c48;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:.82rem;
+
 }
 
 
-/* ───────── CONTENT ───────── */
-
 .recent-news-content{
+
     padding-top:28px;
+
 }
 
 
 .recent-news-card h2{
-    margin:0 0 15px;
+
+    margin:
+        0
+        0
+        15px;
+
+    color:var(--text);
+
+    font-family:"Playfair Display",serif;
 
     font-size:1.4rem;
+
+    font-weight:500;
 
     line-height:1.08;
 
     letter-spacing:1.2px;
+
 }
 
 
 .recent-news-card p{
+
     max-width:290px;
 
     color:#827a73;
 
+    font-family:"Cormorant Garamond",serif;
+
     font-size:1rem;
 
     line-height:1.5;
+
 }
 
 
-/* ───────── CARD FOOTER ───────── */
-
 .recent-news-footer{
+
     margin-top:auto;
 
     padding-top:25px;
@@ -752,20 +1180,315 @@ header{
     font-size:.42rem;
 
     letter-spacing:2px;
+
 }
 
 
 .recent-news-footer span:last-child{
+
     color:#817970;
 
-    transition:
-        color .3s ease;
 }
 
 
-.recent-news-card:hover
-.recent-news-footer span:last-child{
+/* ═══════════════════════════════════════
+   FUTURE SECTIONS
+   ═══════════════════════════════════════ */
+
+.future-section{
+
+    margin-top:70px;
+
+    padding:
+        40px
+        20px;
+
+    text-align:center;
+
+    border:
+        1px solid
+        var(--line);
+
+    opacity:.55;
+
+}
+
+
+.future-section span{
+
+    display:block;
+
     color:var(--gold);
+
+    font-family:"Noto Serif JP",serif;
+
+    font-size:1rem;
+
+    letter-spacing:4px;
+
+}
+
+
+.future-section p{
+
+    margin-top:10px;
+
+    color:#716a64;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:.8rem;
+
+    letter-spacing:3px;
+
+}
+
+
+/* ═══════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════ */
+
+.shinbun-footer{
+
+    width:100%;
+
+    margin-top:80px;
+
+    padding:
+        55px
+        25px
+        35px;
+
+    text-align:center;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(255,255,255,.008),
+            rgba(0,0,0,.12)
+        );
+
+    border-top:
+        1px solid
+        var(--line);
+
+    color:var(--muted);
+
+}
+
+
+.footer-mark{
+
+    font-family:"Noto Serif JP",serif;
+
+    color:var(--gold);
+
+    font-size:1.15rem;
+
+    letter-spacing:8px;
+
+    opacity:.8;
+
+}
+
+
+.footer-name{
+
+    margin-top:12px;
+
+    font-family:"Playfair Display",serif;
+
+    color:var(--text);
+
+    font-size:1.45rem;
+
+    font-weight:500;
+
+    letter-spacing:7px;
+
+}
+
+
+.footer-subtitle{
+
+    margin-top:8px;
+
+    font-family:"Noto Serif JP",serif;
+
+    color:#6f6963;
+
+    font-size:.53rem;
+
+    letter-spacing:3px;
+
+}
+
+
+.footer-divider{
+
+    width:min(500px,75%);
+
+    margin:
+        27px
+        auto;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+
+.footer-divider span{
+
+    height:1px;
+
+    flex:1;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            var(--line)
+        );
+
+}
+
+
+.footer-divider span:last-child{
+
+    background:
+        linear-gradient(
+            to left,
+            transparent,
+            var(--line)
+        );
+
+}
+
+
+.footer-divider b{
+
+    color:var(--gold);
+
+    font-size:.5rem;
+
+    font-weight:400;
+
+}
+
+
+.footer-nav{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:28px;
+
+}
+
+
+.footer-nav a{
+
+    position:relative;
+
+    color:#827a72;
+
+    text-decoration:none;
+
+    font-family:"Noto Serif JP",serif;
+
+    font-size:.57rem;
+
+    letter-spacing:3px;
+
+}
+
+
+.footer-nav a:not(:last-child)::after{
+
+    content:"◆";
+
+    position:absolute;
+
+    right:-17px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:var(--red-light);
+
+    font-size:.3rem;
+
+    opacity:.7;
+
+}
+
+
+.footer-nav a:hover{
+
+    color:var(--gold);
+
+}
+
+
+.footer-motto{
+
+    margin-top:38px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:7px;
+
+}
+
+
+.footer-motto-jp{
+
+    font-family:"Noto Serif JP",serif;
+
+    color:#9a9188;
+
+    font-size:.67rem;
+
+    letter-spacing:3px;
+
+}
+
+
+.footer-motto-es{
+
+    font-family:"Cormorant Garamond",serif;
+
+    color:#625c57;
+
+    font-size:.82rem;
+
+    font-style:italic;
+
+}
+
+
+.footer-year{
+
+    margin-top:35px;
+
+    color:#514c48;
+
+    font-family:"Noto Serif JP",serif;
+
+    font-size:.5rem;
+
+    letter-spacing:3px;
+
 }
 
 
@@ -775,113 +1498,535 @@ header{
 
 @media(max-width:700px){
 
+
+    header{
+
+        padding:
+            15px
+            16px
+            23px;
+
+    }
+
+
+    .header-top{
+
+        grid-template-columns:
+            1fr
+            1fr;
+
+        font-size:.55rem;
+
+        letter-spacing:1.5px;
+
+    }
+
+
+    .header-status{
+
+        display:none;
+
+    }
+
+
+    .masthead{
+
+        margin-top:36px;
+
+    }
+
+
+    .masthead-jp{
+
+        font-size:4rem;
+
+        letter-spacing:10px;
+
+    }
+
+
+    .masthead-name{
+
+        margin-top:15px;
+
+        font-size:1.55rem;
+
+        letter-spacing:6px;
+
+    }
+
+
+    .masthead-subtitle{
+
+        margin-top:12px;
+
+        font-size:.53rem;
+
+        letter-spacing:2.5px;
+
+    }
+
+
+    .masthead-divider{
+
+        width:88%;
+
+        margin-top:25px;
+
+        gap:10px;
+
+    }
+
+
+    .edition-info{
+
+        gap:8px;
+
+        font-size:.48rem;
+
+        letter-spacing:1.5px;
+
+    }
+
+
+    /* NAV */
+
+    .shinbun-nav{
+
+        width:100%;
+
+        display:flex;
+
+        overflow-x:auto;
+
+        justify-content:flex-start;
+
+        border-left:none;
+
+        border-right:none;
+
+        scrollbar-width:none;
+
+        -webkit-overflow-scrolling:touch;
+
+    }
+
+
+    .shinbun-nav::-webkit-scrollbar{
+
+        display:none;
+
+    }
+
+
+    .shinbun-nav-item{
+
+        flex:
+            0 0
+            125px;
+
+        min-height:72px;
+
+    }
+
+
+    .nav-jp{
+
+        font-size:.67rem;
+
+    }
+
+
+    .nav-es{
+
+        font-size:.78rem;
+
+        letter-spacing:2px;
+
+    }
+
+
+    /* MAIN */
+
+    .shinbun-main{
+
+        width:92%;
+
+        padding-top:50px;
+
+    }
+
+
+    .section-heading{
+
+        gap:10px;
+
+    }
+
+
+    .section-heading-jp{
+
+        font-size:.55rem;
+
+    }
+
+
+    .section-heading-es{
+
+        font-size:.6rem;
+
+        letter-spacing:2px;
+
+    }
+
+
+    /* FEATURED */
+
     .featured-news{
+
         margin-top:30px;
 
         min-height:390px;
+
     }
 
 
     .featured-news-inner{
+
         padding:
             60px
             20px
             55px;
+
     }
 
 
     .featured-news h1{
+
         font-size:3.25rem;
 
         line-height:.95;
 
         letter-spacing:1px;
+
     }
 
 
     .featured-news-lead{
+
         font-size:1.05rem;
+
     }
 
 
     .featured-news-meta{
+
         flex-direction:column;
 
         gap:8px;
+
     }
 
 
     .meta-dot{
+
         display:none;
+
     }
 
 
     .featured-news-corner{
+
         font-size:.4rem;
+
     }
 
 
+    /* RECENT */
+
     .recent-news-header{
+
         margin-top:50px;
 
         gap:10px;
+
     }
 
 
     .recent-news-title{
+
         gap:8px;
+
     }
 
 
     .recent-news-title strong{
+
         font-size:.64rem;
 
         letter-spacing:2px;
+
     }
 
 
     .recent-news-jp{
+
         font-size:.55rem;
+
     }
 
 
     .recent-news-count{
+
         font-size:.65rem;
+
+    }
+
+
+    .recent-news-grid{
+
+        grid-template-columns:1fr;
+
     }
 
 
     .recent-news-card{
+
         min-height:240px;
 
         padding:
             23px
             20px
             20px;
+
     }
 
 
     .recent-news-content{
+
         padding-top:24px;
+
     }
 
 
     .recent-news-card h2{
+
         font-size:1.3rem;
+
+    }
+
+
+    /* FUTURE */
+
+    .future-section{
+
+        margin-top:50px;
+
+    }
+
+
+    /* FOOTER */
+
+    .shinbun-footer{
+
+        margin-top:60px;
+
+        padding:
+            45px
+            18px
+            30px;
+
+    }
+
+
+    .footer-name{
+
+        font-size:1.2rem;
+
+        letter-spacing:5px;
+
+    }
+
+
+    .footer-subtitle{
+
+        font-size:.48rem;
+
+        letter-spacing:2px;
+
+    }
+
+
+    .footer-divider{
+
+        width:85%;
+
+        margin:
+            24px
+            auto;
+
+    }
+
+
+    .footer-nav{
+
+        gap:23px;
+
+    }
+
+
+    .footer-nav a{
+
+        font-size:.52rem;
+
+        letter-spacing:2px;
+
+    }
+
+
+    .footer-nav a:not(:last-child)::after{
+
+        right:-14px;
+
+    }
+
+
+    .footer-motto{
+
+        margin-top:32px;
+
+    }
+
+
+    .footer-motto-jp{
+
+        font-size:.58rem;
+
+        letter-spacing:2px;
+
+    }
+
+
+    .footer-motto-es{
+
+        font-size:.78rem;
+
     }
 
 }
+
 </style>
+
 </head>
-<Body>
-<header>
+
+
+<body>
+
 
 <!-- ═══════════════════════════════════════
-     YŌRŌ SHINBUN — NAVEGACIÓN
+     HEADER
      ═══════════════════════════════════════ -->
 
-<nav class="shinbun-nav" aria-label="Secciones del periódico">
+<header>
 
-    <a href="#noticias" class="shinbun-nav-item active">
+
+    <div class="header-top">
+
+
+        <a
+            href="../../index.html"
+            class="header-link"
+        >
+            ← YŌRŌ
+        </a>
+
+
+        <span class="header-status">
+            PRIVATE CIRCULATION
+        </span>
+
+
+        <a
+            href="archivo.html"
+            class="header-link"
+        >
+            ARCHIVE →
+        </a>
+
+
+    </div>
+
+
+    <div class="masthead">
+
+
+        <div class="masthead-jp">
+            夜報
+        </div>
+
+
+        <div class="masthead-name">
+            YŌRŌ SHINBUN
+        </div>
+
+
+        <div class="masthead-subtitle">
+            夜間情報局 · INFORMACIÓN NOCTURNA
+        </div>
+
+
+    </div>
+
+
+    <div class="masthead-divider">
+
+        <span></span>
+
+        <b>◆</b>
+
+        <span></span>
+
+    </div>
+
+
+    <div class="edition-info">
+
+        <span>
+            EDICIÓN Nº 001
+        </span>
+
+        <i></i>
+
+        <span>
+            22 · SEPTIEMBRE · 2026
+        </span>
+
+        <i></i>
+
+        <span>
+            YŌRŌ
+        </span>
+
+    </div>
+
+
+</header>
+
+
+<!-- ═══════════════════════════════════════
+     NAVEGACIÓN
+     ═══════════════════════════════════════ -->
+
+<nav
+    class="shinbun-nav"
+    aria-label="Secciones del periódico"
+>
+
+
+    <a
+        href="#noticias"
+        class="shinbun-nav-item active"
+    >
 
         <span class="nav-jp">
             最新情報
@@ -894,7 +2039,10 @@ header{
     </a>
 
 
-    <a href="#personajes" class="shinbun-nav-item">
+    <a
+        href="#personajes"
+        class="shinbun-nav-item"
+    >
 
         <span class="nav-jp">
             登場人物
@@ -907,7 +2055,10 @@ header{
     </a>
 
 
-    <a href="#agenda" class="shinbun-nav-item">
+    <a
+        href="#agenda"
+        class="shinbun-nav-item"
+    >
 
         <span class="nav-jp">
             今夜の予定
@@ -920,7 +2071,10 @@ header{
     </a>
 
 
-    <a href="#avisos" class="shinbun-nav-item">
+    <a
+        href="#avisos"
+        class="shinbun-nav-item"
+    >
 
         <span class="nav-jp">
             掲示板
@@ -933,7 +2087,10 @@ header{
     </a>
 
 
-    <a href="#rumores" class="shinbun-nav-item">
+    <a
+        href="#rumores"
+        class="shinbun-nav-item"
+    >
 
         <span class="nav-jp">
             噂
@@ -945,287 +2102,321 @@ header{
 
     </a>
 
+
 </nav>
 
 
 <!-- ═══════════════════════════════════════
-     CONTENIDO PRINCIPAL
+     MAIN
      ═══════════════════════════════════════ -->
 
 <main class="shinbun-main">
 
 
-<!-- ═══════════════════════════════════════
-     NOTICIAS — YŌRŌ SHINBUN
-     ═══════════════════════════════════════ -->
-
-<section class="news-section" id="noticias">
-
-    <!-- ENCABEZADO -->
-
-    <div class="section-heading">
-
-        <span class="section-heading-jp">
-            最新情報
-        </span>
-
-        <span class="section-heading-line"></span>
-
-        <span class="section-heading-es">
-            ÚLTIMAS NOTICIAS
-        </span>
-
-    </div>
-
-
     <!-- ═══════════════════════════════════════
-         NOTICIA PRINCIPAL
+         NOTICIAS
          ═══════════════════════════════════════ -->
 
-    <article class="featured-news">
-
-        <div class="featured-news-inner">
-
-            <div class="featured-news-kicker">
-                <span>◆</span>
-                IC · ACTUALIDAD
-                <span>◆</span>
-            </div>
+    <section
+        class="news-section"
+        id="noticias"
+    >
 
 
-            <h1>
-                LA NOCHE<br>
-                COMIENZA
-            </h1>
+        <div class="section-heading">
 
-
-            <div class="featured-news-rule"></div>
-
-
-            <p class="featured-news-lead">
-                Nuevos rostros, acontecimientos y movimientos
-                comienzan a cambiar el ritmo de YŌRŌ.
-            </p>
-
-
-            <div class="featured-news-meta">
-
-                <span>
-                    22 · SEPTIEMBRE · 2026
-                </span>
-
-                <span class="meta-dot">
-                    ◆
-                </span>
-
-                <span>
-                    EDICIÓN Nº 001
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <div class="featured-news-corner top-left">
-            夜
-        </div>
-
-        <div class="featured-news-corner top-right">
-            報
-        </div>
-
-        <div class="featured-news-corner bottom-left">
-            01
-        </div>
-
-        <div class="featured-news-corner bottom-right">
-            YŌRŌ
-        </div>
-
-    </article>
-
-
-    <!-- ═══════════════════════════════════════
-         MÁS RECIENTES
-         ═══════════════════════════════════════ -->
-
-    <div class="recent-news-header">
-
-        <div class="recent-news-title">
-
-            <span class="recent-news-jp">
-                続報
+            <span class="section-heading-jp">
+                最新情報
             </span>
 
-            <strong>
-                MÁS RECIENTES
-            </strong>
+            <span class="section-heading-line"></span>
+
+            <span class="section-heading-es">
+                ÚLTIMAS NOTICIAS
+            </span>
 
         </div>
 
-        <span class="recent-news-line"></span>
 
-        <span class="recent-news-count">
-            03
-        </span>
+        <!-- NOTICIA PRINCIPAL -->
 
-    </div>
+        <article class="featured-news">
 
 
-    <div class="recent-news-grid">
+            <div class="featured-news-inner">
 
 
-        <!-- ───────── NOTICIA 01 ───────── -->
+                <div class="featured-news-kicker">
 
-        <article class="recent-news-card">
+                    <span>◆</span>
 
-            <div class="recent-news-top">
+                    IC · ACTUALIDAD
 
-                <span class="recent-news-category">
-                    IC · YŌRŌ
-                </span>
+                    <span>◆</span>
 
-                <span class="recent-news-number">
-                    01
-                </span>
-
-            </div>
+                </div>
 
 
-            <div class="recent-news-content">
+                <h1>
 
-                <h2>
-                    NUEVOS ROSTROS
-                    EN LA CIUDAD
-                </h2>
+                    LA NOCHE<br>
 
-                <p>
-                    Nuevos personajes comienzan a formar
-                    parte de la vida nocturna de YŌRŌ.
+                    COMIENZA
+
+                </h1>
+
+
+                <div class="featured-news-rule"></div>
+
+
+                <p class="featured-news-lead">
+
+                    Nuevos rostros, acontecimientos y movimientos
+                    comienzan a cambiar el ritmo de YŌRŌ.
+
                 </p>
 
+
+                <div class="featured-news-meta">
+
+
+                    <span>
+                        22 · SEPTIEMBRE · 2026
+                    </span>
+
+
+                    <span class="meta-dot">
+                        ◆
+                    </span>
+
+
+                    <span>
+                        EDICIÓN Nº 001
+                    </span>
+
+
+                </div>
+
+
             </div>
 
 
-            <div class="recent-news-footer">
-
-                <span>
-                    21 · SEP · 2026
-                </span>
-
-                <span>
-                    → LEER
-                </span>
-
+            <div class="featured-news-corner top-left">
+                夜
             </div>
+
+
+            <div class="featured-news-corner top-right">
+                報
+            </div>
+
+
+            <div class="featured-news-corner bottom-left">
+                01
+            </div>
+
+
+            <div class="featured-news-corner bottom-right">
+                YŌRŌ
+            </div>
+
 
         </article>
 
 
-        <!-- ───────── NOTICIA 02 ───────── -->
+        <!-- MÁS RECIENTES -->
 
-        <article class="recent-news-card">
+        <div class="recent-news-header">
 
-            <div class="recent-news-top">
 
-                <span class="recent-news-category">
-                    OOC · COMUNIDAD
+            <div class="recent-news-title">
+
+                <span class="recent-news-jp">
+                    続報
                 </span>
 
-                <span class="recent-news-number">
-                    02
-                </span>
+                <strong>
+                    MÁS RECIENTES
+                </strong>
 
             </div>
 
 
-            <div class="recent-news-content">
-
-                <h2>
-                    ACTUALIZACIÓN
-                    DEL REGLAMENTO
-                </h2>
-
-                <p>
-                    Se incorporaron nuevas disposiciones
-                    para mejorar la organización del rol.
-                </p>
-
-            </div>
+            <span class="recent-news-line"></span>
 
 
-            <div class="recent-news-footer">
-
-                <span>
-                    20 · SEP · 2026
-                </span>
-
-                <span>
-                    → LEER
-                </span>
-
-            </div>
-
-        </article>
+            <span class="recent-news-count">
+                03
+            </span>
 
 
-        <!-- ───────── NOTICIA 03 ───────── -->
-
-        <article class="recent-news-card">
-
-            <div class="recent-news-top">
-
-                <span class="recent-news-category">
-                    EVENTO
-                </span>
-
-                <span class="recent-news-number">
-                    03
-                </span>
-
-            </div>
+        </div>
 
 
-            <div class="recent-news-content">
-
-                <h2>
-                    UNA NUEVA NOCHE
-                    SE ACERCA
-                </h2>
-
-                <p>
-                    Próximamente se anunciarán nuevos
-                    acontecimientos dentro de YŌRŌ.
-                </p>
-
-            </div>
+        <div class="recent-news-grid">
 
 
-            <div class="recent-news-footer">
+            <!-- NOTICIA 01 -->
 
-                <span>
-                    18 · SEP · 2026
-                </span>
+            <article class="recent-news-card">
 
-                <span>
-                    → LEER
-                </span>
 
-            </div>
+                <div class="recent-news-top">
 
-        </article>
+                    <span class="recent-news-category">
+                        IC · YŌRŌ
+                    </span>
 
-    </div>
+                    <span class="recent-news-number">
+                        01
+                    </span>
 
-</section>
+                </div>
+
+
+                <div class="recent-news-content">
+
+                    <h2>
+                        NUEVOS ROSTROS
+                        EN LA CIUDAD
+                    </h2>
+
+                    <p>
+                        Nuevos personajes comienzan a formar
+                        parte de la vida nocturna de YŌRŌ.
+                    </p>
+
+                </div>
+
+
+                <div class="recent-news-footer">
+
+                    <span>
+                        21 · SEP · 2026
+                    </span>
+
+                    <span>
+                        → LEER
+                    </span>
+
+                </div>
+
+
+            </article>
+
+
+            <!-- NOTICIA 02 -->
+
+            <article class="recent-news-card">
+
+
+                <div class="recent-news-top">
+
+                    <span class="recent-news-category">
+                        OOC · COMUNIDAD
+                    </span>
+
+                    <span class="recent-news-number">
+                        02
+                    </span>
+
+                </div>
+
+
+                <div class="recent-news-content">
+
+                    <h2>
+                        ACTUALIZACIÓN
+                        DEL REGLAMENTO
+                    </h2>
+
+                    <p>
+                        Se incorporaron nuevas disposiciones
+                        para mejorar la organización del rol.
+                    </p>
+
+                </div>
+
+
+                <div class="recent-news-footer">
+
+                    <span>
+                        20 · SEP · 2026
+                    </span>
+
+                    <span>
+                        → LEER
+                    </span>
+
+                </div>
+
+
+            </article>
+
+
+            <!-- NOTICIA 03 -->
+
+            <article class="recent-news-card">
+
+
+                <div class="recent-news-top">
+
+                    <span class="recent-news-category">
+                        EVENTO
+                    </span>
+
+                    <span class="recent-news-number">
+                        03
+                    </span>
+
+                </div>
+
+
+                <div class="recent-news-content">
+
+                    <h2>
+                        UNA NUEVA NOCHE
+                        SE ACERCA
+                    </h2>
+
+                    <p>
+                        Próximamente se anunciarán nuevos
+                        acontecimientos dentro de YŌRŌ.
+                    </p>
+
+                </div>
+
+
+                <div class="recent-news-footer">
+
+                    <span>
+                        18 · SEP · 2026
+                    </span>
+
+                    <span>
+                        → LEER
+                    </span>
+
+                </div>
+
+
+            </article>
+
+
+        </div>
+
+
+    </section>
 
 
     <!-- ═══════════════════════════════════════
-         SECCIONES FUTURAS
+         PERSONAJES
          ═══════════════════════════════════════ -->
 
-    <section class="future-section" id="personajes">
+    <section
+        class="future-section"
+        id="personajes"
+    >
 
         <span>
             登場人物
@@ -1238,7 +2429,14 @@ header{
     </section>
 
 
-    <section class="future-section" id="agenda">
+    <!-- ═══════════════════════════════════════
+         AGENDA
+         ═══════════════════════════════════════ -->
+
+    <section
+        class="future-section"
+        id="agenda"
+    >
 
         <span>
             今夜の予定
@@ -1251,7 +2449,14 @@ header{
     </section>
 
 
-    <section class="future-section" id="avisos">
+    <!-- ═══════════════════════════════════════
+         AVISOS
+         ═══════════════════════════════════════ -->
+
+    <section
+        class="future-section"
+        id="avisos"
+    >
 
         <span>
             掲示板
@@ -1264,7 +2469,14 @@ header{
     </section>
 
 
-    <section class="future-section" id="rumores">
+    <!-- ═══════════════════════════════════════
+         RUMORES
+         ═══════════════════════════════════════ -->
+
+    <section
+        class="future-section"
+        id="rumores"
+    >
 
         <span>
             噂
@@ -1280,15 +2492,22 @@ header{
 </main>
 
 
+<!-- ═══════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════ -->
+
 <footer class="shinbun-footer">
+
 
     <div class="footer-mark">
         夜路
     </div>
 
+
     <div class="footer-name">
         YŌRŌ SHINBUN
     </div>
+
 
     <div class="footer-subtitle">
         PRIVATE NIGHT CIRCULATION
@@ -1308,17 +2527,21 @@ header{
 
     <nav class="footer-nav">
 
+
         <a href="index.html">
             SHINBUN
         </a>
+
 
         <a href="archivo.html">
             ARCHIVE
         </a>
 
+
         <a href="../../index.html">
             YŌRŌ
         </a>
+
 
     </nav>
 
@@ -1340,7 +2563,10 @@ header{
         ◆ &nbsp; 2026 &nbsp; ◆
     </div>
 
+
 </footer>
 
+
 </body>
+
 </html>
