@@ -593,7 +593,30 @@ header{
 
     letter-spacing:2.5px;
 }
+.featured-news-link{
+    display:block;
 
+    color:inherit;
+
+    text-decoration:none;
+
+    cursor:pointer;
+}
+.featured-news-link:hover .featured-news{
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(181,154,104,.075),
+            transparent 62%
+        );
+
+    border-color:
+        rgba(181,154,104,.35);
+}
+
+.featured-news-link:hover .featured-news h1{
+    color:var(--gold);
+}
 .meta-dot{
     color:var(--red-light);
 
@@ -1739,10 +1762,11 @@ header{
 
     </div>
 
+<!-- ═══════════════════════════════════════
+     NOTICIA PRINCIPAL
+     ═══════════════════════════════════════ -->
 
-    <!-- ═══════════════════════════════════════
-         NOTICIA PRINCIPAL
-         ═══════════════════════════════════════ -->
+<a href="noticias/la-noche-comienza.html" class="featured-news-link">
 
     <article class="featured-news">
 
@@ -1811,6 +1835,8 @@ header{
 
     </article>
 
+</a>
+  
 
     <!-- ═══════════════════════════════════════
          MÁS RECIENTES
@@ -1883,7 +1909,7 @@ header{
     </span>
 
     <a
-        href="noticias/la-noche-comienza.html"
+        href="noticias/nuevos-rostros.html"
         class="news-read">
         → LEER
     </a>
